@@ -90,7 +90,7 @@ public class FormActivity extends MyActivity{
         else if(resumeModel.survey_id==2){
             tv_type.setText("Survey on Human Health and Social Work Activities");
         }
-        else if(resumeModel.survey_id==3){
+        if(resumeModel.survey_id==3){
             tv_type.setText("Publishing and Software Development Activities");
         }
         else if(resumeModel.survey_id==4){

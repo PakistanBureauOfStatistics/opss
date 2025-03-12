@@ -114,10 +114,6 @@
             android:name="pbs.sme.survey.activity.ImportActivity"
             android:exported="true">
         </activity>
-        <activity
-            android:name="pbs.sme.survey.activity.BaseActivity"
-            android:exported="true">
-        </activity>
 
         <activity
             android:name="pbs.sme.survey.activity.LoginActivity"

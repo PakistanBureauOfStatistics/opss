@@ -1,1398 +1,1451 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/parent_drawer"
-    tools:context="pbs.sme.survey.activity.S8Activity">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".activity.Section8Activity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/header"
+            style="@style/summary_container"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp">
+            <LinearLayout
+                style="@style/summary_container"
+                android:weightSum="10">
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Block Code: "
+                    android:textColor="?s_color"
+                    android:gravity="right"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_block_code"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="00000000"
+                    android:gravity="left"/>
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Total SMEs: "
+                    android:textColor="?s_color"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_total_household"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="1"
+                    android:text="00"
+                    android:gravity="left"/>
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Uploaded: "
+                    android:textColor="?s_color"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_total_uploaded_household"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="1"
+                    android:text="00"
+                    android:gravity="left"/>
+            </LinearLayout>
+        </LinearLayout>
         <ScrollView
-            android:id="@+id/scrollView"
-            style="@style/hr_form_scroll">
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/footer">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include layout="@layout/layout_household"/>
+                android:orientation="vertical"
+                android:paddingHorizontal="?pad">
+                <TextView
+                    style="@style/summary_txt_lg"
+                    android:layout_width="match_parent"
+                    android:text="SECTION-8: GROSS FIXED CAPITAL FORMATION DURING 2023-24" />
 
                 <LinearLayout
-                    android:id="@+id/content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="?pad">
+                    style="@style/vliner">
                     <TextView
-                        style="@style/summary_txt_lg"
-                        android:layout_width="match_parent"
-                        android:text="SECTION-8: GROSS FIXED CAPITAL FORMATION DURING 2023-24" />
-
+                        style="@style/q_heading"
+                        android:text="801 Dwellings (Residential buildings)"/>
                     <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="801 Dwellings (Residential buildings)"/>
+                        style="@style/hliner"
+                        android:weightSum="3">
                         <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__801"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="802 Buildings other than residential buildings"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__802"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="803 Other structures"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__803"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="804 Land improvements and cost of land transfer"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__804"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="805 Transport Equipment (vehicles etc.)"/>
+                        style="@style/hliner"
+                        android:weightSum="3">
                         <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__805"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap801"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
                         </LinearLayout>
                     </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="806 Computers and peripheral equipment (ICT)"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__806"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="807 Communication equipment (ICT)"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__807"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="808 Consumer electronic equipment (ICT)"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__808"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="809 Furniture and Fixture"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__809"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="810 Other machinery and equipment"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__810"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="811 Research and Development "/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__811"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="812 Computer software and database"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__812"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="813 Other intellectual property products"/>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Acquisition"/>
-                                <EditText
-                                    android:id="@+id/acq_fixed_assets__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Addition"/>
-                                <EditText
-                                    android:id="@+id/major_improvements__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Sales"/>
-                                <EditText
-                                    android:id="@+id/sales_proceeds__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            style="@style/hliner"
-                            android:weightSum="3">
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Own Account Capital"/>
-                                <EditText
-                                    android:id="@+id/own_account_capital__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="11"
-                                    android:lines="1"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Expected Life of Asset"/>
-                                <EditText
-                                    android:id="@+id/exp_life__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:maxLength="3"
-                                    android:lines="1"
-                                    android:hint="Life of Asset in years"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                            <LinearLayout
-                                style="@style/vliner"
-                                android:layout_weight="1">
-                                <TextView
-                                    style="@style/txt_lbl"
-                                    android:text="Scrap Value of Asset"/>
-                                <EditText
-                                    android:id="@+id/scrap_value__813"
-                                    style="@style/edit_form_text"
-                                    android:digits="0123456789"
-                                    android:lines="1"
-                                    android:maxLength="11"
-                                    android:hint="Rs. in '000'"
-                                    android:inputType="number"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-                    <include layout="@layout/layout_form_buttons" />
-
                 </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="802 Buildings other than residential buildings"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap802"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="803 Other structures"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap803"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="804 Land improvements and cost of land transfer"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap804"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="805 Transport Equipment (vehicles etc.)"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap805"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="806 Computers and peripheral equipment (ICT)"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap806"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="807 Communication equipment (ICT)"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap807"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="808 Consumer electronic equipment (ICT)"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap808"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="809 Furniture and Fixture"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap809"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="810 Other machinery and equipment"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap810"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="811 Research and Development "/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap811"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="812 Computer software and database"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap812"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/vliner">
+                    <TextView
+                        style="@style/q_heading"
+                        android:text="813 Other intellectual property products"/>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Acquisition"/>
+                            <EditText
+                                android:id="@+id/acquisition813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Addition"/>
+                            <EditText
+                                android:id="@+id/addition813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Sales"/>
+                            <EditText
+                                android:id="@+id/sales813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="3">
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Own Account Capital"/>
+                            <EditText
+                                android:id="@+id/own813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Expected Life of Asset"/>
+                            <EditText
+                                android:id="@+id/life813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:lines="1"
+                                android:hint="Life of Asset in years"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/vliner"
+                            android:layout_weight="1">
+                            <TextView
+                                style="@style/txt_lbl"
+                                android:text="Scrap Value of Asset"/>
+                            <EditText
+                                android:id="@+id/scrap813"
+                                style="@style/edit_form_text"
+                                android:digits="0123456789"
+                                android:maxLength="11"
+                                android:hint="Rs. in '000'"
+                                android:inputType="number"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <include layout="@layout/layout_form_buttons" />
+
             </LinearLayout>
-
         </ScrollView>
+        <LinearLayout
+            style="@style/vliner">
 
-
+        </LinearLayout>
         <include
             android:id="@+id/footer"
             layout="@layout/footer"/>
     </RelativeLayout>
 
-    <include layout="@layout/layout_nav"/>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/mheader"/>
+
 </androidx.drawerlayout.widget.DrawerLayout>

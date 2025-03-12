@@ -1,103 +1,205 @@
 package pbs.sme.survey.activity;
 
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import pbs.sme.survey.R;
+import pbs.sme.survey.model.Block;
+import pbs.sme.survey.model.Constants;
+import pbs.sme.survey.model.Section12;
 import pbs.sme.survey.model.Section8;
-import pbs.sme.survey.model.Section8;
-import pk.gov.pbs.utils.StaticUtils;
+import pbs.sme.survey.utils.Utils;
 
-public class S8Activity extends FormActivity {
+public class S8Activity extends MyActivity {
+    Block mBlock;
+    Section12 section1;
+    List<Section8> resumeModel;
+    List<String> txtIds = Arrays.asList("acquisition","addition", "sales", "own", "life", "scrap");
 
-    private Button sbtn;
-    private List<Section8> modelDatabase;
 
-    private final String[] inputValidationOrder= new String[]{
-            //"value"
-            "acq_fixed_assets", "major_improvements", "sales_proceeds", "own_account_capital",
-            "exp_life", "scrap_value"
-    };
-
-    private final String[] codeList= new String[]{
-            "801","802","803","804","805","806","807","808", "809",
-            "810","811","812","813"
-    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s8);
-        setDrawer(this,"Section 8: GROSS FIXED CAPITAL FORMATION");
-        setParent(this, S9Activity.class);
-        scrollView = findViewById(R.id.scrollView);
-
-        sbtn = findViewById(R.id.btns);
-        sbtn.setOnClickListener(v -> {
-            sbtn.requestFocus();
-            StaticUtils.getHandler().post(this::saveForm);
-        });
-    }
-    private void saveForm() {
-        sbtn.setEnabled(false);
-        List<Section8> list=new ArrayList<>();
-
-        for(int i = 0; i < codeList.length; i++) {
-
-            Section8 m = null;
-            if(modelDatabase != null && modelDatabase.size() == codeList.length){
-                m = modelDatabase.get(i);
-            }
-
-            try {
-                m = (Section8) extractValidatedModelFromForm(this, m, true, inputValidationOrder, codeList[i], Section8.class, false, this.findViewById(android.R.id.content));
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-
-
-            if (m == null) {
-                mUXToolkit.showAlertDialogue("Failed", "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔", alertForEmptyFieldEvent);
-                sbtn.setEnabled(true);
-                return;
-            }
-
-            list.add(m);
-            setCommonFields(m);
-            m.section=8;
-            m.code=codeList[i];
-
-        }
-
-
-        List<Long> iid = dbHandler.replace(list);
-        for(Long i:iid){
-            if (i != null && i < 0) {
-                mUXToolkit.showToast("Failed");
-                sbtn.setEnabled(true);
-                return;
-            }
-        }
-        mUXToolkit.showToast("Success");
-        sbtn.setEnabled(true);
-        btnn.callOnClick();
+        setDrawer(this, "Section 8");
+        mBlock = (Block) getIntent().getSerializableExtra(Constants.EXTRA.IDX_BLOCK);
+        section1 = (Section12) getIntent().getSerializableExtra(Constants.EXTRA.IDX_HOUSE);
+        assert section1 != null;
+        resumeModel = dbHandler.query(Section8.class, "uid=?", section1.uid);
+        resumeModel = resumeModel.isEmpty() ? null : resumeModel;
+        findViewById(R.id.btnp).setOnClickListener(MoveToPrevious());
+        findViewById(R.id.btns).setOnClickListener(SaveData());
+        findViewById(R.id.btnn).setOnClickListener(MoveToNext());
+        if(resumeModel!=null)
+            loadFarmData();
+        //applyValidation();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        loadForm();
+    private void loadFarmData() {
+        for(Section8 s8 : resumeModel){
+            for(String txtId : txtIds){
+                EditText et = (EditText) findViewById(getResources().getIdentifier(txtId+s8.code, "id", getPackageName()));
+                switch (txtId){
+                    case "acquisition":
+                        et.setText(String.valueOf(s8.acq_fixed_assets));
+                        break;
+                    case "addition":
+                        et.setText(String.valueOf(s8.major_improvements));
+                        break;
+                    case "sales":
+                        et.setText(String.valueOf(s8.sales_proceeds));
+                        break;
+                    case "own":
+                        et.setText(String.valueOf(s8.own_account_capital));
+                        break;
+                    case "life":
+                        et.setText(String.valueOf(s8.exp_life));
+                        break;
+                    case "scrap":
+                        et.setText(String.valueOf(s8.scrap_value));
+                        break;
+                }
+            }
+        }
     }
 
+    private View.OnClickListener MoveToNext() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(getApplicationContext(), Section8Activity.class);
+                intent.putExtra(Constants.EXTRA.IDX_BLOCK, mBlock);
+                startActivity(intent);*/
+            }
+        };
+    }
 
-    private void loadForm(){
-        modelDatabase= dbHandler.query(Section8.class," uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
-        for(Section8 s: modelDatabase){
-            setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
+    private View.OnClickListener SaveData() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addOrUpdateSection8();
+                Intent intent = new Intent(S8Activity.this, S9Activity.class);
+                intent.putExtra(Constants.EXTRA.IDX_BLOCK, mBlock);
+                intent.putExtra(Constants.EXTRA.IDX_HOUSE, section1);
+                startActivity(intent);
+                finish();
+            }
+        };
+    }
+
+    private void addOrUpdateSection8() {
+        List<Section8> list = getSection8List();
+        if (resumeModel == null) {
+            for(Section8 section8 : list){
+                try {
+                    dbHandler.insertOrThrow(section8);
+                } catch (Exception e) {
+                    Toast.makeText(getApplicationContext(), "Exception on Section3 Insert: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        } else {
+            updateWithNewValues(resumeModel);
+            for(Section8 s8 : resumeModel){
+                try {
+                    dbHandler.update(s8);
+                } catch (Exception e) {
+                    mUXToolkit.showToast("Update Error: " + e.getMessage());
+                }
+            }
         }
+    }
 
+    private void updateWithNewValues(List<Section8> list) {
+        for(Section8 s8 : list){
+            for(String txtId : txtIds){
+                EditText et = (EditText) findViewById(getResources().getIdentifier(txtId+s8.code, "id", getPackageName()));
+                switch (txtId){
+                    case "acquisition":
+                        s8.acq_fixed_assets = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "addition":
+                        s8.major_improvements = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "sales":
+                        s8.sales_proceeds = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "own":
+                        s8.own_account_capital = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "life":
+                        s8.exp_life = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "scrap":
+                        s8.scrap_value = Utils.GetInteger(et.getText().toString());
+                        break;
+                }
+            }
+            s8.userid = getCurrentUser().getID();
+            s8.sid = settings.getLong(Constants.SID, 0);
+            s8.modified_time = getTimeNowwithSeconds();
+            s8.sync_time = null;
+            //s8.status = Constants.COMPLETED;
+        }
+    }
+
+    private List<Section8> getSection8List() {
+        List<Section8> list = new ArrayList<>();
+        for (int i = 801; i < 814; i++) {
+            Section8 s8 = new Section8();
+            s8.uid = section1.uid;
+            s8.code = String.valueOf(i);
+            for(String txtId : txtIds){
+                EditText et = (EditText) findViewById(getResources().getIdentifier(txtId+i, "id", getPackageName()));
+                switch (txtId){
+                    case "acquisition":
+                        s8.acq_fixed_assets = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "addition":
+                        s8.major_improvements = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "sales":
+                        s8.sales_proceeds = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "own":
+                        s8.own_account_capital = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "life":
+                        s8.exp_life = Utils.GetInteger(et.getText().toString());
+                        break;
+                    case "scrap":
+                        s8.scrap_value = Utils.GetInteger(et.getText().toString());
+                        break;
+                }
+            }
+            s8.created_time = getTimeNowwithSeconds();
+            s8.userid = getCurrentUser().getID();
+            s8.sid = settings.getLong(Constants.SID, 0);
+            s8.setupDataIntegrity();
+            s8.status = 2;
+            list.add(s8);
+        }
+        return list;
+    }
+
+    private View.OnClickListener MoveToPrevious() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(S8Activity.this, S9Activity.class);
+                intent.putExtra(Constants.EXTRA.IDX_BLOCK, mBlock);
+                intent.putExtra(Constants.EXTRA.IDX_HOUSE, section1);
+                startActivity(intent);
+                finish();
+            }
+        };
     }
 }

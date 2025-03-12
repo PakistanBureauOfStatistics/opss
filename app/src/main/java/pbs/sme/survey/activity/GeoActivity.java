@@ -156,7 +156,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
             if(resumeModel.survey_id!=null)
                 survey_id.setSelection(resumeModel.survey_id);
 //            tv_emp.setText(String.valueOf(resumeModel.emp_count));
-            mapTextOverlay.setText("آپ اس گھر کو پہلے ہی جیوٹیگ کر کے ہیں");
+            mapTextOverlay.setText("Ø¢Ù¾ Ø§Ø³ Ú¯Ú¾Ø± Ú©Ùˆ Ù¾ÛÙ„Û’ ÛÛŒ Ø¬ÛŒÙˆÙ¹ÛŒÚ¯ Ú©Ø± Ú©Û’ ÛÛŒÚº");
         }
         else if(idx_title!=null && !idx_title.isEmpty()){
             tv_title.setText(idx_title);
@@ -186,7 +186,8 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
         btnLocate.setOnLongClickListener(v -> {
             if (countDownProgress.getVisibility() == View.GONE && !isResuming()) {
                 switchLocationMode();
-                mapTextOverlay.setText("براہ کرم اپنا موجودہ مقام خود منتخب کریں۔");    }
+                mapTextOverlay.setText("Ø¨Ø±Ø§Û Ú©Ø±Ù… Ø§Ù¾Ù†Ø§ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ù‚Ø§Ù… Ø®ÙˆØ¯ Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚºÛ”");
+            }
             return true;
         });
 
@@ -231,7 +232,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
             }
         }
         else if(!isResuming()){
-            mUXToolkit.showToast("لوکیشن کا انتظار کریں یا مینوئل جیوٹیگ کریں");
+            mUXToolkit.showToast("Ù„ÙˆÚ©ÛŒØ´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ø± Ú©Ø±ÛŒÚº ÛŒØ§ Ù…ÛŒÙ†ÙˆØ¦Ù„ Ø¬ÛŒÙˆÙ¹ÛŒÚ¯ Ú©Ø±ÛŒÚº");
             return;
         }
 
@@ -245,7 +246,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
             startActivity(intent);
             finish();
         } else {
-            mUXToolkit.showToast("نئے گھر کا ڈیٹا محفوظ کرنے میں ناکام");
+            mUXToolkit.showToast("Ù†Ø¦Û’ Ú¯Ú¾Ø± Ú©Ø§ ÚˆÛŒÙ¹Ø§ Ù…Ø­ÙÙˆØ¸ Ú©Ø±Ù†Û’ Ù…ÛŒÚº Ù†Ø§Ú©Ø§Ù…");
         }
     }
 
@@ -268,7 +269,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
             return null;
         }
         else if((best==null && manualTagLocation==null) && resumeModel==null){
-            mUXToolkit.showToast("لوکیشن کا انتظار کریں یا مینوئل جیوٹیگ کریں");
+            mUXToolkit.showToast("Ù„ÙˆÚ©ÛŒØ´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ø± Ú©Ø±ÛŒÚº ÛŒØ§ Ù…ÛŒÙ†ÙˆØ¦Ù„ Ø¬ÛŒÙˆÙ¹ÛŒÚ¯ Ú©Ø±ÛŒÚº");
             return null;
         }
         else if((best!=null || manualTagLocation!=null) && resumeModel==null){
@@ -292,7 +293,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
                     return (res > 0) ? h : null;
                 }
                 else{
-                    mUXToolkit.showToast("لوکیشن کا انتظار کریں یا مینوئل جیوٹیگ کریں");
+                    mUXToolkit.showToast("Ù„ÙˆÚ©ÛŒØ´Ù† Ú©Ø§ Ø§Ù†ØªØ¸Ø§Ø± Ú©Ø±ÛŒÚº ÛŒØ§ Ù…ÛŒÙ†ÙˆØ¦Ù„ Ø¬ÛŒÙˆÙ¹ÛŒÚ¯ Ú©Ø±ÛŒÚº");
                     return null;
                 }
             }
@@ -382,7 +383,8 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
             }
             catch (Exception e){
                 boundary=null;
-                getUXToolkit().showToast("بلاک باؤنڈری درست نہیں، ہیڈکوارٹر سے رابطہ کریں");  }
+                getUXToolkit().showToast("Ø¨Ù„Ø§Ú© Ø¨Ø§Ø¤Ù†ÚˆØ±ÛŒ Ø¯Ø±Ø³Øª Ù†ÛÛŒÚºØŒ ÛÛŒÚˆÚ©ÙˆØ§Ø±Ù¹Ø± Ø³Û’ Ø±Ø§Ø¨Ø·Û Ú©Ø±ÛŒÚº");
+            }
         }
 
         distancePoints = new ArrayList<>(2);
@@ -464,10 +466,9 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
                     distanceLine.setPoints(distancePoints);
                     outside_in_meters=(int) distanceLine.getDistance();
                     currentLocationMarker.setTitle(String.format("%.2f", distanceLine.getDistance() / 1000) + " KM");
-
-                    mapTextOverlay.setText("اس گھر کو بلاک سے " + String.format("%.2f", distanceLine.getDistance() / 1000) + " کلومیٹر دور نشان زد کیا گیا تھا۔");
+                    mapTextOverlay.setText("Ø§Ø³ Ú¯Ú¾Ø± Ú©Ùˆ Ø¨Ù„Ø§Ú© Ø³Û’ " + String.format("%.2f", distanceLine.getDistance() / 1000) + " Ú©Ù„ÙˆÙ…ÛŒÙ¹Ø± Ø¯ÙˆØ± Ù†Ø´Ø§Ù† Ø²Ø¯ Ú©ÛŒØ§ Ú¯ÛŒØ§ ØªÚ¾Ø§Û”");
                 } else {
-                    mapTextOverlay.setText("اس گھر کو بلاک باؤنڈری کے اندر نشان زد کیا گیا تھا۔");
+                    mapTextOverlay.setText("Ø§Ø³ Ú¯Ú¾Ø± Ú©Ùˆ Ø¨Ù„Ø§Ú© Ø¨Ø§Ø¤Ù†ÚˆØ±ÛŒ Ú©Û’ Ø§Ù†Ø¯Ø± Ù†Ø´Ø§Ù† Ø²Ø¯ Ú©ÛŒØ§ Ú¯ÛŒØ§ ØªÚ¾Ø§Û”");
                 }
             }else{
                 try{
@@ -487,7 +488,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
         manualTagEnabled = !manualTagEnabled;
         if (manualTagEnabled) {
             btnLocate.setImageResource(R.drawable.baseline_touch_app_24);
-            mapTextOverlay.setText("مقررہ وقت کے اندر آپ کے موجودہ مقام کا تعین نہیں کر سکے،\n براہ کرم اپنا موجودہ مقام خود منتخب کریں۔");
+            mapTextOverlay.setText("Ù…Ù‚Ø±Ø±Û ÙˆÙ‚Øª Ú©Û’ Ø§Ù†Ø¯Ø± Ø¢Ù¾ Ú©Û’ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ù‚Ø§Ù… Ú©Ø§ ØªØ¹ÛŒÙ† Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©Û’ØŒ\n Ø¨Ø±Ø§Û Ú©Ø±Ù… Ø§Ù¾Ù†Ø§ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ù‚Ø§Ù… Ø®ÙˆØ¯ Ù…Ù†ØªØ®Ø¨ Ú©Ø±ÛŒÚºÛ”");
             if (manualTagLocation != null) {
                 Location location = new Location("manual");
                 location.setLatitude(manualTagLocation.getLatitude());
@@ -509,13 +510,12 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
                 map.getController().animateTo(((KmlPlacemark) boundary.mKmlRoot.mItems.get(0)).mGeometry.getBoundingBox().getCenterWithDateLine());
             }
             else{
-                mUXToolkit.showToast(" بلاک باؤنڈری دستیاب نہیں");
+                mUXToolkit.showToast(" Ø¨Ù„Ø§Ú© Ø¨Ø§Ø¤Ù†ÚˆØ±ÛŒ Ø¯Ø³ØªÛŒØ§Ø¨ Ù†ÛÛŒÚº");
             }
         }
         catch (Exception e){
-            getUXToolkit().showToast("بلاک باؤنڈری درست نہیں، پاکستان ادارہ شماریات ہیڈکوارٹر سے رابطہ کریں");
+            getUXToolkit().showToast("Ø¨Ù„Ø§Ú© Ø¨Ø§Ø¤Ù†ÚˆØ±ÛŒ Ø¯Ø±Ø³Øª Ù†ÛÛŒÚºØŒ Ù¾Ø§Ú©Ø³ØªØ§Ù† Ø§Ø¯Ø§Ø±Û Ø´Ù…Ø§Ø±ÛŒØ§Øª ÛÛŒÚˆÚ©ÙˆØ§Ø±Ù¹Ø± Ø³Û’ Ø±Ø§Ø¨Ø·Û Ú©Ø±ÛŒÚº");
         }
-
     }
 
 
@@ -560,16 +560,15 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
                     distanceLine.setVisible(true);
                     outside_in_meters=(int) distanceLine.getDistance();
 
-                    String msg = "آپ بلاک سے "+ String.format("%.2f", distanceLine.getDistance()/1000) +" کلو میٹر دور ہیں۔";
+                    String msg = "Ø¢Ù¾ Ø¨Ù„Ø§Ú© Ø³Û’ "+ String.format("%.2f", distanceLine.getDistance()/1000) +" Ú©Ù„Ùˆ Ù…ÛŒÙ¹Ø± Ø¯ÙˆØ± ÛÛŒÚºÛ”";
                     currentLocationMarker.setTitle(String.format("%.2f", distanceLine.getDistance()/1000) + " KM");
                     currentLocationMarker.setSubDescription(msg);
                     mapTextOverlay.setText(msg);
                 } else {
                     distancePoints.clear();
                     distanceLine.setVisible(false);
-                    mapTextOverlay.setText("آپ کا موجودہ مقام بلاک باؤنڈری کے اندر ہے۔");
-                    currentLocationMarker.setTitle("مقام");
-
+                    mapTextOverlay.setText("Ø¢Ù¾ Ú©Ø§ Ù…ÙˆØ¬ÙˆØ¯Û Ù…Ù‚Ø§Ù… Ø¨Ù„Ø§Ú© Ø¨Ø§Ø¤Ù†ÚˆØ±ÛŒ Ú©Û’ Ø§Ù†Ø¯Ø± ÛÛ’Û”");
+                    currentLocationMarker.setTitle("Ù…Ù‚Ø§Ù…");
                     currentLocationMarker.setSubDescription("lat:"+String.valueOf(best.getLatitude()).substring(0,5)+", Lon:"+String.valueOf(best.getLongitude()).substring(0,5));
                 }
             }else{
@@ -718,7 +717,7 @@ public class GeoActivity extends MyActivity implements LocationListener, GeoPoin
     }
 
     private void RequestSettingDialog(){
-        dh.SingleClickDialogError(this,"لوکیشن آن نہیں ہے","سیٹنگ میں لوکیش آن کریں۔", "سیٹنگ میں جائیں", new View.OnClickListener() {
+        dh.SingleClickDialogError(this,"Ù„ÙˆÚ©ÛŒØ´Ù† Ø¢Ù† Ù†ÛÛŒÚº ÛÛ’","Ø³ÛŒÙ¹Ù†Ú¯ Ù…ÛŒÚº Ù„ÙˆÚ©ÛŒØ´ Ø¢Ù† Ú©Ø±ÛŒÚºÛ”", "Ø³ÛŒÙ¹Ù†Ú¯ Ù…ÛŒÚº Ø¬Ø§Ø¦ÛŒÚº", new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dh.hideSingleError();

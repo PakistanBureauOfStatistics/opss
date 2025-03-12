@@ -1,25 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/parent_drawer"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".activity.S9Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/header"
+            style="@style/summary_container"
+            android:orientation="vertical"
+            android:paddingHorizontal="5dp">
+            <LinearLayout
+                style="@style/summary_container"
+                android:weightSum="10">
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Block Code: "
+                    android:textColor="?s_color"
+                    android:gravity="right"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_block_code"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="00000000"
+                    android:gravity="left"/>
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Total SMEs: "
+                    android:textColor="?s_color"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_total_household"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="1"
+                    android:text="00"
+                    android:gravity="left"/>
+                <TextView
+                    style="@style/summary_txt_md"
+                    android:layout_weight="2"
+                    android:text="Uploaded: "
+                    android:textColor="?s_color"
+                    android:layout_marginBottom="0dp"/>
+                <TextView
+                    android:id="@+id/tv_total_uploaded_household"
+                    style="@style/summary_txt_md"
+                    android:layout_weight="1"
+                    android:text="00"
+                    android:gravity="left"/>
+            </LinearLayout>
+        </LinearLayout>
         <ScrollView
-            android:id="@+id/scrollView"
-            style="@style/hr_form_scroll">
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include layout="@layout/layout_household"/>
-            <LinearLayout
-                android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -57,7 +104,7 @@
                         style="@style/summary_txt_md"
                         android:layout_weight="3"
                         android:gravity="center"
-                        android:text="Amount ‘000’ Rs."
+                        android:text="Amount â€˜000â€™ Rs."
                         android:textColor="@color/white" />
                 </LinearLayout>
                 <LinearLayout
@@ -74,9 +121,8 @@
                         android:gravity="start"
                         android:text="Value of Stock at the beginning of the year" />
                     <EditText
-                        android:id="@+id/rupees__901"
+                        android:id="@+id/code901"
                         style="@style/edit_form_num"
-                        android:maxLength="10"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>
@@ -94,9 +140,8 @@
                         android:gravity="start"
                         android:text="Value of Stock at the end of the year" />
                     <EditText
-                        android:id="@+id/rupees__902"
+                        android:id="@+id/code902"
                         style="@style/edit_form_num"
-                        android:maxLength="10"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>
@@ -114,15 +159,13 @@
                         android:gravity="start"
                         android:text="Change/(902-901)= +/-" />
                     <EditText
-                        android:id="@+id/rupees__900"
+                        android:id="@+id/code903"
                         style="@style/edit_form_num"
-                        android:maxLength="10"
-                        android:enabled="false"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>
+
                 <include layout="@layout/layout_form_buttons" />
-            </LinearLayout>
 
             </LinearLayout>
 
@@ -133,6 +176,12 @@
             layout="@layout/footer"/>
     </RelativeLayout>
 
-    <include layout="@layout/layout_nav"/>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/main_menu"
+        app:headerLayout="@layout/mheader"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
