@@ -23,6 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <include layout="@layout/layout_household"/>
+                <TextView
+                    style="@style/summary_txt_lg"
+                    android:layout_width="match_parent"
+                    android:text="SECTION-4: INPUTS/INTERMEDIATE CONSUMPTION" />
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
