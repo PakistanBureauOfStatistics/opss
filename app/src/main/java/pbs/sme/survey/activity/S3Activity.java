@@ -28,7 +28,6 @@ public class S3Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s3);
-        setDrawer(this,"Section 3: Emp Cost");
         setParent(this, S4Activity.class);
         scrollView = findViewById(R.id.scrollView);
 

@@ -2,11 +2,13 @@ package pbs.sme.survey.activity;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import pbs.sme.survey.R;
+import pbs.sme.survey.model.Section8;
 import pbs.sme.survey.model.Section8;
 import pk.gov.pbs.utils.StaticUtils;
 
@@ -29,7 +31,7 @@ public class S8Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s8);
-        setDrawer(this,"Section 8: Gross Fixed Capital");
+        setDrawer(this,"Section 8: Ouput");
         setParent(this, S9Activity.class);
         scrollView = findViewById(R.id.scrollView);
 
