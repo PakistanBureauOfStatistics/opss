@@ -12,7 +12,7 @@ public class Section3 extends FormTable {
     @SqlPrimaryKey
     public Integer survey_id;
     public String code;
-    public Integer value;
+    public Integer duration;
     public Integer male;
     public Integer female;
     public Integer persons;
@@ -30,7 +30,7 @@ public class Section3 extends FormTable {
                 ", section=" + section +
                 ", survey_id=" + survey_id +
                 ", code='" + code + '\'' +
-                ", value=" + value +
+                ", duration=" + duration +
                 ", male=" + male +
                 ", female=" + female +
                 ", persons=" + persons +

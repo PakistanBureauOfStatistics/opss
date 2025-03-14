@@ -1,7 +1,9 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,6 @@ public class S3Activity extends FormActivity {
     private List<Section3> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-            //"value"
            "male", "female", "wages", "other_cash_payment", "payment_in_kind"
     };
 
@@ -31,17 +32,27 @@ public class S3Activity extends FormActivity {
         setParent(this, S4Activity.class);
         scrollView = findViewById(R.id.scrollView);
 
-        //EditText totalEditText = findViewById(R.id.value__300);
-
-//        //AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-//
-//        for(int i = 0; i < codeList.length-1; i++) {
-//            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-//            et.removeTextChangedListener(additionTextWatcher);
-//            et.addTextChangedListener(additionTextWatcher);
-//        }
-
-
+        for(String property : inputValidationOrder){
+            for (String code : codeList) {
+                EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                String resourceName = getResources().getResourceEntryName(et.getId());
+                if(resourceName.contains("ale")){
+                    et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                        @Override
+                        public void onFocusChange(View view, boolean hasFocus) {
+                            if(!hasFocus){
+                                EditText male = findViewById(getResources().getIdentifier("male__"+ code, "id", getPackageName()));
+                                EditText female = findViewById(getResources().getIdentifier("female__"+ code, "id", getPackageName()));
+                                EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
+                                int maleCount = GetInteger(male.getText().toString());
+                                int femaleCount = GetInteger(female.getText().toString());
+                                total.setText(String.valueOf(maleCount + femaleCount));
+                            }
+                        }
+                    });
+                }
+            }
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -112,5 +123,14 @@ public class S3Activity extends FormActivity {
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
 
+    }
+
+    private int GetInteger(String txt){
+        try {
+            return Integer.parseInt(txt);
+        }
+        catch (Exception e) {
+            return 0;
+        }
     }
 }
