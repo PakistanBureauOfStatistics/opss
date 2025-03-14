@@ -27,24 +27,33 @@
                     android:id="@+id/content"
                     android:orientation="vertical">
                     <LinearLayout
-                        style="@style/hliner"
-                        android:padding="?padd"
-                        android:weightSum="3">
-                        <CheckBox android:id="@+id/last_month"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Last Month" />
-                        <CheckBox android:id="@+id/last_three_month"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Last Three Months"/>
-                        <CheckBox android:id="@+id/last_year"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Last Year 2024-25 (July-June)"/>
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Duration"/>
+
+                        <RadioGroup
+                            android:id="@+id/duration"
+                            style="@style/rdg"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <RadioButton
+                                android:id="@+id/duration1"
+                                style="@style/rd_yesno"
+                                android:text="Last Month" />
+
+                            <RadioButton
+                                android:id="@+id/duration2"
+                                style="@style/rd_yesno"
+                                android:text="Last Three Months" />
+
+                            <RadioButton
+                                android:id="@+id/duration3"
+                                style="@style/rd_yesno"
+                                android:text="Last Year 2024-25 (Jul-Jun)" />
+                        </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
