@@ -3,7 +3,9 @@ package pbs.sme.survey.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ import pk.gov.pbs.utils.StaticUtils;
 public class S3Activity extends FormActivity {
 
     private Button sbtn;
+    private CheckBox duration1, duration2, duration3;
     private List<Section3> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
@@ -31,6 +34,15 @@ public class S3Activity extends FormActivity {
         setContentView(R.layout.activity_s3);
         setParent(this, S4Activity.class);
         scrollView = findViewById(R.id.scrollView);
+        duration1 = findViewById(R.id.duration1);
+        duration2 = findViewById(R.id.duration2);
+        duration3 = findViewById(R.id.duration3);
+        if(resumeModel.survey_id==4)
+            duration1.setChecked(true);
+        else if (resumeModel.survey_id==5)
+            duration2.setChecked(true);
+        else
+            duration3.setChecked(true);
 
         for(String property : inputValidationOrder){
             for (String code : codeList) {

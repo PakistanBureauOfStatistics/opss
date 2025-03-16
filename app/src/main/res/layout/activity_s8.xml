@@ -110,7 +110,7 @@
                                     android:id="@+id/exp_life__801"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -214,7 +214,7 @@
                                     android:id="@+id/exp_life__802"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -318,7 +318,7 @@
                                     android:id="@+id/exp_life__803"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -422,7 +422,7 @@
                                     android:id="@+id/exp_life__804"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -525,7 +525,7 @@
                                     android:id="@+id/exp_life__805"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -629,7 +629,7 @@
                                     android:id="@+id/exp_life__806"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -733,7 +733,7 @@
                                     android:id="@+id/exp_life__807"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -837,7 +837,7 @@
                                     android:id="@+id/exp_life__808"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -941,7 +941,7 @@
                                     android:id="@+id/exp_life__809"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -1045,7 +1045,7 @@
                                     android:id="@+id/exp_life__810"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -1149,7 +1149,7 @@
                                     android:id="@+id/exp_life__811"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -1253,7 +1253,7 @@
                                     android:id="@+id/exp_life__812"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -1357,7 +1357,7 @@
                                     android:id="@+id/exp_life__813"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
-                                    android:maxLength="11"
+                                    android:maxLength="3"
                                     android:lines="1"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
@@ -1372,6 +1372,7 @@
                                     android:id="@+id/scrap_value__813"
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
+                                    android:lines="1"
                                     android:maxLength="11"
                                     android:hint="Rs. in '000'"
                                     android:inputType="number"/>
