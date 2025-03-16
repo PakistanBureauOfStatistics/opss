@@ -20,40 +20,30 @@
                 <TextView
                     style="@style/summary_txt_lg"
                     android:layout_width="match_parent"
-                    android:text="Section-3: Employment And Employment Cost" />
+                    android:textSize="20dp"
+                    android:text="Section-3 : Employment And Employment Cost" />
 
                 <LinearLayout
                     style="@style/smp_container_hr"
                     android:id="@+id/content"
                     android:orientation="vertical">
                     <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="Duration"/>
-
-                        <RadioGroup
-                            android:id="@+id/duration"
-                            style="@style/rdg"
-                            android:layout_width="match_parent"
-                            android:orientation="horizontal"
-                            android:weightSum="3">
-
-                            <RadioButton
-                                android:id="@+id/duration1"
-                                style="@style/rd_yesno"
-                                android:text="Last Month" />
-
-                            <RadioButton
-                                android:id="@+id/duration2"
-                                style="@style/rd_yesno"
-                                android:text="Last Three Months" />
-
-                            <RadioButton
-                                android:id="@+id/duration3"
-                                style="@style/rd_yesno"
-                                android:text="Last Year 2024-25 (Jul-Jun)" />
-                        </RadioGroup>
+                        style="@style/hliner">
+                         <CheckBox
+                             android:id="@+id/duration1"
+                             style="@style/rd_yesno"
+                             android:enabled="false"
+                             android:text="Last Month" />
+                        <CheckBox
+                            android:id="@+id/duration2"
+                            style="@style/rd_yesno"
+                            android:enabled="false"
+                            android:text="Last Three Months" />
+                        <CheckBox
+                            android:id="@+id/duration3"
+                            style="@style/rd_yesno"
+                            android:enabled="false"
+                            android:text="Last Year 2024-25 (Jul-Jun)" />
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">

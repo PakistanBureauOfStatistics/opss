@@ -31,19 +31,9 @@ public class S8Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s8);
-        setDrawer(this,"Section 8: Ouput");
+        setDrawer(this,"Section 8: GROSS FIXED CAPITAL FORMATION");
         setParent(this, S9Activity.class);
         scrollView = findViewById(R.id.scrollView);
-
-       // EditText totalEditText = findViewById(R.id.value__400);
-
-//        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-//
-//        for(int i = 0; i < codeList.length-2; i++) {
-//            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-//            et.removeTextChangedListener(additionTextWatcher);
-//            et.addTextChangedListener(additionTextWatcher);
-//        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -81,9 +71,6 @@ public class S8Activity extends FormActivity {
             m.code=codeList[i];
 
         }
-
-
-        /////TODO CHECKS////////////////////////////
 
 
         List<Long> iid = dbHandler.replace(list);
