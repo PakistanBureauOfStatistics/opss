@@ -1,7 +1,9 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class S9Activity extends FormActivity {
     private List<Section9> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-            "value"
+            "rupees"
     };
 
     private final String[] codeList= new String[]{
@@ -27,18 +29,24 @@ public class S9Activity extends FormActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s9);
         setDrawer(this,"Section 9: Inventories");
-        setParent(this, BaseActivity.class);
+        setParent(this, HomeActivity.class);
         scrollView = findViewById(R.id.scrollView);
-
-        /*EditText totalEditText = findViewById(R.id.value__900);
-
-        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-
-        for(int i = 0; i < codeList.length-2; i++) {
-            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-            et.removeTextChangedListener(additionTextWatcher);
-            et.addTextChangedListener(additionTextWatcher);
-        }*/
+        for (String code : codeList) {
+            EditText et = (EditText) findViewById(getResources().getIdentifier("rupees__"+code, "id", getPackageName()));
+            et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View view, boolean hasFocus) {
+                    if(!hasFocus){
+                        EditText et901 = findViewById(getResources().getIdentifier("rupees__901", "id", getPackageName()));
+                        EditText et902 = findViewById(getResources().getIdentifier("rupees__902", "id", getPackageName()));
+                        EditText total = findViewById(getResources().getIdentifier("rupees__900", "id", getPackageName()));
+                        int Count901 = GetInteger(et901.getText().toString());
+                        int Count902 = GetInteger(et902.getText().toString());
+                        total.setText(String.valueOf(Count901 - Count902));
+                    }
+                }
+            });
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -106,6 +114,13 @@ public class S9Activity extends FormActivity {
         for(Section9 s: modelDatabase){
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
-
+    }
+    private int GetInteger(String txt){
+        try {
+            return Integer.parseInt(txt);
+        }
+        catch (Exception e) {
+            return 0;
+        }
     }
 }

@@ -76,6 +76,7 @@
                     <EditText
                         android:id="@+id/rupees__901"
                         style="@style/edit_form_num"
+                        android:maxLength="10"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>
@@ -95,6 +96,7 @@
                     <EditText
                         android:id="@+id/rupees__902"
                         style="@style/edit_form_num"
+                        android:maxLength="10"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>
@@ -114,6 +116,8 @@
                     <EditText
                         android:id="@+id/rupees__900"
                         style="@style/edit_form_num"
+                        android:maxLength="10"
+                        android:enabled="false"
                         android:layout_weight="3"
                         android:hint="Rs. in '000'" />
                 </LinearLayout>

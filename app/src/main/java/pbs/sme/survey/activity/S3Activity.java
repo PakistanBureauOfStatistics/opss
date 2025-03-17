@@ -1,7 +1,11 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,10 +17,10 @@ import pk.gov.pbs.utils.StaticUtils;
 public class S3Activity extends FormActivity {
 
     private Button sbtn;
+    private CheckBox duration1, duration2, duration3;
     private List<Section3> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-            //"value"
            "male", "female", "wages", "other_cash_payment", "payment_in_kind"
     };
 
@@ -28,21 +32,39 @@ public class S3Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s3);
-        setDrawer(this,"Section 3: Emp Cost");
         setParent(this, S4Activity.class);
         scrollView = findViewById(R.id.scrollView);
+        duration1 = findViewById(R.id.duration1);
+        duration2 = findViewById(R.id.duration2);
+        duration3 = findViewById(R.id.duration3);
+        if(resumeModel.survey_id==4)
+            duration1.setChecked(true);
+        else if (resumeModel.survey_id==5)
+            duration2.setChecked(true);
+        else
+            duration3.setChecked(true);
 
-        //EditText totalEditText = findViewById(R.id.value__300);
-
-//        //AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-//
-//        for(int i = 0; i < codeList.length-1; i++) {
-//            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-//            et.removeTextChangedListener(additionTextWatcher);
-//            et.addTextChangedListener(additionTextWatcher);
-//        }
-
-
+        for(String property : inputValidationOrder){
+            for (String code : codeList) {
+                EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                String resourceName = getResources().getResourceEntryName(et.getId());
+                if(resourceName.contains("ale")){
+                    et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                        @Override
+                        public void onFocusChange(View view, boolean hasFocus) {
+                            if(!hasFocus){
+                                EditText male = findViewById(getResources().getIdentifier("male__"+ code, "id", getPackageName()));
+                                EditText female = findViewById(getResources().getIdentifier("female__"+ code, "id", getPackageName()));
+                                EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
+                                int maleCount = GetInteger(male.getText().toString());
+                                int femaleCount = GetInteger(female.getText().toString());
+                                total.setText(String.valueOf(maleCount + femaleCount));
+                            }
+                        }
+                    });
+                }
+            }
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -113,5 +135,14 @@ public class S3Activity extends FormActivity {
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
 
+    }
+
+    private int GetInteger(String txt){
+        try {
+            return Integer.parseInt(txt);
+        }
+        catch (Exception e) {
+            return 0;
+        }
     }
 }
