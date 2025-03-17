@@ -29,7 +29,7 @@ public class S9Activity extends FormActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s9);
         setDrawer(this,"Section 9: Inventories");
-        setParent(this, HomeActivity.class);
+        setParent(this, BaseActivity.class);
         scrollView = findViewById(R.id.scrollView);
         for (String code : codeList) {
             EditText et = (EditText) findViewById(getResources().getIdentifier("rupees__"+code, "id", getPackageName()));

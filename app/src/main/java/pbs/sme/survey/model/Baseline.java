@@ -2,68 +2,65 @@ package pbs.sme.survey.model;
 
 public class Baseline extends FormTable {
 
-    Integer a1;
-    Integer a2;
-    Integer a3;
-    Integer b1;
-    Integer b2;
-    Integer b3;
-    Integer b4;
-    Integer b5;
-    Integer b6;
-    String b6_other;
-    Integer b7;
-    Integer b8;
-    Integer b9;
-    Integer b10;
-    String b10_other;
-    Integer c1;
-    String c1_other;
-    Integer c2;
-    Integer c3;
-    Integer d1;
-    Integer d2;
-    String d2_other;
-    Integer d3;
-    Integer d4;
-    String d5;
-    Integer d6;
-    Integer d7;
-    String d7_other;
-    Integer e1;
-    String e1_other;
-    Integer e2;
-    String e3;
-    Integer e4;
-    Integer e5;
-    Integer f1;
-    Integer f2;
-    Integer f3;
-    Integer f4;
-    Integer f5;
-    Integer f6;
-    String f6_other;
-    Integer f7;
-    Integer f8;
-    Integer f9;
-    String f9_other;
-    Integer f10;
-    String f10_other;
-    Integer f11;
-    Integer export1;
-    Integer export2;
-    String export2_other;
-    Integer export3;
-    Integer export4;
-    Integer export5;
-    Integer time_spent;
-    String survey;
+    public Integer a2;
+    public Integer a3;
+    public Integer b1;
+    public Integer b2;
+    public Integer b3;
+    public Integer b4;
+    public Integer b5;
+    public Integer b6;
+    public String b6_other;
+    public Integer b7;
+    public Integer a1;
+    public Integer b8;
+    public Integer b9;
+    public Integer b10;
+    public String b10_other;
+    public Integer c1;
+    public String c1_other;
+    public Integer c2;
+    public Integer c3;
+    public Integer d1;
+    public Integer d2;
+    public String d2_other;
+    public Integer d3;
+    public Integer d4;
+    public String d5;
+    public Integer d6;
+    public Integer d7;
+    public String d7_other;
+    public Integer e1;
+    public String e1_other;
+    public Integer e2;
+    public String e3;
+    public Integer e4;
+    public String e5;
+    public Integer f1;
+    public Integer f2;
+    public Integer f3;
+    public Integer f4;
+    public Integer f5;
+    public Integer f6;
+    public String f6_other;
+    public Integer f7;
+    public Integer f8;
+    public Integer f9;
+    public String f9_other;
+    public Integer f10;
+    public String f10_other;
+    public String f11;
+    public Integer export1;
+    public String export2;
+    public String export2_other;
+    public String export3;
+    public String export4;
+    public Integer export5;
 
     @Override
     public String toString() {
         return "Baseline{" +
-                "a1=" + a1 +
-                ", a2=" + a2 +
+                "a2=" + a2 +
                 ", a3=" + a3 +
                 ", b1=" + b1 +
                 ", b2=" + b2 +
@@ -73,6 +70,7 @@ public class Baseline extends FormTable {
                 ", b6=" + b6 +
                 ", b6_other='" + b6_other + '\'' +
                 ", b7=" + b7 +
+                ", a1=" + a1 +
                 ", b8=" + b8 +
                 ", b9=" + b9 +
                 ", b10=" + b10 +
@@ -117,7 +115,7 @@ public class Baseline extends FormTable {
                 ", export4=" + export4 +
                 ", export5=" + export5 +
                 ", time_spent=" + time_spent +
-                ", survey='" + survey + '\'' +
+                ", env='" + env + '\'' +
                 ", blk_desc='" + blk_desc + '\'' +
                 ", sno=" + sno +
                 ", uid='" + uid + '\'' +
@@ -135,7 +133,7 @@ public class Baseline extends FormTable {
                 ", rcol2=" + rcol2 +
                 ", remarks='" + remarks + '\'' +
                 ", flag=" + flag +
-                ", survey=" + survey +
+                ", survey='" + survey + '\'' +
                 ", status=" + status +
                 '}';
     }
