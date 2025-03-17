@@ -6,6 +6,8 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import pbs.sme.survey.helper.AdditionTextWatcher;
 import pbs.sme.survey.model.Section6;
 import pbs.sme.survey.R;
 //import pbs.sme.survey.helper.AdditionTextWatcher;
@@ -34,13 +36,12 @@ public class S6Activity extends FormActivity {
 
         EditText totalEditText = findViewById(R.id.value__600);
 
-//        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-//
-//        for(int i = 0; i < codeList.length-2; i++) {
-//            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-//            et.removeTextChangedListener(additionTextWatcher);
-//            et.addTextChangedListener(additionTextWatcher);
-//        }
+        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
+
+        for(int i = 0; i < codeList.length-2; i++) {
+            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));et.removeTextChangedListener(additionTextWatcher);
+            et.addTextChangedListener(additionTextWatcher);
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
