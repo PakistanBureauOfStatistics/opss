@@ -475,6 +475,7 @@
     <style name="edit_form_text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?icon_lg</item>
+        <item name="android:imeOptions">actionNext</item>
         <item name="android:textSize">?t_lg</item>
         <item name="android:paddingLeft">?padd</item>
         <item name="android:paddingRight">?padd</item>

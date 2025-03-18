@@ -23,6 +23,11 @@ public class Section3 extends FormTable {
     public Integer total;
     public Integer emp_cost;
     public String other;
+
+    public Integer getPersons() {
+        return male + female;
+    }
+
     @Override
     public String toString() {
         return "Section3{" +

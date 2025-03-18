@@ -133,6 +133,8 @@ public class S3Activity extends FormActivity {
         modelDatabase= dbHandler.query(Section3.class," uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         for(Section3 s: modelDatabase){
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
+            EditText total = findViewById(getResources().getIdentifier("persons__"+ s.code, "id", getPackageName()));
+            total.setText(String.valueOf(s.getPersons() ));
         }
 
     }
