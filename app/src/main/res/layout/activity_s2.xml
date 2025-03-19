@@ -106,7 +106,7 @@
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.2 Code (PSIC-2010)"/>
-                            <EditText android:id="@+id/psic" style="@style/edit_form_text"/>
+                            <Spinner android:id="@+id/psic" android:layout_width="match_parent" android:layout_height="wrap_content"/>
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
