@@ -99,7 +99,6 @@
                             <TextView style="@style/q_heading" android:text="2.4.1 Kind of Major Activity"/>
                             <Spinner android:id="@+id/major_activities" style="@style/spn_form" />
                         </LinearLayout>
-
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.2 Description of Activity"/>
                             <EditText android:id="@+id/description_psic" style="@style/edit_form_text"/>
