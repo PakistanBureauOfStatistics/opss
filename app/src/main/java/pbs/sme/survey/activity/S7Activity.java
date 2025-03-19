@@ -1,8 +1,10 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,7 @@ public class S7Activity extends FormActivity {
         setDrawer(this,"Section 7:Output/Sales During Last 3 Calender Month and Year 2023-24");
         setParent(this, S8Activity.class);
         scrollView = findViewById(R.id.scrollView);
-
+        init();
         EditText totalEditText = findViewById(R.id.year_700);
 
 //        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
@@ -54,6 +56,43 @@ public class S7Activity extends FormActivity {
             sbtn.requestFocus();
             StaticUtils.getHandler().post(this::saveForm);
         });
+    }
+    private void init() {
+        // Get references to all layouts
+        LinearLayout layout1 = findViewById(R.id.survey1);
+        LinearLayout layout2 = findViewById(R.id.survey2);
+        LinearLayout layout3 = findViewById(R.id.survey3);
+        LinearLayout layout4 = findViewById(R.id.survey4);
+        LinearLayout layout5 = findViewById(R.id.survey5);
+
+        // Hide all layouts initially
+        layout1.setVisibility(View.GONE);
+        layout2.setVisibility(View.GONE);
+        layout3.setVisibility(View.GONE);
+        layout4.setVisibility(View.GONE);
+        layout5.setVisibility(View.GONE);
+
+        // Show the layout based on the surveyid
+        switch (resumeModel.survey_id) {
+            case 1:
+                layout1.setVisibility(View.VISIBLE);  // Show layout1
+                break;
+            case 2:
+                layout2.setVisibility(View.VISIBLE);  // Show layout2
+                break;
+            case 3:
+                layout3.setVisibility(View.VISIBLE);  // Show layout3
+                break;
+            case 4:
+                layout4.setVisibility(View.VISIBLE);  // Show layout4
+                break;
+            case 5:
+                layout5.setVisibility(View.VISIBLE);  // Show layout5
+                break;
+            default:
+                // Optional: Handle cases where surveyid is not in the 1-5 range
+                break;
+        }
     }
     private void saveForm() {
         sbtn.setEnabled(false);
