@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parent_drawer"
+    tools:context="pbs.sme.survey.activity.S3Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:id="@+id/scrollView"
+            style="@style/hr_form_scroll">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_household"/>
+
+                <TextView
+                    style="@style/summary_txt_lg"
+                    android:layout_width="match_parent"
+                    android:textSize="20dp"
+                    android:text="Section-3 : Employment And Employment Cost" />
+
+                <LinearLayout
+                    style="@style/smp_container_hr"
+                    android:id="@+id/content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        style="@style/hliner">
+                         <CheckBox
+                             android:id="@+id/duration1"
+                             style="@style/rd_yesno"
+                             android:enabled="false"
+                             android:text="Last Month" />
+                        <CheckBox
+                            android:id="@+id/duration2"
+                            style="@style/rd_yesno"
+                            android:enabled="false"
+                            android:text="Last Three Months" />
+                        <CheckBox
+                            android:id="@+id/duration3"
+                            style="@style/rd_yesno"
+                            android:enabled="false"
+                            android:text="Last Year 2024-25 (Jul-Jun)" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="301 Working Proprietor"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__301"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="302 Unpaid Family Workers "/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__302"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="303 Doctors"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__303"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="304 Nursing and Paramedical Staff"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__304"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="305 Clerical and Support Staff"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__305"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="306 Service Workers"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__306"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="307 Other Employees (If Any)"/>
+                        <TextView
+                            style="@style/txt_lbl"
+                            android:text="Number of Persons on the Last working day."/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Male" />
+                                <EditText
+                                    android:id="@+id/male__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Female"/>
+                                <EditText
+                                    android:id="@+id/female__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="4"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total"/>
+                                <EditText
+                                    android:id="@+id/persons__307"
+                                    android:enabled="false"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Wages / Salaries"/>
+                                <EditText
+                                    android:id="@+id/wages__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Cash Payments"/>
+                                <EditText
+                                    android:id="@+id/other_cash_payment__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Non-Cash Benefits"/>
+                                <EditText
+                                    android:id="@+id/payment_in_kind__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/layout_form_buttons"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"/>
+    </RelativeLayout>
+
+    <include layout="@layout/layout_nav"/>
+</androidx.drawerlayout.widget.DrawerLayout>
