@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">SME 2025</string>
+    <string name="app_name" translatable="false">OPSS 2025</string>
     <string name="application">SME Application 2024-2025</string>
 
 
@@ -135,6 +135,7 @@
     </string-array>
 
     <string-array name="spn_contact">
+        <item>Select Type</item>
         <item>Mobile</item>
         <item>Landline</item>
         <item>None</item>

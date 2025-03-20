@@ -112,15 +112,17 @@ public class S7Activity extends FormActivity {
             }
 
 
+
             if (m == null) {
-                mUXToolkit.showAlertDialogue("Failed", "ÙØ§Ø±Ù… Ú©Ùˆ Ù…Ø­ÙÙˆØ¸ Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªÛ’ØŒ Ø¨Ø±Ø§Û Ú©Ø±Ù… Ø¢Ú¯Û’ Ø¨Ú‘Ú¾Ù†Û’ Ø³Û’ Ù¾ÛÙ„Û’ ØªÙ…Ø§Ù… ÚˆÛŒÙ¹Ø§ Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚºÛ”Ø®Ø§Ù„ÛŒ Ø§Ù†Ø¯Ø±Ø§Ø¬ ÛŒØ§ ØºÙ„Ø· Ø¬ÙˆØ§Ø¨Ø§Øª Ø¯ÛŒÚ©Ú¾Ù†Û’ Ú©Û’ Ù„ÛŒÛ’ \"OK\" Ù¾Ø± Ú©Ù„Ú© Ú©Ø±ÛŒÚºÛ”", alertForEmptyFieldEvent);
+                mUXToolkit.showAlertDialogue("Failed", "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔", alertForEmptyFieldEvent);
                 sbtn.setEnabled(true);
                 return;
             }
 
+
             list.add(m);
             setCommonFields(m);
-            m.section=4;
+            m.section=7;
             m.code=codeList[i];
 
         }

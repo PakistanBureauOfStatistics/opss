@@ -100,7 +100,6 @@ public class S3Activity extends FormActivity {
 
             list.add(m);
             setCommonFields(m);
-            m.section=3;
             m.code=codeList[i];
 
         }

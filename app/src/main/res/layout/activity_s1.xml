@@ -108,7 +108,7 @@
                             style="@style/q_heading"
                             android:text="Name of the Respondent: "/>
                         <EditText
-                            android:id="@+id/name"
+                            android:id="@+id/respondent_name"
                             style="@style/edit_form_text"/>
                     </LinearLayout>
 
@@ -130,25 +130,25 @@
                             android:weightSum="5">
 
                             <RadioButton
-                                android:id="@+id/designation1"
+                                android:id="@+id/respondent_designation1"
                                 style="@style/rd_yesno"
                                 android:layout_width="116dp"
                                 android:text="Owner" />
 
                             <RadioButton
-                                android:id="@+id/designation2"
+                                android:id="@+id/respondent_designation2"
                                 style="@style/rd_yesno"
                                 android:layout_width="218dp"
                                 android:text="Responsible Family Member" />
 
                             <RadioButton
-                                android:id="@+id/designation3"
+                                android:id="@+id/respondent_designation3"
                                 style="@style/rd_yesno"
                                 android:layout_width="125dp"
                                 android:text="Manager" />
 
                             <RadioButton
-                                android:id="@+id/designation4"
+                                android:id="@+id/respondent_designation4"
                                 style="@style/rd_yesno"
                                 android:layout_width="193dp"
                                 android:text="Other employee" />
@@ -223,7 +223,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Email Address: "/>
+                            android:text="Email Address (optional): "/>
                         <EditText
                             android:id="@+id/email"
                             style="@style/edit_form_text"/>
@@ -233,7 +233,7 @@
                         style="@style/vliner">
                         <TextView
                             style="@style/q_heading"
-                            android:text="Website: "/>
+                            android:text="Website (optional): "/>
                         <EditText
                             android:id="@+id/website"
                             style="@style/edit_form_text"/>

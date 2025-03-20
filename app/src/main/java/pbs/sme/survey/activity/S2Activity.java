@@ -148,11 +148,13 @@ public class S2Activity extends FormActivity {
             throw new RuntimeException(e);
         }
 
+
         if (s2 == null) {
-            mUXToolkit.showAlertDialogue("Failed", "ÙØ§Ø±Ù… Ú©Ùˆ Ù…Ø­ÙÙˆØ¸ Ù†ÛÛŒÚº Ú©Ø± Ø³Ú©ØªÛ’ØŒ Ø¨Ø±Ø§Û Ú©Ø±Ù… Ø¢Ú¯Û’ Ø¨Ú‘Ú¾Ù†Û’ Ø³Û’ Ù¾ÛÙ„Û’ ØªÙ…Ø§Ù… ÚˆÛŒÙ¹Ø§ Ø¯Ø±Ø¬ Ú©Ø±ÛŒÚºÛ”", alertForEmptyFieldEvent);
+            mUXToolkit.showAlertDialogue("Failed", "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔", alertForEmptyFieldEvent);
             sbtn.setEnabled(true);
             return;
         }
+
 
         Long iid = dbHandler.replace(s2);
 

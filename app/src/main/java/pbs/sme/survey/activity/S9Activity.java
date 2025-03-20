@@ -80,7 +80,6 @@ public class S9Activity extends FormActivity {
 
             list.add(m);
             setCommonFields(m);
-            m.section=9;
             m.code=codeList[i];
 
         }

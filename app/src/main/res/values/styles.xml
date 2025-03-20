@@ -233,6 +233,7 @@
     </style>
 
     <style name="s_heading" parent="summary_txt">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_marginTop">15dp</item>
         <item name="android:textSize">16dp</item>
         <item name="android:background">@color/black</item>
