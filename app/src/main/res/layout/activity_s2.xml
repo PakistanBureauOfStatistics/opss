@@ -24,19 +24,12 @@
                     <TextView
                         style="@style/summary_txt_lg"
                         android:layout_width="match_parent"
-                        android:text="SECTION -2"
-                        tools:ignore="TextSizeCheck" />
+                        android:text="SECTION -2" />
 
                     <LinearLayout style="@style/smp_container_hr" android:orientation="vertical">
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.1 Year of Commencement of Activity"/>
-
-                            <EditText
-                                android:id="@+id/year"
-                                style="@style/edit_form_text"
-                                android:digits="0123456789"
-                                android:maxLength="4"
-                                tools:ignore="SpeakableTextPresentCheck" />
+                            <EditText android:id="@+id/year" style="@style/edit_form_text" android:digits="0123456789" android:maxLength="4"/>
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
@@ -47,15 +40,12 @@
                                     android:id="@+id/is_registered1"
                                     style="@style/rd_yesno"
                                     android:layout_width="102dp"
-                                    android:text="Yes"
-                                    tools:ignore="TouchTargetSizeCheck" />
-
+                                    android:text="Yes" />
                                 <RadioButton
                                     android:id="@+id/is_registered2"
                                     style="@style/rd_yesno"
                                     android:layout_width="127dp"
-                                    android:text="No"
-                                    tools:ignore="TouchTargetSizeCheck" />
+                                    android:text="No" />
                             </RadioGroup>
 
 
@@ -75,15 +65,12 @@
                                     android:id="@+id/maintaining_accounts1"
                                     style="@style/rd_yesno"
                                     android:layout_width="132dp"
-                                    android:text="Yes"
-                                    tools:ignore="TouchTargetSizeCheck" />
-
+                                    android:text="Yes" />
                                 <RadioButton
                                     android:id="@+id/maintaining_accounts2"
                                     style="@style/rd_yesno"
                                     android:layout_width="127dp"
-                                    android:text="No"
-                                    tools:ignore="TouchTargetSizeCheck" />
+                                    android:text="No" />
 
                             </RadioGroup>
 
@@ -99,6 +86,7 @@
                             <TextView style="@style/q_heading" android:text="2.4.1 Kind of Major Activity"/>
                             <Spinner android:id="@+id/major_activities" style="@style/spn_form" />
                         </LinearLayout>
+
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.2 Description of Activity"/>
                             <EditText android:id="@+id/description_psic" style="@style/edit_form_text"/>
@@ -106,7 +94,7 @@
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.2 Code (PSIC-2010)"/>
-                            <Spinner android:id="@+id/psic" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                            <EditText android:id="@+id/psic" style="@style/edit_form_text"/>
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
