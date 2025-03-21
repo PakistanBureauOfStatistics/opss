@@ -38,9 +38,11 @@ public class S8Activity extends FormActivity {
 
         for(String property : inputValidationOrder){
             for (String code : codeList) {
-                EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
-                EditText total300 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
-                et.addTextChangedListener(new AdditionTextWatcher(total300));
+                if (!property.equalsIgnoreCase("exp_life")) {
+                    EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                    EditText total300 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
+                    et.addTextChangedListener(new AdditionTextWatcher(total300));
+                }
             }
         }
 

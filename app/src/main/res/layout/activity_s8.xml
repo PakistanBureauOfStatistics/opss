@@ -1400,6 +1400,7 @@
                                     android:digits="0123456789"
                                     android:maxLength="11"
                                     android:lines="1"
+                                    android:enabled="false"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -1416,6 +1417,7 @@
                                     android:maxLength="11"
                                     android:lines="1"
                                     android:hint="Rs."
+                                    android:enabled="false"
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -1431,6 +1433,7 @@
                                     android:maxLength="11"
                                     android:lines="1"
                                     android:hint="Rs."
+                                    android:enabled="false"
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -1450,6 +1453,7 @@
                                     android:maxLength="11"
                                     android:lines="1"
                                     android:hint="Rs."
+                                    android:enabled="false"
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -1464,6 +1468,8 @@
                                     android:digits="0123456789"
                                     android:maxLength="3"
                                     android:lines="1"
+                                    android:enabled="false"
+                                    android:text="0"
                                     android:hint="Life of Asset in years"
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -1480,6 +1486,7 @@
                                     android:lines="1"
                                     android:maxLength="11"
                                     android:hint="Rs."
+                                    android:enabled="false"
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
