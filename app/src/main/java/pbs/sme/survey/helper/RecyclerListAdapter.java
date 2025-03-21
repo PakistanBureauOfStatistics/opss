@@ -84,7 +84,7 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
         holder.setIsRecyclable(false);
         holder.sno.setText(String.format("%04d",a.sno));
         holder.title.setText(a.title);
-        holder.emp.setText(String.valueOf(a.emp_count));
+        holder.emp.setText(String.valueOf(a.survey_id));
         if(a.sync_time!=null){
             ImageViewCompat.setImageTintList(holder.imgtick, ColorStateList.valueOf(context.getColor(R.color.success)));
         }
@@ -119,11 +119,11 @@ public class RecyclerListAdapter extends RecyclerView.Adapter<RecyclerListAdapte
                                 //syncHouse(a,holder.btnView, holder.imgtick);
                                 break;
                             case "Edit":
-                                    Block b = (Block) context.getIntent().getSerializableExtra(Constants.EXTRA.IDX_BLOCK);
-                                    Intent i = new Intent(context, GeoActivity.class);
-                                    i.putExtra(Constants.EXTRA.IDX_BLOCK, b);
-                                    i.putExtra(Constants.EXTRA.IDX_HOUSE, a);
-                                    context.startActivity(i);
+                                Block b = (Block) context.getIntent().getSerializableExtra(Constants.EXTRA.IDX_BLOCK);
+                                Intent i = new Intent(context, GeoActivity.class);
+                                i.putExtra(Constants.EXTRA.IDX_BLOCK, b);
+                                i.putExtra(Constants.EXTRA.IDX_HOUSE, a);
+                                context.startActivity(i);
                                 break;
                             case "Delete":
                                 UXToolkit tk = ((CustomActivity) context).getUXToolkit();

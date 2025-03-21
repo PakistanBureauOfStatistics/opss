@@ -84,7 +84,7 @@
                     style="@style/summary_txt_md"
                     android:layout_weight="1.5"
                     android:gravity="left"
-                    android:text="Emp"
+                    android:text="Survey"
                     android:textColor="@color/white" />
                 <TextView
                     style="@style/summary_txt_md"

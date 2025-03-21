@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import pbs.sme.survey.helper.AdditionTextWatcher;
 import pbs.sme.survey.model.Section47;
 import pbs.sme.survey.R;
 //import pbs.sme.survey.helper.AdditionTextWatcher;
@@ -32,7 +34,7 @@ public class S4Activity extends FormActivity {
             "3430","3431","3432","3433","4426","4427","4428","4429",
             "4430","4431","4432","5426","5427","5428","5429",
             "5430","5431","5432","5433","5434","5435","5436","5437","5438","5439"
-            ,"5440","5441","5442","5443","5444","400"
+            ,"5440","5441","5442","5443","5444","400","1437","2433","2434","2435","2436"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,15 +44,21 @@ public class S4Activity extends FormActivity {
         setParent(this, S5Activity.class);
         scrollView = findViewById(R.id.scrollView);
         init();
-        EditText totalEditText = findViewById(R.id.year_400);
+        EditText totalEditTextyear = findViewById(R.id.year__400);
+        EditText totalEditTextmonth = findViewById(R.id.month__400);
+        AdditionTextWatcher additionTextWatchermonth = new AdditionTextWatcher(totalEditTextmonth);
+        AdditionTextWatcher additionTextWatcheryear= new AdditionTextWatcher(totalEditTextyear);
+        for(int i = 0; i < codeList.length; i++) {
+            EditText et = findViewById(getResources().getIdentifier("month__"+codeList[i], "id", getPackageName()));
+            et.removeTextChangedListener(additionTextWatchermonth);
+            et.addTextChangedListener(additionTextWatchermonth);
+        }
 
-//        AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
-//
-//        for(int i = 0; i < codeList.length-2; i++) {
-//            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));
-//            et.removeTextChangedListener(additionTextWatcher);
-//            et.addTextChangedListener(additionTextWatcher);
-//        }
+        for(int i = 0; i < codeList.length; i++) {
+            EditText et = findViewById(getResources().getIdentifier("year__"+codeList[i], "id", getPackageName()));
+            et.removeTextChangedListener(additionTextWatcheryear);
+            et.addTextChangedListener(additionTextWatcheryear);
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -72,17 +80,46 @@ public class S4Activity extends FormActivity {
         layout3.setVisibility(View.GONE);
         layout4.setVisibility(View.GONE);
         layout5.setVisibility(View.GONE);
+        if(resumeModel.survey_id==1||resumeModel.survey_id==2)
+        {
+            for (int i = 0; i <= codeList.length; i++) {
+                String id = "year__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                et.setVisibility(View.VISIBLE);
+            }
 
+            for (int i = 0; i <= codeList.length; i++) {
+                String id = "month__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                et.setVisibility(View.GONE);
+            }
+        }
+        if(resumeModel.survey_id==3||resumeModel.survey_id==4||resumeModel.survey_id==5)
+        {
+            for (int i = 0; i <= codeList.length; i++) {
+                String id = "year__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                et.setVisibility(View.GONE);
+            }
+
+            for (int i = 0; i <= codeList.length; i++) {
+                String id = "month__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                et.setVisibility(View.VISIBLE);
+            }
+        }
         // Show the layout based on the surveyid
         switch (resumeModel.survey_id) {
             case 1:
                 layout1.setVisibility(View.VISIBLE);  // Show layout1
+
                 break;
             case 2:
                 layout2.setVisibility(View.VISIBLE);  // Show layout2
                 break;
             case 3:
                 layout3.setVisibility(View.VISIBLE);  // Show layout3
+
                 break;
             case 4:
                 layout4.setVisibility(View.VISIBLE);  // Show layout4
@@ -94,6 +131,7 @@ public class S4Activity extends FormActivity {
                 // Optional: Handle cases where surveyid is not in the 1-5 range
                 break;
         }
+
     }
     private void saveForm() {
         sbtn.setEnabled(false);

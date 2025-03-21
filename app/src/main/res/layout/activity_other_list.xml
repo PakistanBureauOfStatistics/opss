@@ -76,25 +76,25 @@
                     android:textColor="@color/white" />
                 <TextView
                     style="@style/summary_txt_md"
-                    android:layout_weight="5"
+                    android:layout_weight="4.5"
                     android:text="Name of the Entity"
                     android:textColor="@color/white"
                     android:gravity="left"/>
                 <TextView
                     style="@style/summary_txt_md"
-                    android:layout_weight="1.5"
+                    android:layout_weight="2"
                     android:gravity="left"
-                    android:text="Emp"
+                    android:text="Survey"
                     android:textColor="@color/white" />
                 <TextView
                     style="@style/summary_txt_md"
-                    android:layout_weight="1.2"
+                    android:layout_weight="1.5"
                     android:text="Status"
                     android:textColor="@color/white" />
                 <View
                     android:layout_width="0dp"
                     android:layout_height="?icon_sm"
-                    android:layout_weight="1.3" />
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
