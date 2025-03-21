@@ -53,22 +53,9 @@ public class S3Activity extends FormActivity {
                 String resourceName = getResources().getResourceEntryName(et.getId());
                 if(resourceName.contains("ale")){
                     EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
-                    EditText persons300 = findViewById(getResources().getIdentifier("persons__", "id", getPackageName()));
+                    EditText persons300 = findViewById(getResources().getIdentifier("persons__300", "id", getPackageName()));
                     et.addTextChangedListener(new AdditionTextWatcher(total));
-                    et.addTextChangedListener(new AdditionTextWatcher(total300));
-                    /*et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-                        @Override
-                        public void onFocusChange(View view, boolean hasFocus) {
-                            if(!hasFocus){
-                                EditText male = findViewById(getResources().getIdentifier("male__"+ code, "id", getPackageName()));
-                                EditText female = findViewById(getResources().getIdentifier("female__"+ code, "id", getPackageName()));
-                                EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
-                                int maleCount = GetInteger(male.getText().toString());
-                                int femaleCount = GetInteger(female.getText().toString());
-                                total.setText(String.valueOf(maleCount + femaleCount));
-                            }
-                        }
-                    });*/
+                    et.addTextChangedListener(new AdditionTextWatcher(persons300));
                 }
             }
         }

@@ -5,9 +5,7 @@ import pk.gov.pbs.database.annotations.SqlPrimaryKey;
 
 public class Section3 extends FormTable {
     public Integer  id;
-    @PrimaryKey
-    @SqlPrimaryKey
-    public Integer section;
+
     @PrimaryKey
     @SqlPrimaryKey
     public Integer survey_id;
@@ -32,7 +30,6 @@ public class Section3 extends FormTable {
     public String toString() {
         return "Section3{" +
                 "id=" + id +
-                ", section=" + section +
                 ", survey_id=" + survey_id +
                 ", code='" + code + '\'' +
                 ", duration=" + duration +

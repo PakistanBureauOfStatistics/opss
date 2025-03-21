@@ -43,14 +43,20 @@
                         <EditText
                             android:id="@+id/student_401"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_401"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_401"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -65,14 +71,20 @@
                         <EditText
                             android:id="@+id/student_402"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_402"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_402"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -87,14 +99,20 @@
                         <EditText
                             android:id="@+id/student_403"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_403"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_403"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -109,14 +127,20 @@
                         <EditText
                             android:id="@+id/student_404"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_404"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_404"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <!-- Expenditure on Stationery and Office Supplies -->
@@ -130,14 +154,20 @@
                         <EditText
                             android:id="@+id/student_405"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_405"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_405"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -152,14 +182,20 @@
                         <EditText
                             android:id="@+id/student_406"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_406"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_406"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -174,14 +210,20 @@
                         <EditText
                             android:id="@+id/student_407"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_407"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_407"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -196,14 +238,20 @@
                         <EditText
                             android:id="@+id/student_408"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_408"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_408"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -218,14 +266,20 @@
                         <EditText
                             android:id="@+id/student_409"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_409"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_409"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -240,14 +294,20 @@
                         <EditText
                             android:id="@+id/student_410"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_410"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_410"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -262,14 +322,20 @@
                         <EditText
                             android:id="@+id/student_411"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_411"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_411"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -284,14 +350,20 @@
                         <EditText
                             android:id="@+id/student_412"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_412"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_412"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <!-- Payment for Repair and Maintenance Work on Computer Equipment -->
@@ -305,14 +377,20 @@
                         <EditText
                             android:id="@+id/student_413"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_413"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_413"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -327,14 +405,20 @@
                         <EditText
                             android:id="@+id/student_414"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_414"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_414"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -349,14 +433,20 @@
                         <EditText
                             android:id="@+id/student_415"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_415"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_415"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -371,14 +461,20 @@
                         <EditText
                             android:id="@+id/student_416"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_416"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_416"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -393,14 +489,20 @@
                         <EditText
                             android:id="@+id/student_417"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_417"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_417"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -415,14 +517,20 @@
                         <EditText
                             android:id="@+id/student_418"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_418"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_418"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -437,14 +545,20 @@
                         <EditText
                             android:id="@+id/student_419"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_419"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_419"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -459,14 +573,20 @@
                         <EditText
                             android:id="@+id/student_420"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_420"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_420"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -481,14 +601,20 @@
                         <EditText
                             android:id="@+id/student_421"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_421"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_421"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -503,14 +629,20 @@
                         <EditText
                             android:id="@+id/student_422"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_422"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_422"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -525,14 +657,20 @@
                         <EditText
                             android:id="@+id/student_423"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_423"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_423"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <LinearLayout
@@ -545,14 +683,20 @@
                         <EditText
                             android:id="@+id/student_424"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_424"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_424"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <LinearLayout
@@ -565,6 +709,8 @@
                         <EditText
                             android:id="@+id/student_425"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_425"
@@ -573,6 +719,8 @@
                         <EditText
                             android:id="@+id/year_425"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -592,14 +740,20 @@
                         <EditText
                             android:id="@+id/student_1426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -614,14 +768,20 @@
                         <EditText
                             android:id="@+id/student_1427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -636,10 +796,14 @@
                         <EditText
                             android:id="@+id/student_1428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1428"
@@ -658,14 +822,20 @@
                         <EditText
                             android:id="@+id/student_1429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -680,14 +850,20 @@
                         <EditText
                             android:id="@+id/student_1430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -702,14 +878,20 @@
                         <EditText
                             android:id="@+id/student_1431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -724,14 +906,20 @@
                         <EditText
                             android:id="@+id/student_1432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <!-- Scientific Journals Subscription Fee -->
@@ -745,14 +933,20 @@
                         <EditText
                             android:id="@+id/student_1433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -767,14 +961,20 @@
                         <EditText
                             android:id="@+id/student_1434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -789,14 +989,20 @@
                         <EditText
                             android:id="@+id/student_1435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -811,14 +1017,20 @@
                         <EditText
                             android:id="@+id/student_1436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -833,14 +1045,20 @@
                         <EditText
                             android:id="@+id/student_1437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_1437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_1437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -861,14 +1079,20 @@
                         <EditText
                             android:id="@+id/student_2426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -883,14 +1107,20 @@
                         <EditText
                             android:id="@+id/student_2427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -905,14 +1135,20 @@
                         <EditText
                             android:id="@+id/student_2428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -927,14 +1163,20 @@
                         <EditText
                             android:id="@+id/student_2429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -949,14 +1191,20 @@
                         <EditText
                             android:id="@+id/student_2430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -971,14 +1219,20 @@
                         <EditText
                             android:id="@+id/student_2431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -993,14 +1247,20 @@
                         <EditText
                             android:id="@+id/student_2432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1015,14 +1275,20 @@
                         <EditText
                             android:id="@+id/student_2433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1037,14 +1303,20 @@
                         <EditText
                             android:id="@+id/student_2434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1059,14 +1331,20 @@
                         <EditText
                             android:id="@+id/student_2435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1081,14 +1359,20 @@
                         <EditText
                             android:id="@+id/student_2436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_2436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_2436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1109,14 +1393,20 @@
                         <EditText
                             android:id="@+id/student_3426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1131,14 +1421,20 @@
                         <EditText
                             android:id="@+id/student_3427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1153,14 +1449,20 @@
                         <EditText
                             android:id="@+id/student_3428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1175,14 +1477,20 @@
                         <EditText
                             android:id="@+id/student_3429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1197,14 +1505,20 @@
                         <EditText
                             android:id="@+id/student_3430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1219,14 +1533,20 @@
                         <EditText
                             android:id="@+id/student_3431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1241,14 +1561,20 @@
                         <EditText
                             android:id="@+id/student_3432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1263,14 +1589,20 @@
                         <EditText
                             android:id="@+id/student_3433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_3433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_3433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1291,14 +1623,20 @@
                         <EditText
                             android:id="@+id/student_4426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1313,14 +1651,20 @@
                         <EditText
                             android:id="@+id/student_4427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1335,14 +1679,20 @@
                         <EditText
                             android:id="@+id/student_4428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1357,14 +1707,20 @@
                         <EditText
                             android:id="@+id/student_4429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1379,14 +1735,20 @@
                         <EditText
                             android:id="@+id/student_4430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1401,14 +1763,20 @@
                         <EditText
                             android:id="@+id/student_4431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1423,14 +1791,20 @@
                         <EditText
                             android:id="@+id/student_4432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_4432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_4432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1451,14 +1825,20 @@
                         <EditText
                             android:id="@+id/student_5426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5426"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1473,14 +1853,20 @@
                         <EditText
                             android:id="@+id/student_5427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5427"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1495,14 +1881,20 @@
                         <EditText
                             android:id="@+id/student_5428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5428"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1517,14 +1909,20 @@
                         <EditText
                             android:id="@+id/student_5429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5429"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1539,14 +1937,20 @@
                         <EditText
                             android:id="@+id/student_5430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5430"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1561,14 +1965,20 @@
                         <EditText
                             android:id="@+id/student_5431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5431"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1583,14 +1993,20 @@
                         <EditText
                             android:id="@+id/student_5432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5432"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1605,14 +2021,20 @@
                         <EditText
                             android:id="@+id/student_5433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5433"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1627,14 +2049,20 @@
                         <EditText
                             android:id="@+id/student_5434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5434"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1649,14 +2077,20 @@
                         <EditText
                             android:id="@+id/student_5435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5435"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1671,14 +2105,20 @@
                         <EditText
                             android:id="@+id/student_5436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5436"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <!-- All Other Food Including Grocery -->
@@ -1692,14 +2132,20 @@
                         <EditText
                             android:id="@+id/student_5437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5437"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1714,14 +2160,20 @@
                         <EditText
                             android:id="@+id/student_5438"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5438"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5438"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1736,14 +2188,20 @@
                         <EditText
                             android:id="@+id/student_5439"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5439"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5439"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1758,14 +2216,20 @@
                         <EditText
                             android:id="@+id/student_5440"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5440"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5440"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1780,14 +2244,20 @@
                         <EditText
                             android:id="@+id/student_5441"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5441"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5441"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1802,14 +2272,20 @@
                         <EditText
                             android:id="@+id/student_5442"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5442"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5442"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1824,14 +2300,20 @@
                         <EditText
                             android:id="@+id/student_5443"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5443"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5443"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
 
@@ -1846,14 +2328,20 @@
                         <EditText
                             android:id="@+id/student_5444"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_5444"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_5444"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                     <LinearLayout
@@ -1866,14 +2354,20 @@
                         <EditText
                             android:id="@+id/student_400"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month_400"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year_400"
                             android:layout_weight="2"
+                            android:inputType="number"
+                            android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
                 </LinearLayout>

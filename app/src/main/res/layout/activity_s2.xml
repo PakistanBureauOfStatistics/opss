@@ -29,7 +29,7 @@
                     <LinearLayout style="@style/smp_container_hr" android:orientation="vertical">
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.1 Year of Commencement of Activity"/>
-                            <EditText android:id="@+id/year" style="@style/edit_form_text" android:digits="0123456789" android:maxLength="4"/>
+                            <EditText android:id="@+id/year" style="@style/edit_form_text" android:digits="0123456789" android:inputType="number" android:maxLength="4"/>
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
@@ -154,9 +154,9 @@
                         <LinearLayout android:id="@+id/l_food_services" style="@style/vliner" android:visibility="gone">
                             <TextView style="@style/q_heading" android:text="2.9 Who arranges food and laundry services in hostel?"/>
                             <RadioGroup android:id="@+id/food_laundry_other" style="@style/rdg" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                                <RadioButton android:id="@+id/food_org" style="@style/rd_yesno" android:text="Organization itself"
+                                <RadioButton android:id="@+id/food_laundry_other1" style="@style/rd_yesno" android:text="Organization itself"
                                     android:layout_width="307dp" />
-                                <RadioButton android:id="@+id/food_outsourced" style="@style/rd_yesno" android:text="Outsourced to other firm"
+                                <RadioButton android:id="@+id/food_laundry_other2" style="@style/rd_yesno" android:text="Outsourced to other firm"
                                     android:layout_width="307dp" />
                             </RadioGroup>
                         </LinearLayout>

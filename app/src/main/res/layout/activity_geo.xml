@@ -77,14 +77,18 @@
                         style="@style/summary_txt_md"
                         android:layout_width="wrap_content"
                         android:text="Select  the  Required  Survey Name"
-                        android:textColor="?s_color"
-                    android:background="@drawable/spinner_container">
+                        android:textColor="?s_color">
                     </TextView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/spinner_container">
+                        <Spinner
+                            android:id="@+id/survey_id"
+                            style="@style/spn_form"
+                            android:entries="@array/spn_survey_type"/>
+                    </RelativeLayout>
 
-                    <Spinner
-                        android:id="@+id/survey_id"
-                        style="@style/spn_form"
-                        android:entries="@array/spn_survey_type"/>
 
                 </LinearLayout>
 
