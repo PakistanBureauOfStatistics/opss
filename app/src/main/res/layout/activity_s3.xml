@@ -113,7 +113,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -128,7 +128,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -143,7 +143,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -220,7 +220,7 @@
                                     android:enabled="false"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -237,7 +237,7 @@
                                     android:enabled="false"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -254,7 +254,7 @@
                                     android:enabled="false"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -329,7 +329,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -344,7 +344,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -359,7 +359,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -435,7 +435,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -450,7 +450,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -465,7 +465,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -541,7 +541,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -556,7 +556,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -571,7 +571,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -647,7 +647,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -662,7 +662,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -677,7 +677,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -753,7 +753,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -768,7 +768,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -783,7 +783,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -858,7 +858,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -873,7 +873,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -888,7 +888,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:maxLength="11"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
@@ -962,7 +962,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:enabled="false"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -977,7 +977,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:enabled="false"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                             <LinearLayout
@@ -992,7 +992,7 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:enabled="false"
-                                    android:hint="Rs. in '000'"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
