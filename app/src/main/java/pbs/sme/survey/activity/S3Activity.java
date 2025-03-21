@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pbs.sme.survey.R;
+import pbs.sme.survey.helper.AdditionTextWatcher;
 import pbs.sme.survey.model.Section3;
 import pk.gov.pbs.utils.StaticUtils;
 
@@ -25,7 +26,7 @@ public class S3Activity extends FormActivity {
     };
 
     private final String[] codeList= new String[]{
-            "301","302","303","304","305","306","307"//,"300"
+            "301","302","303","304","305","306","307", "308"//,"300"
     };
 
     @Override
@@ -47,9 +48,15 @@ public class S3Activity extends FormActivity {
         for(String property : inputValidationOrder){
             for (String code : codeList) {
                 EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                EditText total300 = findViewById(getResources().getIdentifier(property+"__300", "id", getPackageName()));
+                et.addTextChangedListener(new AdditionTextWatcher(total300));
                 String resourceName = getResources().getResourceEntryName(et.getId());
                 if(resourceName.contains("ale")){
-                    et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                    EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
+                    EditText persons300 = findViewById(getResources().getIdentifier("persons__", "id", getPackageName()));
+                    et.addTextChangedListener(new AdditionTextWatcher(total));
+                    et.addTextChangedListener(new AdditionTextWatcher(total300));
+                    /*et.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                         @Override
                         public void onFocusChange(View view, boolean hasFocus) {
                             if(!hasFocus){
@@ -61,7 +68,7 @@ public class S3Activity extends FormActivity {
                                 total.setText(String.valueOf(maleCount + femaleCount));
                             }
                         }
-                    });
+                    });*/
                 }
             }
         }
@@ -100,7 +107,6 @@ public class S3Activity extends FormActivity {
 
             list.add(m);
             setCommonFields(m);
-            m.section=3;
             m.code=codeList[i];
 
         }

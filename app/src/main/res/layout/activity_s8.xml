@@ -26,6 +26,7 @@
                     <TextView
                         style="@style/summary_txt_lg"
                         android:layout_width="match_parent"
+                        android:textSize="20dp"
                         android:text="SECTION-8: GROSS FIXED CAPITAL FORMATION DURING 2023-24" />
 
                     <LinearLayout
@@ -1379,7 +1380,110 @@
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-
+                    <LinearLayout
+                        style="@style/vliner">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="800 Total"/>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Acquisition"/>
+                                <EditText
+                                    android:id="@+id/acq_fixed_assets__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:lines="1"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Addition"/>
+                                <EditText
+                                    android:id="@+id/major_improvements__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:lines="1"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Sales"/>
+                                <EditText
+                                    android:id="@+id/sales_proceeds__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:lines="1"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Own Account Capital"/>
+                                <EditText
+                                    android:id="@+id/own_account_capital__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:lines="1"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Expected Life of Asset"/>
+                                <EditText
+                                    android:id="@+id/exp_life__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="3"
+                                    android:lines="1"
+                                    android:hint="Life of Asset in years"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Scrap Value of Asset"/>
+                                <EditText
+                                    android:id="@+id/scrap_value__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:lines="1"
+                                    android:maxLength="11"
+                                    android:hint="Rs. in '000'"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
 
                     <include layout="@layout/layout_form_buttons" />
 

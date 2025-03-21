@@ -80,7 +80,6 @@ public class S9Activity extends FormActivity {
 
             list.add(m);
             setCommonFields(m);
-            m.section=9;
             m.code=codeList[i];
 
         }
@@ -114,6 +113,12 @@ public class S9Activity extends FormActivity {
         for(Section9 s: modelDatabase){
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
+        EditText et901 = findViewById(getResources().getIdentifier("rupees__901", "id", getPackageName()));
+        EditText et902 = findViewById(getResources().getIdentifier("rupees__902", "id", getPackageName()));
+        EditText total = findViewById(getResources().getIdentifier("rupees__900", "id", getPackageName()));
+        int Count901 = GetInteger(et901.getText().toString());
+        int Count902 = GetInteger(et902.getText().toString());
+        total.setText(String.valueOf(Count901 - Count902));
     }
     private int GetInteger(String txt){
         try {

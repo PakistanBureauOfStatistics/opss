@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import pbs.sme.survey.R;
+import pbs.sme.survey.helper.AdditionTextWatcher;
 import pbs.sme.survey.model.Section8;
 import pbs.sme.survey.model.Section8;
 import pk.gov.pbs.utils.StaticUtils;
@@ -34,6 +35,14 @@ public class S8Activity extends FormActivity {
         setDrawer(this,"Section 8: GROSS FIXED CAPITAL FORMATION");
         setParent(this, S9Activity.class);
         scrollView = findViewById(R.id.scrollView);
+
+        for(String property : inputValidationOrder){
+            for (String code : codeList) {
+                EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                EditText total300 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
+                et.addTextChangedListener(new AdditionTextWatcher(total300));
+            }
+        }
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -67,7 +76,6 @@ public class S8Activity extends FormActivity {
 
             list.add(m);
             setCommonFields(m);
-            m.section=8;
             m.code=codeList[i];
 
         }
