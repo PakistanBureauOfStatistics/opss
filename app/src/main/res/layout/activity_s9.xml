@@ -78,8 +78,7 @@
                         android:id="@+id/rupees__901"
                         style="@style/edit_form_num"
                         android:maxLength="10"
-                        android:layout_weight="3"
-                        android:hint="Rs." />
+                        android:layout_weight="3"></EditText>
                 </LinearLayout>
                 <LinearLayout
                     style="@style/hliner"
@@ -99,11 +98,12 @@
                         style="@style/edit_form_num"
                         android:maxLength="10"
                         android:layout_weight="3"
-                        android:hint="Rs." />
+                        android:hint="Rs. in '000'" />
                 </LinearLayout>
                 <LinearLayout
                     style="@style/hliner"
-                    android:weightSum="10">
+                    android:weightSum="10"
+                    tools:ignore="ExtraText">
                     <TextView
                         style="@style/summary_txt_md"
                         android:layout_weight="1"
@@ -120,7 +120,8 @@
                         android:maxLength="10"
                         android:enabled="false"
                         android:layout_weight="3"
-                        android:hint="Rs." />
+                        android:hint="Rs. in '000'" />
+                        />
                 </LinearLayout>
                 <include layout="@layout/layout_form_buttons" />
             </LinearLayout>

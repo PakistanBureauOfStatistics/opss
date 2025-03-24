@@ -9,6 +9,8 @@ public class Section3 extends FormTable {
     @PrimaryKey
     @SqlPrimaryKey
     public Integer survey_id;
+    @PrimaryKey
+    @SqlPrimaryKey
     public String code;
     public Integer duration;
     public Integer male;

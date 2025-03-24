@@ -29,8 +29,13 @@
                     <LinearLayout style="@style/smp_container_hr" android:orientation="vertical">
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.1 Year of Commencement of Activity"/>
-                            <EditText android:id="@+id/year" style="@style/edit_form_text" android:digits="0123456789" android:inputType="number" android:maxLength="4"/>
+                            <Spinner
+                                android:id="@+id/year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dropdown"/>
                         </LinearLayout>
+
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.2 Is the establishment registered with any government agency/autonomous body?"/>
@@ -77,24 +82,33 @@
 
                         </LinearLayout>
 
-                        <LinearLayout style="@style/vliner">
-                            <TextView style="@style/q_heading" android:text="2.4.1 Select Survey Type"/>
-                            <Spinner android:id="@+id/survey_type" style="@style/spn_form" android:entries="@array/spn_survey_type"/>
-                        </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.1 Kind of Major Activity"/>
-                            <Spinner android:id="@+id/major_activities" style="@style/spn_form" />
+                            <RelativeLayout
+                                style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
+                                <Spinner android:id="@+id/major_activities" style="@style/spn_form" />
+                            </RelativeLayout>
+
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.2 Description of Activity"/>
-                            <EditText android:id="@+id/description_psic" style="@style/edit_form_text"/>
-                        </LinearLayout>
+                            <RelativeLayout
+                                style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
+                                <Spinner android:id="@+id/description_psic" style="@style/spn_form" />
+                            </RelativeLayout>
+                             </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
-                            <TextView style="@style/q_heading" android:text="2.4.2 Code (PSIC-2010)"/>
-                            <EditText android:id="@+id/psic" style="@style/edit_form_text"/>
+                            <TextView style="@style/q_heading" android:text="2.4.3 Code (PSIC-2010)"/>
+                            <EditText
+                                android:id="@+id/psic"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusable="false"
+                                android:inputType="none"
+                                android:padding="8dp"/>
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">

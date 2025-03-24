@@ -29,26 +29,13 @@
                     android:orientation="vertical">
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Building of Establishment:"/>
-                        <RadioGroup android:id="@+id/building_establishment" style="@style/rdg" android:layout_width="match_parent" android:weightSum="5">
-                            <RadioButton android:id="@+id/building_establishment1" style="@style/rd_yesno" android:text="Owned"/>
-                            <RadioButton android:id="@+id/building_establishment2" style="@style/rd_yesno" android:text="Leased"/>
-                            <RadioButton android:id="@+id/building_establishment3" style="@style/rd_yesno" android:text="Rented"/>
-
-                            <RadioButton
-                                android:id="@+id/building4"
-                                style="@style/rd_yesno"
-                                android:layout_width="120dp"
-                                android:layout_height="50dp"
-                                android:text="Temporary(Khoka etc.)" />
-
-                            <RadioButton
-                                android:id="@+id/building5"
-                                style="@style/rd_yesno"
-                                android:layout_width="154dp"
-                                android:layout_height="match_parent"
-                                android:text="Movable(Street Vendor)" />
-                        </RadioGroup>
+                        <Spinner
+                            android:id="@+id/building_establishment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"/>
                     </LinearLayout>
+
                     <LinearLayout
                         style="@style/vliner">
                         <TextView
@@ -120,41 +107,16 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        style="@style/vliner">
+                    <LinearLayout style="@style/vliner">
+                        <TextView style="@style/q_heading" android:text="Respondent Designation:"/>
 
-                        <RadioGroup
+                        <Spinner
                             android:id="@+id/respondent_designation"
-                            style="@style/rdg"
                             android:layout_width="match_parent"
-                            android:weightSum="5">
-
-                            <RadioButton
-                                android:id="@+id/respondent_designation1"
-                                style="@style/rd_yesno"
-                                android:layout_width="116dp"
-                                android:text="Owner" />
-
-                            <RadioButton
-                                android:id="@+id/respondent_designation2"
-                                style="@style/rd_yesno"
-                                android:layout_width="218dp"
-                                android:text="Responsible Family Member" />
-
-                            <RadioButton
-                                android:id="@+id/respondent_designation3"
-                                style="@style/rd_yesno"
-                                android:layout_width="125dp"
-                                android:text="Manager" />
-
-                            <RadioButton
-                                android:id="@+id/respondent_designation4"
-                                style="@style/rd_yesno"
-                                android:layout_width="193dp"
-                                android:text="Other employee" />
-
-                        </RadioGroup>
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"/>
                     </LinearLayout>
+
 
                     <LinearLayout
                         style="@style/vliner">

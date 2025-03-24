@@ -29,11 +29,11 @@
                     android:orientation="vertical">
                     <LinearLayout
                         style="@style/hliner">
-                         <CheckBox
-                             android:id="@+id/duration1"
-                             style="@style/rd_yesno"
-                             android:enabled="false"
-                             android:text="Last Month" />
+                        <CheckBox
+                            android:id="@+id/duration1"
+                            style="@style/rd_yesno"
+                            android:enabled="false"
+                            android:text="Last Month" />
                         <CheckBox
                             android:id="@+id/duration2"
                             style="@style/rd_yesno"
