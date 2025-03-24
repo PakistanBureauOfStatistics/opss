@@ -10,8 +10,13 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import pbs.sme.survey.R;
 import pbs.sme.survey.model.Section12;
@@ -20,12 +25,16 @@ import pk.gov.pbs.utils.StaticUtils;
 public class S2Activity extends FormActivity {
 
     private Button sbtn;
+    private Map<String, List<String>> descriptionMap = new HashMap<>();
+    private Map<String, String> psicCodeMap = new HashMap<>();
     private Section12 section2_database;
     private RadioGroup is_registered, is_hostel_available;
-    private Spinner survey_type, major_activity, organization_type;
+    private Spinner major_activity;
+    private Spinner organization_type;
     private LinearLayout l_seasonal;
-    private EditText establishment_months;
+    private EditText establishment_months,psic;
     private CheckBox[] monthCheckboxes;
+    private Spinner description_psic;
     private final String[] inputValidationOrder = new String[]{
             "year", "is_registered", "agency", "maintaining_accounts", "type_org", "description_psic", "psic", "hostel_facilty",
             "food_laundry_other", "major_activities", "months"
@@ -39,6 +48,36 @@ public class S2Activity extends FormActivity {
         setDrawer(this, "Section 2");
         setParent(this, S3Activity.class);
         scrollView = findViewById(R.id.scrollView);
+
+        Spinner yearSpinner = findViewById(R.id.year);
+
+// Create an array list for years (1947 to 2025)
+        List<String> years = new ArrayList<>();
+        for (int i = 1947; i <= 2025; i++) {
+            years.add(String.valueOf(i));
+        }
+        // Set up the adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, years);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        yearSpinner.setAdapter(adapter);
+
+// Handle selection
+        yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedYear = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Selected Year: " + selectedYear, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        major_activity = findViewById(R.id.major_activities);
+        description_psic = findViewById(R.id.description_psic);
+        psic = findViewById(R.id.psic);
+        updateMajorActivitySpinner(resumeModel.survey_id);
+        updateDescriptionSpinner();
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -56,8 +95,6 @@ public class S2Activity extends FormActivity {
             findViewById(R.id.l_food_services).setVisibility(checkedId == R.id.hostel_facilty1 ? View.VISIBLE : View.GONE);
         });
 
-        survey_type = findViewById(R.id.survey_type);
-        major_activity = findViewById(R.id.major_activities);
         organization_type = findViewById(R.id.type_org);
         l_seasonal = findViewById(R.id.l_seasonal);
         establishment_months = findViewById(R.id.establishment_months);
@@ -73,11 +110,82 @@ public class S2Activity extends FormActivity {
             monthCheckbox.setOnCheckedChangeListener((buttonView, isChecked) -> updateMonthCount());
         }
 
-        survey_type.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+    }
+
+
+    private void updateDescriptionSpinner() {
+        if (major_activity == null || description_psic == null) return;
+
+        int surveyId = resumeModel.survey_id; // Retrieve survey ID
+        int arrayId;
+        Map<String, String> psicCodeMap = new HashMap<>();
+
+        switch (surveyId) {
+            case 1: // Education
+                arrayId = R.array.education_descriptions;
+                String[] educationCodes = getResources().getStringArray(R.array.education_codes);
+                String[] educationDescriptions = getResources().getStringArray(R.array.education_descriptions);
+                for (int i = 0; i < educationDescriptions.length; i++) {
+                    psicCodeMap.put(educationDescriptions[i], educationCodes[i]);
+                }
+                break;
+
+            case 2: // Health
+                arrayId = R.array.health_activity_descriptions;
+                String[] healthCodes = getResources().getStringArray(R.array.health_activity_codes);
+                String[] healthDescriptions = getResources().getStringArray(R.array.health_activity_descriptions);
+                for (int i = 0; i < healthDescriptions.length; i++) {
+                    psicCodeMap.put(healthDescriptions[i], healthCodes[i]);
+                }
+                break;
+
+            case 3: // Publishing
+                arrayId = R.array.publishing_descriptions;
+                String[] publishingCodes = getResources().getStringArray(R.array.publishing_psic_codes);
+                String[] publishingDescriptions = getResources().getStringArray(R.array.publishing_descriptions);
+                for (int i = 0; i < publishingDescriptions.length; i++) {
+                    psicCodeMap.put(publishingDescriptions[i], publishingCodes[i]);
+                }
+                break;
+
+            case 4: // Personal Services
+                arrayId = R.array.other_personal_services_descriptions;
+                String[] personalCodes = getResources().getStringArray(R.array.other_personal_services_codes);
+                String[] personalDescriptions = getResources().getStringArray(R.array.other_personal_services_descriptions);
+                for (int i = 0; i < personalDescriptions.length; i++) {
+                    psicCodeMap.put(personalDescriptions[i], personalCodes[i]);
+                }
+                break;
+
+            case 5: // Food & Accommodation
+                arrayId = R.array.accommodation_food_descriptions;
+                String[] foodCodes = getResources().getStringArray(R.array.accommodation_food_codes);
+                String[] foodDescriptions = getResources().getStringArray(R.array.accommodation_food_descriptions);
+                for (int i = 0; i < foodDescriptions.length; i++) {
+                    psicCodeMap.put(foodDescriptions[i], foodCodes[i]);
+                }
+                break;
+
+            default:
+                arrayId = R.array.education_descriptions; // Default case
+        }
+
+        // Fetch descriptions from arrays.xml
+        String[] descriptions = getResources().getStringArray(arrayId);
+
+        runOnUiThread(() -> {
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, descriptions);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            description_psic.setAdapter(adapter);
+        });
+
+        // Set PSIC code based on selected description
+        description_psic.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                updateMajorActivitySpinner(position);
-                toggleSeasonalVisibility(position);
+                String selectedDescription = parent.getItemAtPosition(position).toString();
+                psic.setText(psicCodeMap.getOrDefault(selectedDescription, ""));
             }
 
             @Override
@@ -85,35 +193,39 @@ public class S2Activity extends FormActivity {
         });
     }
 
+
+
     private void updateMajorActivitySpinner(int surveyPosition) {
+
         int arrayId;
         switch (surveyPosition) {
-            case 0:
+            case 1:
                 arrayId = R.array.spn_major_activity_education;
                 break;
-            case 1:
+            case 2:
                 arrayId = R.array.spn_major_activity_health;
                 break;
-            case 2:
+            case 3:
                 arrayId = R.array.spn_major_activity_publishing;
                 break;
-            case 3:
+            case 4:
                 arrayId = R.array.spn_major_activity_personal_services;
                 break;
-            case 4:
+            case 5:
                 arrayId = R.array.spn_major_activity_accommodation_food;
                 break;
             default:
                 arrayId = R.array.spn_major_activity_education;
         }
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, arrayId, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, getResources().getStringArray(arrayId));
+
         major_activity.setAdapter(adapter);
     }
 
     private void toggleSeasonalVisibility(int surveyPosition) {
-        if (surveyPosition == 3 || surveyPosition == 4 || surveyPosition == 2) {
+        if (surveyPosition == 3 || surveyPosition == 4 || surveyPosition == 5) {
             l_seasonal.setVisibility(View.VISIBLE);
         } else {
             l_seasonal.setVisibility(View.GONE);

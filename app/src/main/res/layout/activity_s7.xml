@@ -24,9 +24,9 @@
                 <include layout="@layout/layout_household"/>
 
                 <TextView
-                    style="@style/summary_txt_lg"
+                    style="@style/s_heading"
                     android:layout_width="match_parent"
-                    android:text="SECTION-7: OUTPUT/SALES DURING LAST 3 MONTHS AND LAST YEAR i.e. 2023-24."/>
+                    android:text="SECTION-7:  OUTPUT/SALES DURING LAST 3 CALENDAR MONTHS AND LAST YEAR i.e. 2023-24 (value in â€˜000â€™ Rs."/>
 
                 <LinearLayout
                     style="@style/smp_container_hr"
@@ -38,16 +38,31 @@
                         android:background="?s_color">
                         <TextView
                             style="@style/summary_eng"
-                            android:layout_weight="3"
+                            android:layout_weight="1.2"
                             android:textColor="@color/white"
-                            android:text="Code | Description"
-                            android:gravity="left" />
+                            android:text="Code"
+                            android:gravity="center_horizontal"/>
                         <TextView
                             style="@style/summary_eng"
-                            android:layout_weight="6"
-                            android:text="No of Students |  Last 3 months |  2023-24"
+                            android:layout_weight="2.5"
+                            android:text="Description"
                             android:textColor="@color/white"
-                            android:gravity="center_horizontal"/>
+                            android:gravity="left"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="2.3"
+                            android:textColor="@color/white"
+                            android:text="Number of Students"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="2.2"
+                            android:textColor="@color/white"
+                            android:text="Last 3 Calender Months"/>
+                        <TextView
+                            style="@style/summary_eng"
+                            android:layout_weight="1.8"
+                            android:textColor="@color/white"
+                            android:text="2023-24"/>
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/common"
@@ -56,217 +71,249 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="701" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="701.Income from scrap, electricity, waste product etc." />
+                                android:layout_weight="2.5"
+                                android:text="Income from scrap, electricity, waste product etc." />
                             <EditText
-                                android:id="@+id/student_701"
-                                android:layout_weight="2"
+                                android:id="@+id/student__701"
+                                android:layout_weight="2.3"
                                 android:inputType="number"
                                 android:digits="0123456789"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_701"
-                                android:layout_weight="2"
+                                android:id="@+id/month__701"
+                                android:layout_weight="2.2"
                                 android:inputType="number"
                                 android:digits="0123456789"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_701"
+                                android:id="@+id/year__701"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="702" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="702.Professional fees received (e.g. accounting, management, engineering, legal services, research and development etc.)" />
+                                android:layout_weight="2.5"
+                                android:text="Professional fees received (e.g. accounting, management, engineering, legal services, research and development etc.)" />
                             <EditText
-                                android:id="@+id/student_702"
+                                android:id="@+id/student__702"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_702"
+                                android:id="@+id/month__702"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_702"
+                                android:id="@+id/year__702"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="703" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="703.Rental income received (Land, residential buildings, non-residential buildings, transport equipment, machinery and equipment)" />
+                                android:layout_weight="2.5"
+                                android:text="Rental income received (Land, residential buildings, non-residential buildings, transport equipment, machinery and equipment)" />
                             <EditText
-                                android:id="@+id/student_703"
+                                android:id="@+id/student__703"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_703"
+                                android:id="@+id/month__703"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_703"
+                                android:id="@+id/year__703"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="704" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="704.Non-operating income (Interest, dividend, gain from resale of assets), gain from foreign exchange, corporate sponsorship," />
+                                android:layout_weight="2.5"
+                                android:text="Non-operating income (Interest, dividend, gain from resale of assets), gain from foreign exchange, corporate sponsorship," />
                             <EditText
-                                android:id="@+id/student_704"
+                                android:id="@+id/student__704"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_704"
+                                android:id="@+id/month__704"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_704"
+                                android:id="@+id/year__704"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="705" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="705.Royalties, copyrights, licensing, and franchise fees" />
+                                android:layout_weight="2.5"
+                                android:text="Royalties, copyrights, licensing, and franchise fees" />
                             <EditText
-                                android:id="@+id/student_705"
+                                android:id="@+id/student__705"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_705"
+                                android:id="@+id/month__705"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_705"
+                                android:id="@+id/year__705"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="706" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="706.Remittances, budget grants / subsidies received" />
+                                android:layout_weight="2.5"
+                                android:text="Remittances, budget grants / subsidies received" />
                             <EditText
-                                android:id="@+id/student_706"
+                                android:id="@+id/student__706"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_706"
+                                android:id="@+id/month__706"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_706"
+                                android:id="@+id/year__706"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="707" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="707.Value of sales from goods/material that is purchased for resale without further processing" />
+                                android:layout_weight="2.5"
+                                android:text="Value of sales from goods/material that is purchased for resale without further processing" />
                             <EditText
-                                android:id="@+id/student_707"
+                                android:id="@+id/student__707"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_707"
+                                android:id="@+id/month__707"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_707"
+                                android:id="@+id/year__707"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="708" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="708.Other Income (Please Specify)" />
+                                android:layout_weight="2.5"
+                                android:text="Other Income (Please Specify)" />
                             <EditText
-                                android:id="@+id/student_708"
+                                android:id="@+id/student__708"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_708"
+                                android:id="@+id/month__708"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_708"
+                                android:id="@+id/year__708"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
@@ -280,244 +327,280 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="715" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="715.Pre-primary education services including earning from day care activities" />
+                                android:layout_weight="2.5"
+                                android:text="Pre-primary education services including earning from day care activities" />
                             <EditText
-                                android:id="@+id/student_1715"
+                                android:id="@+id/student__1715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1715"
+                                android:id="@+id/month__1715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1715"
+                                android:id="@+id/year__1715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="716" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="716.Primary education services" />
+                                android:layout_weight="2.5"
+                                android:text="Primary education services" />
                             <EditText
-                                android:id="@+id/student_1716"
+                                android:id="@+id/student__1716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1716"
+                                android:id="@+id/month__1716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1716"
+                                android:id="@+id/year__1716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="717" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="717.Lower secondary (middle) education services (general, technical and vocational)" />
+                                android:layout_weight="2.5"
+                                android:text="Lower secondary (middle) education services (general, technical and vocational)" />
                             <EditText
-                                android:id="@+id/student_1717"
+                                android:id="@+id/student__1717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1717"
+                                android:id="@+id/month__1717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1717"
+                                android:id="@+id/year__1717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="718" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="718.Upper secondary (matric) education services (general, technical and vocational)" />
+                                android:layout_weight="2.5"
+                                android:text="Upper secondary (matric) education services (general, technical and vocational)" />
                             <EditText
-                                android:id="@+id/student_1718"
+                                android:id="@+id/student__1718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1718"
+                                android:id="@+id/month__1718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1718"
+                                android:id="@+id/year__1718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="719" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="719.Post-secondary (Intermediate) non-tertiary education services" />
+                                android:layout_weight="2.5"
+                                android:text="Post-secondary (Intermediate) non-tertiary education services" />
                             <EditText
-                                android:id="@+id/student_1719"
+                                android:id="@+id/student__1719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1719"
+                                android:id="@+id/month__1719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1719"
+                                android:id="@+id/year__1719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="720" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="720.Tertiary (graduation and above) education services" />
+                                android:layout_weight="2.5"
+                                android:text="Tertiary (graduation and above) education services" />
                             <EditText
-                                android:id="@+id/student_1720"
+                                android:id="@+id/student__1720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1720"
+                                android:id="@+id/month__1720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1720"
+                                android:id="@+id/year__1720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
-                            <TextView
-                                style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="721.Other education and training services and educational support services (training, culture, sports etc.)" />
-                            <EditText
-                                android:id="@+id/student_1721"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/month_1721"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/year_1721"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="721" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="722.Income from hostels" />
+                                android:layout_weight="2.5"
+                                android:text="Other education and training services and educational support services (training, culture, sports etc.)" />
                             <EditText
-                                android:id="@+id/student_1722"
+                                android:id="@+id/student__1721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1722"
+                                android:id="@+id/month__1721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1722"
+                                android:id="@+id/year__1721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="722" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="723.Income from provision of books, notebooks, uniforms to students" />
+                                android:layout_weight="2.5"
+                                android:text="Income from hostels" />
                             <EditText
-                                android:id="@+id/student_1723"
+                                android:id="@+id/student__1722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_1723"
+                                android:id="@+id/month__1722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_1723"
+                                android:id="@+id/year__1722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
+                                style="@style/edit_table"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="723" />
+                            <TextView
+                                style="@style/summary_eng"
+                                android:layout_weight="2.5"
+                                android:text="Income from provision of books, notebooks, uniforms to students" />
+                            <EditText
+                                android:id="@+id/student__1723"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="2.3"
+                                style="@style/edit_table"/>
+                            <EditText
+                                android:id="@+id/month__1723"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="2.2"
+                                style="@style/edit_table"/>
+                            <EditText
+                                android:id="@+id/year__1723"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
@@ -529,272 +612,312 @@
                         android:layout_height="wrap_content">
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="715" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="715.Inpatient services (Admitted)" />
+                                android:layout_weight="2.5"
+                                android:text="Inpatient services (Admitted)" />
                             <EditText
-                                android:id="@+id/student_2715"
+                                android:id="@+id/student__2715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2715"
+                                android:id="@+id/month__2715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2715"
+                                android:id="@+id/year__2715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="716" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="716.Medical and dental services (OPD)" />
+                                android:layout_weight="2.5"
+                                android:text="Medical and dental services (OPD)" />
                             <EditText
-                                android:id="@+id/student_2716"
+                                android:id="@+id/student__2716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2716"
+                                android:id="@+id/month__2716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2716"
+                                android:id="@+id/year__2716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="717" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="717.Laboratory test, X-Ray services etc." />
+                                android:layout_weight="2.5"
+                                android:text="Laboratory test, X-Ray services etc." />
                             <EditText
-                                android:id="@+id/student_2717"
+                                android:id="@+id/student__2717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2717"
+                                android:id="@+id/month__2717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2717"
+                                android:id="@+id/year__2717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="718" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="718.Drugs, medicines and other medical supplies for patients" />
+                                android:layout_weight="2.5"
+                                android:text="Drugs, medicines and other medical supplies for patients" />
                             <EditText
-                                android:id="@+id/student_2718"
+                                android:id="@+id/student__2718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2718"
+                                android:id="@+id/month__2718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2718"
+                                android:id="@+id/year__2718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="719" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="719.Revenue from ambulance services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from ambulance services" />
                             <EditText
-                                android:id="@+id/student_2719"
+                                android:id="@+id/student__2719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2719"
+                                android:id="@+id/month__2719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2719"
+                                android:id="@+id/year__2719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="720" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="720.Other human health services (childbirth, nursing, laboratories etc.)" />
+                                android:layout_weight="2.5"
+                                android:text="Other human health services (childbirth, nursing, laboratories etc.)" />
                             <EditText
-                                android:id="@+id/student_2720"
+                                android:id="@+id/student__2720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2720"
+                                android:id="@+id/month__2720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2720"
+                                android:id="@+id/year__2720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="721" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="721.Residential care services for the elderly and persons with disabilities" />
+                                android:layout_weight="2.5"
+                                android:text="Residential care services for the elderly and persons with disabilities" />
                             <EditText
-                                android:id="@+id/student_2721"
+                                android:id="@+id/student__2721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2721"
+                                android:id="@+id/month__2721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2721"
+                                android:id="@+id/year__2721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="722" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="722.Other social services with accommodation (mentally retards)" />
+                                android:layout_weight="2.5"
+                                android:text="Other social services with accommodation (mentally retards)" />
                             <EditText
-                                android:id="@+id/student_2722"
+                                android:id="@+id/student__2722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2722"
+                                android:id="@+id/month__2722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2722"
+                                android:id="@+id/year__2722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="723" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="723.Other social services without accommodation (Child day-care, counseling etc.)" />
+                                android:layout_weight="2.5"
+                                android:text="Other social services without accommodation (Child day-care, counseling etc.)" />
                             <EditText
-                                android:id="@+id/student_2723"
+                                android:id="@+id/student__2723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2723"
+                                android:id="@+id/month__2723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2723"
+                                android:id="@+id/year__2723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="724" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="724.Income from sale of medicines and other medical equipment" />
+                                android:layout_weight="2.5"
+                                android:text="Income from sale of medicines and other medical equipment" />
                             <EditText
-                                android:id="@+id/student_2724"
+                                android:id="@+id/student__2724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_2724"
+                                android:id="@+id/month__2724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_2724"
+                                android:id="@+id/year__2724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
@@ -807,730 +930,838 @@
 
                         <!-- Type 3 Survey Section -->
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="715" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="715.Publishing of educational text/reference books, directories, in print" />
+                                android:layout_weight="2.5"
+                                android:text="Publishing of educational text/reference books, directories, in print" />
                             <EditText
-                                android:id="@+id/student_3715"
+                                android:id="@+id/student__3715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3715"
+                                android:id="@+id/month__3715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3715"
+                                android:id="@+id/year__3715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="716" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="716.Publishing of newspapers and periodicals, daily, in print" />
+                                android:layout_weight="2.5"
+                                android:text="Publishing of newspapers and periodicals, daily, in print" />
                             <EditText
-                                android:id="@+id/student_3716"
+                                android:id="@+id/student__3716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3716"
+                                android:id="@+id/month__3716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3716"
+                                android:id="@+id/year__3716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="717" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="717.Publishing of newspapers and periodicals, other than daily, in print" />
+                                android:layout_weight="2.5"
+                                android:text="Publishing of newspapers and periodicals, other than daily, in print" />
                             <EditText
-                                android:id="@+id/student_3717"
+                                android:id="@+id/student__3717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3717"
+                                android:id="@+id/month__3717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3717"
+                                android:id="@+id/year__3717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="718" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="718.Publishing of Printed maps; music, printed or in manuscript; postcards, greeting cards, pictures and plans" />
+                                android:layout_weight="2.5"
+                                android:text="Publishing of Printed maps; music, printed or in manuscript; postcards, greeting cards, pictures and plans" />
                             <EditText
-                                android:id="@+id/student_3718"
+                                android:id="@+id/student__3718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3718"
+                                android:id="@+id/month__3718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3718"
+                                android:id="@+id/year__3718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="719" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="719.Stamps, cheque forms, stock certificates, brochures and leaflets, advertising material and other printed matter" />
+                                android:layout_weight="2.5"
+                                android:text="Stamps, cheque forms, stock certificates, brochures and leaflets, advertising material and other printed matter" />
                             <EditText
-                                android:id="@+id/student_3719"
+                                android:id="@+id/student__3719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3719"
+                                android:id="@+id/month__3719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3719"
+                                android:id="@+id/year__3719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="720" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="720.Audio, video and other disks, tapes and other physical media, recorded" />
+                                android:layout_weight="2.5"
+                                android:text="Audio, video and other disks, tapes and other physical media, recorded" />
                             <EditText
-                                android:id="@+id/student_3720"
+                                android:id="@+id/student__3720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3720"
+                                android:id="@+id/month__3720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3720"
+                                android:id="@+id/year__3720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="721" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="721.Revenue Publishing, printing and reproduction services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue Publishing, printing and reproduction services" />
                             <EditText
-                                android:id="@+id/student_3721"
+                                android:id="@+id/student__3721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3721"
+                                android:id="@+id/month__3721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3721"
+                                android:id="@+id/year__3721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="722" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="722.Software publishing (Packaged software)" />
+                                android:layout_weight="2.5"
+                                android:text="Software publishing (Packaged software)" />
                             <EditText
-                                android:id="@+id/student_3722"
+                                android:id="@+id/student__3722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3722"
+                                android:id="@+id/month__3722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3722"
+                                android:id="@+id/year__3722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="723" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="723.Revenue from online content (textbooks, games, softwareâ€™s)" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from online content (textbooks, games, softwareâ€™s)" />
                             <EditText
-                                android:id="@+id/student_3723"
+                                android:id="@+id/student__3723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3723"
+                                android:id="@+id/month__3723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3723"
+                                android:id="@+id/year__3723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="724" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="724.IT consulting services" />
+                                android:layout_weight="2.5"
+                                android:text="IT consulting services" />
                             <EditText
-                                android:id="@+id/student_3724"
+                                android:id="@+id/student__3724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3724"
+                                android:id="@+id/month__3724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3724"
+                                android:id="@+id/year__3724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="725" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="725.IT support services" />
+                                android:layout_weight="2.5"
+                                android:text="IT support services" />
                             <EditText
-                                android:id="@+id/student_3725"
+                                android:id="@+id/student__3725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3725"
+                                android:id="@+id/month__3725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3725"
+                                android:id="@+id/year__3725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
-                            <TextView
-                                style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="726.IT design and development services for applications" />
-                            <EditText
-                                android:id="@+id/student_3726"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/month_3726"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/year_3726"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="726" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="727.IT design and development services for networks and systems" />
+                                android:layout_weight="2.5"
+                                android:text="IT design and development services for applications" />
                             <EditText
-                                android:id="@+id/student_3727"
+                                android:id="@+id/student__3726"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3727"
+                                android:id="@+id/month__3726"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3727"
+                                android:id="@+id/year__3726"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="727" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="728.Network management services" />
+                                android:layout_weight="2.5"
+                                android:text="IT design and development services for networks and systems" />
                             <EditText
-                                android:id="@+id/student_3728"
+                                android:id="@+id/student__3727"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3728"
+                                android:id="@+id/month__3727"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3728"
+                                android:id="@+id/year__3727"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="728" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="729.Computer systems management services" />
+                                android:layout_weight="2.5"
+                                android:text="Network management services" />
                             <EditText
-                                android:id="@+id/student_3729"
+                                android:id="@+id/student__3728"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3729"
+                                android:id="@+id/month__3728"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3729"
+                                android:id="@+id/year__3728"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="729" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="730.Website hosting services" />
+                                android:layout_weight="2.5"
+                                android:text="Computer systems management services" />
                             <EditText
-                                android:id="@+id/student_3730"
+                                android:id="@+id/student__3729"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3730"
+                                android:id="@+id/month__3729"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3730"
+                                android:id="@+id/year__3729"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="730" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="731.Application service provisioning" />
+                                android:layout_weight="2.5"
+                                android:text="Website hosting services" />
                             <EditText
-                                android:id="@+id/student_3731"
+                                android:id="@+id/student__3730"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3731"
+                                android:id="@+id/month__3730"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3731"
+                                android:id="@+id/year__3730"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="731" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="732.Other hosting and IT infrastructure provisioning services" />
+                                android:layout_weight="2.5"
+                                android:text="Application service provisioning" />
                             <EditText
-                                android:id="@+id/student_3732"
+                                android:id="@+id/student__3731"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3732"
+                                android:id="@+id/month__3731"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3732"
+                                android:id="@+id/year__3731"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="732" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="733.Sale of Internet advertising space (except on commission)" />
+                                android:layout_weight="2.5"
+                                android:text="Other hosting and IT infrastructure provisioning services" />
                             <EditText
-                                android:id="@+id/student_3733"
+                                android:id="@+id/student__3732"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3733"
+                                android:id="@+id/month__3732"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3733"
+                                android:id="@+id/year__3732"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="733" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="734.Web search portal content" />
+                                android:layout_weight="2.5"
+                                android:text="Sale of Internet advertising space (except on commission)" />
                             <EditText
-                                android:id="@+id/student_3734"
+                                android:id="@+id/student__3733"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3734"
+                                android:id="@+id/month__3733"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3734"
+                                android:id="@+id/year__3733"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="734" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="735.News agency services" />
+                                android:layout_weight="2.5"
+                                android:text="Web search portal content" />
                             <EditText
-                                android:id="@+id/student_3735"
+                                android:id="@+id/student__3734"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3735"
+                                android:id="@+id/month__3734"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3735"
+                                android:id="@+id/year__3734"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="735" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="736.Other information and support services n.e.c" />
+                                android:layout_weight="2.5"
+                                android:text="News agency services" />
                             <EditText
-                                android:id="@+id/student_3736"
+                                android:id="@+id/student__3735"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3736"
+                                android:id="@+id/month__3735"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3736"
+                                android:id="@+id/year__3735"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="736" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="737.Maintenance and repair of machinery, accounting and computing" />
+                                android:layout_weight="2.5"
+                                android:text="Other information and support services n.e.c" />
                             <EditText
-                                android:id="@+id/student_3737"
+                                android:id="@+id/student__3736"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3737"
+                                android:id="@+id/month__3736"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3737"
+                                android:id="@+id/year__3736"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="737" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="738.Other computer related services" />
+                                android:layout_weight="2.5"
+                                android:text="Maintenance and repair of machinery, accounting and computing" />
                             <EditText
-                                android:id="@+id/student_3738"
+                                android:id="@+id/student__3737"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3738"
+                                android:id="@+id/month__3737"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3738"
+                                android:id="@+id/year__3737"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="738" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="739.Rental and leasing of computer hardware, software" />
+                                android:layout_weight="2.5"
+                                android:text="Other computer related services" />
                             <EditText
-                                android:id="@+id/student_3739"
+                                android:id="@+id/student__3738"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3739"
+                                android:id="@+id/month__3738"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3739"
+                                android:id="@+id/year__3738"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="739" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="740.License fees received" />
+                                android:layout_weight="2.5"
+                                android:text="Rental and leasing of computer hardware, software" />
                             <EditText
-                                android:id="@+id/student_3740"
+                                android:id="@+id/student__3739"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3740"
+                                android:id="@+id/month__3739"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3740"
+                                android:id="@+id/year__3739"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="740" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="741.Export sales" />
+                                android:layout_weight="2.5"
+                                android:text="License fees received" />
                             <EditText
-                                android:id="@+id/student_3741"
+                                android:id="@+id/student__3740"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_3741"
+                                android:id="@+id/month__3740"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_3741"
+                                android:id="@+id/year__3740"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
+                                style="@style/edit_table"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="741" />
+                            <TextView
+                                style="@style/summary_eng"
+                                android:layout_weight="2.5"
+                                android:text="Export sales" />
+                            <EditText
+                                android:id="@+id/student__3741"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="2.3"
+                                style="@style/edit_table"/>
+                            <EditText
+                                android:id="@+id/month__3741"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="2.2"
+                                style="@style/edit_table"/>
+                            <EditText
+                                android:id="@+id/year__3741"
+                                android:inputType="number"
+                                android:digits="0123456789"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
@@ -1541,68 +1772,64 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="715" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="715.Income from laundering (dry) cleaning, pressing etc." />
+                                android:layout_weight="2.5"
+                                android:text="Income from laundering (dry) cleaning, pressing etc." />
                             <EditText
-                                android:id="@+id/student_4715"
+                                android:id="@+id/student__4715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_4715"
+                                android:id="@+id/month__4715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_4715"
+                                android:id="@+id/year__4715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_4715"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="716" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="716.Income from hairdressing and other beauty treatment activities" />
+                                android:layout_weight="2.5"
+                                android:text="Income from hairdressing and other beauty treatment activities" />
                             <EditText
-                                android:id="@+id/student_4716"
+                                android:id="@+id/student__4716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_4716"
+                                android:id="@+id/month__4716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_4716"
+                                android:id="@+id/year__4716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_4716"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -1612,466 +1839,466 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="715" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="715.Revenue from room or unit accommodation services for visitors" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from room or unit accommodation services for visitors" />
                             <EditText
-                                android:id="@+id/student_5715"
+                                android:id="@+id/student__5715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5715"
+                                android:id="@+id/month__5715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5715"
+                                android:id="@+id/year__5715"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5715"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="716" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="716.Revenue from camp site services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from camp site services" />
                             <EditText
-                                android:id="@+id/student_5716"
+                                android:id="@+id/student__5716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5716"
+                                android:id="@+id/month__5716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5716"
+                                android:id="@+id/year__5716"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5716"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="717" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="717.Revenue from recreational and vacation camp services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from recreational and vacation camp services" />
                             <EditText
-                                android:id="@+id/student_5717"
+                                android:id="@+id/student__5717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5717"
+                                android:id="@+id/month__5717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5717"
+                                android:id="@+id/year__5717"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5717"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="718" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="718.Revenue from workers hostels" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from workers hostels" />
                             <EditText
-                                android:id="@+id/student_5718"
+                                android:id="@+id/student__5718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5718"
+                                android:id="@+id/month__5718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5718"
+                                android:id="@+id/year__5718"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5718"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="719" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="719.Revenue from other room or unit accommodation services n.e.c." />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from other room or unit accommodation services n.e.c." />
                             <EditText
-                                android:id="@+id/student_5719"
+                                android:id="@+id/student__5719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5719"
+                                android:id="@+id/month__5719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5719"
+                                android:id="@+id/year__5719"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5719"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <!-- Continue the same pattern for the remaining revenue categories -->
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="720" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="720.Revenue from meal serving services with full restaurant services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from meal serving services with full restaurant services" />
                             <EditText
-                                android:id="@+id/student_5720"
+                                android:id="@+id/student__5720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5720"
+                                android:id="@+id/month__5720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5720"
+                                android:id="@+id/year__5720"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5720"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="721" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="721.Revenue from meal serving services with limited services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from meal serving services with limited services" />
                             <EditText
-                                android:id="@+id/student_5721"
+                                android:id="@+id/student__5721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5721"
+                                android:id="@+id/month__5721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5721"
+                                android:id="@+id/year__5721"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5721"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="722" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="722.Revenue from student hostels" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from student hostels" />
                             <EditText
-                                android:id="@+id/student_5722"
+                                android:id="@+id/student__5722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5722"
+                                android:id="@+id/month__5722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5722"
+                                android:id="@+id/year__5722"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5722"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="723" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="723.Revenue from event catering and other food serving services" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue from event catering and other food serving services" />
                             <EditText
-                                android:id="@+id/student_5723"
+                                android:id="@+id/student__5723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5723"
+                                android:id="@+id/month__5723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5723"
+                                android:id="@+id/year__5723"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5723"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="724" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="724.Beverage serving services (Coffee shops/bars, mobile beverage vendors)" />
+                                android:layout_weight="2.5"
+                                android:text="Beverage serving services (Coffee shops/bars, mobile beverage vendors)" />
                             <EditText
-                                android:id="@+id/student_5724"
+                                android:id="@+id/student__5724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5724"
+                                android:id="@+id/month__5724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5724"
+                                android:id="@+id/year__5724"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
-                                style="@style/edit_table"/>
-                            <EditText
-                                android:id="@+id/extra_5724"
-                                android:inputType="number"
-                                android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="725" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="725.Value of other receipts (Car rentals, laundry, gyms, transportation etc.)" />
+                                android:layout_weight="2.5"
+                                android:text="Value of other receipts (Car rentals, laundry, gyms, transportation etc.)" />
                             <EditText
-                                android:id="@+id/student_5725"
+                                android:id="@+id/student__5725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5725"
+                                android:id="@+id/month__5725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5725"
+                                android:id="@+id/year__5725"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
 
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="700" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="700.Total" />
+                                android:layout_weight="2.5"
+                                android:text="Total" />
                             <EditText
-                                android:id="@+id/student_700"
+                                android:id="@+id/student__700"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_700"
+                                android:id="@+id/month__700"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_700"
+                                android:id="@+id/year__700"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="709" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="709.Revenue/Income (via own website)" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue/Income (via own website)" />
                             <EditText
-                                android:id="@+id/student_5709"
+                                android:id="@+id/student__5709"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5709"
+                                android:id="@+id/month__5709"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5709"
+                                android:id="@+id/year__5709"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="711" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="711.Revenue/Income (via DomesticDIPs)" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue/Income (via DomesticDIPs)" />
                             <EditText
-                                android:id="@+id/student_5711"
+                                android:id="@+id/student__5711"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5711"
+                                android:id="@+id/month__5711"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5711"
+                                android:id="@+id/year__5711"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                         <LinearLayout
-                            style="@style/smp_container_hr"
-                            android:orientation="horizontal">
+                            style="@style/hliner"
+                            android:weightSum="10">
+                            <TextView
+                                style="@style/summary_eng_c"
+                                android:layout_weight="1.2"
+                                android:text="713" />
                             <TextView
                                 style="@style/summary_eng"
-                                android:layout_weight="4"
-                                android:text="713.Revenue/Income (via International DIPs)" />
+                                android:layout_weight="2.5"
+                                android:text="Revenue/Income (via International DIPs)" />
                             <EditText
-                                android:id="@+id/student_5713"
+                                android:id="@+id/student__5713"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.3"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/month_5713"
+                                android:id="@+id/month__5713"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="2.2"
                                 style="@style/edit_table"/>
                             <EditText
-                                android:id="@+id/year_5713"
+                                android:id="@+id/year__5713"
                                 android:inputType="number"
                                 android:digits="0123456789"
-                                android:layout_weight="2"
+                                android:layout_weight="1.8"
                                 style="@style/edit_table"/>
                         </LinearLayout>
                     </LinearLayout>
@@ -2080,17 +2307,13 @@
 
 
                 <include layout="@layout/layout_form_buttons"/>
-
-
             </LinearLayout>
+        </ScrollView>
 
 
-    </ScrollView>
-
-
-    <include
-        android:id="@+id/footer"
-        layout="@layout/footer"/>
-</RelativeLayout>
-<include layout="@layout/layout_nav"/>
-    </androidx.drawerlayout.widget.DrawerLayout>
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"/>
+    </RelativeLayout>
+    <include layout="@layout/layout_nav"/>
+</androidx.drawerlayout.widget.DrawerLayout>
