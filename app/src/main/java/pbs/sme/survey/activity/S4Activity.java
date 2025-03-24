@@ -1,6 +1,7 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,16 +26,15 @@ public class S4Activity extends FormActivity {
     };
 
     private final String[] codeList= new String[]{
-            "401","402","403","404","405","406","407","400","408","409",
+            "401","402","403","404","405","406","407","408","409",
             "410","411","412","413","414","415","416","417","418","419",
-            "420","421","422","423","424","425","426","427","428","429",
-            "430","431","432","433","434","435","436","437","1426","1427","1428","1429",
+            "420","421","422","423","424","425","1426","1427","1428","1429",
             "1430","1431","1432","1433","1434","1435","1436","2426","2427","2428","2429",
-            "2430","2431","2432","3426","3427","3428","3429",
+            "2430","2431","2432","2433","2434","2435","2436","3426","3427","3428","3429",
             "3430","3431","3432","3433","4426","4427","4428","4429",
             "4430","4431","4432","5426","5427","5428","5429",
             "5430","5431","5432","5433","5434","5435","5436","5437","5438","5439"
-            ,"5440","5441","5442","5443","5444","400","1437","2433","2434","2435","2436"
+            ,"5440","5441","5442","5443","5444","400"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,16 +48,20 @@ public class S4Activity extends FormActivity {
         EditText totalEditTextmonth = findViewById(R.id.month__400);
         AdditionTextWatcher additionTextWatchermonth = new AdditionTextWatcher(totalEditTextmonth);
         AdditionTextWatcher additionTextWatcheryear= new AdditionTextWatcher(totalEditTextyear);
-        for(int i = 0; i < codeList.length; i++) {
+        for(int i = 0; i < codeList.length-1; i++) {
             EditText et = findViewById(getResources().getIdentifier("month__"+codeList[i], "id", getPackageName()));
-            et.removeTextChangedListener(additionTextWatchermonth);
-            et.addTextChangedListener(additionTextWatchermonth);
+            if (et!=null) {
+                et.removeTextChangedListener(additionTextWatchermonth);
+                et.addTextChangedListener(additionTextWatchermonth);
+            }
         }
 
-        for(int i = 0; i < codeList.length; i++) {
+        for(int i = 0; i < codeList.length-1; i++) {
             EditText et = findViewById(getResources().getIdentifier("year__"+codeList[i], "id", getPackageName()));
+            if (et!=null) {
             et.removeTextChangedListener(additionTextWatcheryear);
             et.addTextChangedListener(additionTextWatcheryear);
+            }
         }
 
         sbtn = findViewById(R.id.btns);
@@ -82,31 +86,49 @@ public class S4Activity extends FormActivity {
         layout5.setVisibility(View.GONE);
         if(resumeModel.survey_id==1||resumeModel.survey_id==2)
         {
-            for (int i = 0; i <= codeList.length; i++) {
+            for (int i = 0; i < codeList.length-1; i++) {
                 String id = "year__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                et.setVisibility(View.VISIBLE);
+                if (et != null) {
+                    et.setVisibility(View.VISIBLE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
             }
 
-            for (int i = 0; i <= codeList.length; i++) {
+            for (int i = 0; i < codeList.length-1; i++) {
                 String id = "month__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                et.setVisibility(View.GONE);
+                if (et != null) {
+                    et.setVisibility(View.GONE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
             }
+
         }
         if(resumeModel.survey_id==3||resumeModel.survey_id==4||resumeModel.survey_id==5)
         {
-            for (int i = 0; i <= codeList.length; i++) {
+            for (int i = 0; i < codeList.length; i++) {
                 String id = "year__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                et.setVisibility(View.GONE);
+                if (et != null) {
+                    et.setVisibility(View.GONE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
             }
 
-            for (int i = 0; i <= codeList.length; i++) {
+            for (int i = 0; i < codeList.length; i++) {
                 String id = "month__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                et.setVisibility(View.VISIBLE);
+                if (et != null) {
+                    et.setVisibility(View.VISIBLE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
             }
+
         }
         // Show the layout based on the surveyid
         switch (resumeModel.survey_id) {

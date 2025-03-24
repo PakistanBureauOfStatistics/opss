@@ -6,9 +6,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -49,6 +51,62 @@ public class S1Activity extends FormActivity {
 
     }
     public void init(){
+        Spinner respondentSpinner = findViewById(R.id.respondent_designation);
+
+// Define the options
+        String[] respondentOptions = {
+                "Owner",
+                "Responsible Family Member",
+                "Manager",
+                "Other Employee"
+        };
+
+// Set up the adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, respondentOptions);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        respondentSpinner.setAdapter(adapter);
+
+// Handle selection
+        respondentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedOption = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Selected: " + selectedOption, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+
+        Spinner buildingSpinner = findViewById(R.id.building_establishment);
+
+// Define the options
+        String[] buildingOptions = {
+                "Owned",
+                "Leased",
+                "Rented",
+                "Temporary (Khoka etc.)",
+                "Movable (Street Vendor)"
+        };
+
+// Set up the adapter
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, buildingOptions);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        buildingSpinner.setAdapter(adapter1);
+
+// Handle selection
+        buildingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedOption = parent.getItemAtPosition(position).toString();
+                Toast.makeText(getApplicationContext(), "Selected: " + selectedOption, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
         phone_code2 = findViewById(R.id.phone_code2);
         phone_number = findViewById(R.id.phone_number);
         phone_code = findViewById(R.id.phone_code);

@@ -2219,6 +2219,12 @@
                             android:digits="0123456789"
                             style="@style/edit_table"/>
                     </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/total"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                     <LinearLayout
                         style="@style/hliner"
                         android:orientation="horizontal">
