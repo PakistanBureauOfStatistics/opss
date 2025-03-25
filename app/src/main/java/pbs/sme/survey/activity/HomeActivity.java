@@ -21,6 +21,8 @@ import pbs.sme.survey.model.Constants;
 import pbs.sme.survey.model.Section;
 import pbs.sme.survey.model.Section12;
 import pbs.sme.survey.model.Section3;
+import pbs.sme.survey.model.Section47;
+import pbs.sme.survey.model.Section6;
 import pbs.sme.survey.model.Section8;
 import pbs.sme.survey.model.Section9;
 
@@ -80,10 +82,21 @@ public class HomeActivity extends FormActivity {
                 status[1]=R.drawable.ic_tick;
             }
         }
+
         String s3time=dbHandler.queryString("SELECT min(created_time) from "+ Section3.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
         if(s3time!=null && !s3time.isEmpty()){
             times[2]=s3time;
             status[2]=R.drawable.ic_tick;
+        }
+        String s4time=dbHandler.queryString("SELECT min(created_time) from "+ Section47.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
+        if(s4time!=null && !s4time.isEmpty()){
+            times[3]=s4time;
+            status[3]=R.drawable.ic_tick;
+        }
+        String s6time=dbHandler.queryString("SELECT min(created_time) from "+ Section6.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
+        if(s6time!=null && !s6time.isEmpty()){
+            times[5]=s6time;
+            status[5]=R.drawable.ic_tick;
         }
         String s8time=dbHandler.queryString("SELECT min(created_time) from "+ Section8.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
         if(s8time!=null && !s8time.isEmpty()){

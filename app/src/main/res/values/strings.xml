@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">OPSS 2025</string>
-    <string name="application">SME Application 2024-2025</string>
+    <string name="app_name" translatable="false">OPSS-2025</string>
+    <string name="application">OPSS-2025</string>
 
 
     <string name="signin" translatable="false">signin</string>
