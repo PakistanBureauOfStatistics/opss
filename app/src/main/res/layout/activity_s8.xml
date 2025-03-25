@@ -131,6 +131,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__801"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -231,6 +251,26 @@
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__802"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -339,6 +379,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__803"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -443,6 +503,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__804"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -542,6 +622,26 @@
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__805"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -650,6 +750,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__806"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -750,6 +870,26 @@
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__807"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -858,6 +998,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__808"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -958,6 +1118,26 @@
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__809"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -1066,6 +1246,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__810"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -1166,6 +1366,26 @@
                                     style="@style/edit_form_text"
                                     android:digits="0123456789"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__811"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -1274,6 +1494,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__812"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -1375,6 +1615,26 @@
                                     android:digits="0123456789"
                                     android:lines="1"
                                     android:maxLength="11"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__813"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
@@ -1487,6 +1747,26 @@
                                     android:maxLength="11"
                                     android:hint="Rs."
                                     android:enabled="false"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="GFCF (2+3 - 4+5)"/>
+                                <EditText
+                                    android:id="@+id/GFCF__800"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
