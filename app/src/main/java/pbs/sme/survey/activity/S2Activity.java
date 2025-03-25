@@ -77,7 +77,7 @@ public class S2Activity extends FormActivity {
         description_psic = findViewById(R.id.description_psic);
         psic = findViewById(R.id.psic);
         updateMajorActivitySpinner(resumeModel.survey_id);
-            updateDescriptionSpinner();
+        updateDescriptionSpinner();
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {

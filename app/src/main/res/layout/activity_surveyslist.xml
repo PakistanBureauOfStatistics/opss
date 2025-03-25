@@ -111,7 +111,7 @@
                 <TextView
                     style="@style/summary_txt_md"
                     android:layout_weight="5"
-                    android:text="Publishing and software development activities "
+                    android:text="Survey Of Education "
                     android:textColor="@color/white"
                     android:gravity="left"/>
                 <TextView
@@ -145,7 +145,7 @@
                 <TextView
                     style="@style/summary_txt_md"
                     android:layout_weight="5"
-                    android:text="Survey of education"
+                    android:text="Survey on human health and social work activities"
                     android:textColor="@color/white"
                     android:gravity="left"/>
                 <TextView
@@ -179,7 +179,7 @@
                 <TextView
                     style="@style/summary_txt_md"
                     android:layout_weight="5"
-                    android:text="Survey on human health and social work activities"
+                    android:text="Publishing And Software Development Activities"
                     android:textColor="@color/white"
                     android:gravity="left"/>
                 <TextView
@@ -247,7 +247,7 @@
                 <TextView
                     style="@style/summary_txt_md"
                     android:layout_weight="5"
-                    android:text="Study on accommodation and food service activities"
+                    android:text="Study on Accommodation and Food service activities"
                     android:textColor="@color/white"
                     android:gravity="left"/>
                 <TextView

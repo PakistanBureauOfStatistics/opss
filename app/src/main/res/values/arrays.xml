@@ -1,375 +1,376 @@
 <resources>
-    <string-array name="education_codes">
-        <item>85101</item>
-        <item>85102</item>
-        <item>85103</item>
-        <item>85104</item>
-        <item>85211</item>
-        <item>85212</item>
-        <item>85213</item>
-        <item>85301</item>
-        <item>85302</item>
-        <item>85303</item>
-        <item>85304</item>
-        <item>85411</item>
-        <item>85412</item>
-        <item>85413</item>
-        <item>85414</item>
-        <item>85419</item>
-        <item>85421</item>
-        <item>85422</item>
-        <item>85423</item>
-        <item>85424</item>
-        <item>85425</item>
-        <item>85429</item>
-        <item>85491</item>
-        <item>85492</item>
-        <item>85493</item>
-        <item>85494</item>
-        <item>85495</item>
-        <item>85499</item>
-        <item>85501</item>
-        <item>85502</item>
-        <item>85503</item>
-        <item>85504</item>
-        <item>85509</item>
-        <item>85221</item>
-        <item>85222</item>
-        <item>85223</item>
-        <item>85224</item>
-        <item>85225</item>
-        <item>85226</item>
-        <item>85227</item>
-    </string-array>
 
-    <string-array name="education_descriptions">
-        <item>Pre-primary education</item>
-        <item>Primary education</item>
-        <item>Special education for handicapped students at this level</item>
-        <item>Provision of literacy programmes for adults</item>
-        <item>General school education in the first stage of the secondary level corresponding more or less to the period of compulsory school attendance</item>
-        <item>General school education in the second stage of the secondary level giving, in principle, access to higher education</item>
-        <item>Special education for handicapped students at this level</item>
-        <item>Post-secondary non-tertiary education</item>
-        <item>First stage of tertiary education</item>
-        <item>Second stage of tertiary education</item>
-        <item>Performing arts schools providing higher education</item>
-        <item>Sports instruction including camps, sports instruction</item>
-        <item>Gymnastics/ riding/ swimming instruction</item>
-        <item>Professional sports instructors, teachers, coaches</item>
-        <item>Martial arts instruction</item>
-        <item>Others like card game/ yoga/ cheerleading instructions n.e.c.</item>
-        <item>Piano teachers and other music instruction</item>
-        <item>Dance instruction and dance studios, drama schools (except academic)</item>
-        <item>Fine arts schools (except academic)</item>
-        <item>Photography schools (except commercial)</item>
-        <item>Art instruction / performing arts schools (except academic)</item>
-        <item>Others n.e.c.</item>
-        <item>Education that is not definable by level</item>
-        <item>Academic tutoring, college board / preparation, professional examination review courses, language instruction and conversational skills instruction, speed reading instruction, public speaking training</item>
-        <item>Automobile driving/ flying schools</item>
-        <item>Lifeguard / survival training</item>
-        <item>Computer training</item>
-        <item>Others n.e.c.</item>
-        <item>Provision of non-instructional services that support educational processes or systems</item>
-        <item>Educational consulting, educational guidance counselling services</item>
-        <item>Educational testing evaluation services, educational testing services</item>
-        <item>Organization of student exchange programs</item>
-        <item>Others n.e.c.</item>
-        <item>Technical and vocational education below the level of higher education</item>
-        <item>Instruction for tourist guides</item>
-        <item>Instruction for chefs, hoteliers and restaurateurs</item>
-        <item>Special education for handicapped students at this level</item>
-        <item>Cosmetology and barber schools</item>
-        <item>Computer repair training</item>
-        <item>Driving schools for occupational drivers e.g. of trucks, buses, coaches</item>
-    </string-array>
+<string-array name="education_codes">
+    <item>85101</item>
+    <item>85102</item>
+    <item>85103</item>
+    <item>85104</item>
+    <item>85211</item>
+    <item>85212</item>
+    <item>85213</item>
+    <item>85301</item>
+    <item>85302</item>
+    <item>85303</item>
+    <item>85304</item>
+    <item>85411</item>
+    <item>85412</item>
+    <item>85413</item>
+    <item>85414</item>
+    <item>85419</item>
+    <item>85421</item>
+    <item>85422</item>
+    <item>85423</item>
+    <item>85424</item>
+    <item>85425</item>
+    <item>85429</item>
+    <item>85491</item>
+    <item>85492</item>
+    <item>85493</item>
+    <item>85494</item>
+    <item>85495</item>
+    <item>85499</item>
+    <item>85501</item>
+    <item>85502</item>
+    <item>85503</item>
+    <item>85504</item>
+    <item>85509</item>
+    <item>85221</item>
+    <item>85222</item>
+    <item>85223</item>
+    <item>85224</item>
+    <item>85225</item>
+    <item>85226</item>
+    <item>85227</item>
+</string-array>
+
+<string-array name="education_descriptions">
+    <item>Pre-primary education</item>
+    <item>Primary education</item>
+    <item>Special education for handicapped students at this level</item>
+    <item>Provision of literacy programmes for adults</item>
+    <item>General school education in the first stage of the secondary level corresponding more or less to the period of compulsory school attendance</item>
+    <item>General school education in the second stage of the secondary level giving, in principle, access to higher education</item>
+    <item>Special education for handicapped students at this level</item>
+    <item>Post-secondary non-tertiary education</item>
+    <item>First stage of tertiary education</item>
+    <item>Second stage of tertiary education</item>
+    <item>Performing arts schools providing higher education</item>
+    <item>Sports instruction including camps, sports instruction</item>
+    <item>Gymnastics/ riding/ swimming instruction</item>
+    <item>Professional sports instructors, teachers, coaches</item>
+    <item>Martial arts instruction</item>
+    <item>Others like card game/ yoga/ cheerleading instructions n.e.c.</item>
+    <item>Piano teachers and other music instruction</item>
+    <item>Dance instruction and dance studios, drama schools (except academic)</item>
+    <item>Fine arts schools (except academic)</item>
+    <item>Photography schools (except commercial)</item>
+    <item>Art instruction / performing arts schools (except academic)</item>
+    <item>Others n.e.c.</item>
+    <item>Education that is not definable by level</item>
+    <item>Academic tutoring, college board / preparation, professional examination review courses, language instruction and conversational skills instruction, speed reading instruction, public speaking training</item>
+    <item>Automobile driving/ flying schools</item>
+    <item>Lifeguard / survival training</item>
+    <item>Computer training</item>
+    <item>Others n.e.c.</item>
+    <item>Provision of non-instructional services that support educational processes or systems</item>
+    <item>Educational consulting, educational guidance counselling services</item>
+    <item>Educational testing evaluation services, educational testing services</item>
+    <item>Organization of student exchange programs</item>
+    <item>Others n.e.c.</item>
+    <item>Technical and vocational education below the level of higher education</item>
+    <item>Instruction for tourist guides</item>
+    <item>Instruction for chefs, hoteliers and restaurateurs</item>
+    <item>Special education for handicapped students at this level</item>
+    <item>Cosmetology and barber schools</item>
+    <item>Computer repair training</item>
+    <item>Driving schools for occupational drivers e.g. of trucks, buses, coaches</item>
+</string-array>
 
 <string-array name="other_personal_services_codes">
-        <item>96011</item>
-        <item>96012</item>
-        <item>96013</item>
-        <item>96014</item>
-        <item>96015</item>
-        <item>96019</item>
-        <item>96021</item>
-        <item>96022</item>
-        <item>96023</item>
-        <item>96029</item>
-        <item>96091</item>
-        <item>96092</item>
-        <item>96093</item>
-        <item>96094</item>
-        <item>96095</item>
-        <item>96096</item>
-        <item>96099</item>
-    </string-array>
+    <item>96011</item>
+    <item>96012</item>
+    <item>96013</item>
+    <item>96014</item>
+    <item>96015</item>
+    <item>96019</item>
+    <item>96021</item>
+    <item>96022</item>
+    <item>96023</item>
+    <item>96029</item>
+    <item>96091</item>
+    <item>96092</item>
+    <item>96093</item>
+    <item>96094</item>
+    <item>96095</item>
+    <item>96096</item>
+    <item>96099</item>
+</string-array>
 
-    <string-array name="other_personal_services_descriptions">
-        <item>Laundering and dry-cleaning, pressing etc., of all kinds of clothing (including fur)</item>
-        <item>Laundry collection and delivery</item>
-        <item>Carpet and rug shampooing and drapery and curtain cleaning</item>
-        <item>Provision of linens, work uniforms and related items by laundries</item>
-        <item>Diaper supply services</item>
-        <item>Repair and minor alteration of garments or other textile articles when done in connection with cleaning</item>
-        <item>Hair washing, trimming and cutting, setting, dyeing, tinting, waving, straightening and similar activities for men and women</item>
-        <item>Shaving and beard trimming</item>
-        <item>Facial massage, manicure and pedicure, make-up etc.</item>
-        <item>Others n.e.c.</item>
-        <item>Activities of Turkish baths, sauna and steam baths etc.</item>
-        <item>Astrological and spiritualists’ activities</item>
-        <item>Social activities such as services of marriage bureaux</item>
-        <item>Pet care services such as boarding, grooming, sitting and training pets</item>
-        <item>Shoe shiners, porters, valet car parkers etc.</item>
-        <item>Concession operation of coin-operated personal service machines (photo booths, weighing machines, machines for checking blood pressure, coin-operated lockers etc.)</item>
-        <item>Others n.e.c.</item>
-    </string-array>
+<string-array name="other_personal_services_descriptions">
+    <item>Laundering and dry-cleaning, pressing etc., of all kinds of clothing (including fur)</item>
+    <item>Laundry collection and delivery</item>
+    <item>Carpet and rug shampooing and drapery and curtain cleaning</item>
+    <item>Provision of linens, work uniforms and related items by laundries</item>
+    <item>Diaper supply services</item>
+    <item>Repair and minor alteration of garments or other textile articles when done in connection with cleaning</item>
+    <item>Hair washing, trimming and cutting, setting, dyeing, tinting, waving, straightening and similar activities for men and women</item>
+    <item>Shaving and beard trimming</item>
+    <item>Facial massage, manicure and pedicure, make-up etc.</item>
+    <item>Others n.e.c.</item>
+    <item>Activities of Turkish baths, sauna and steam baths etc.</item>
+    <item>Astrological and spiritualistsâ€™ activities</item>
+    <item>Social activities such as services of marriage bureaux</item>
+    <item>Pet care services such as boarding, grooming, sitting and training pets</item>
+    <item>Shoe shiners, porters, valet car parkers etc.</item>
+    <item>Concession operation of coin-operated personal service machines (photo booths, weighing machines, machines for checking blood pressure, coin-operated lockers etc.)</item>
+    <item>Others n.e.c.</item>
+</string-array>
 
 <string-array name="accommodation_food_codes">
-        <item>55101</item>
-        <item>55102</item>
-        <item>55103</item>
-        <item>55109</item>
-        <item>55201</item>
-        <item>55202</item>
-        <item>55203</item>
-        <item>55901</item>
-        <item>55902</item>
-        <item>56101</item>
-        <item>56102</item>
-        <item>56103</item>
-        <item>56104</item>
-        <item>56210</item>
-        <item>56291</item>
-        <item>56292</item>
-        <item>56293</item>
-        <item>56301</item>
-        <item>56302</item>
-        <item>56303</item>
-    </string-array>
+    <item>55101</item>
+    <item>55102</item>
+    <item>55103</item>
+    <item>55109</item>
+    <item>55201</item>
+    <item>55202</item>
+    <item>55203</item>
+    <item>55901</item>
+    <item>55902</item>
+    <item>56101</item>
+    <item>56102</item>
+    <item>56103</item>
+    <item>56104</item>
+    <item>56210</item>
+    <item>56291</item>
+    <item>56292</item>
+    <item>56293</item>
+    <item>56301</item>
+    <item>56302</item>
+    <item>56303</item>
+</string-array>
 
-    <string-array name="accommodation_food_descriptions">
-        <item>Hotels/resort hotels/Suite/apartment hotels/motels/motor hotels etc</item>
-        <item>Guest Houses/Bed and breakfast units/visitor flats and bungalows etc.</item>
-        <item>Youth Hostels and mountain refuges.</item>
-        <item>others n.e.c</item>
-        <item>Provision of accommodation in campgrounds, trailer parks, recreational camps and fishing and hunting camps for short stay visitors.</item>
-        <item>Provision of space and facilities for recreational vehicles.</item>
-        <item>Protective shelters or plain bivouac facilities for placing tents and/or sleeping bags.</item>
-        <item>Students residences/school dormitories/rooming and boarding houses etc.</item>
-        <item>Railway sleeping cars etc.</item>
-        <item>Restaurants/cafeterias/fast-food restaurants/Pizza delivery.</item>
-        <item>Take out eating places/food preparation in market stalls.</item>
-        <item>Ice cream truck vendors/Mobile food carts</item>
-        <item>Restaurants and bar activities connected to transportation, when carried out by separate units.</item>
-        <item>Event catering</item>
-        <item>Activities of food services contractors (e.g., for transportation companies)</item>
-        <item>Operation of Food concessions at sports and similar facilities.</item>
-        <item>Operation of canteens or cafeterias (e.g., for factories, offices, hospitals or schools) on a concession basis.</item>
-        <item>Coffee shops/fruits, juice bars/bars</item>
-        <item>Mobile beverage vendor</item>
-        <item>Others n.e.c</item>
-    </string-array>
+<string-array name="accommodation_food_descriptions">
+    <item>Hotels/resort hotels/Suite/apartment hotels/motels/motor hotels etc</item>
+    <item>Guest Houses/Bed and breakfast units/visitor flats and bungalows etc.</item>
+    <item>Youth Hostels and mountain refuges.</item>
+    <item>others n.e.c</item>
+    <item>Provision of accommodation in campgrounds, trailer parks, recreational camps and fishing and hunting camps for short stay visitors.</item>
+    <item>Provision of space and facilities for recreational vehicles.</item>
+    <item>Protective shelters or plain bivouac facilities for placing tents and/or sleeping bags.</item>
+    <item>Students residences/school dormitories/rooming and boarding houses etc.</item>
+    <item>Railway sleeping cars etc.</item>
+    <item>Restaurants/cafeterias/fast-food restaurants/Pizza delivery.</item>
+    <item>Take out eating places/food preparation in market stalls.</item>
+    <item>Ice cream truck vendors/Mobile food carts</item>
+    <item>Restaurants and bar activities connected to transportation, when carried out by separate units.</item>
+    <item>Event catering</item>
+    <item>Activities of food services contractors (e.g., for transportation companies)</item>
+    <item>Operation of Food concessions at sports and similar facilities.</item>
+    <item>Operation of canteens or cafeterias (e.g., for factories, offices, hospitals or schools) on a concession basis.</item>
+    <item>Coffee shops/fruits, juice bars/bars</item>
+    <item>Mobile beverage vendor</item>
+    <item>Others n.e.c</item>
+</string-array>
 
 
 <string-array name="health_activity_codes">
-        <item>86101</item>
-        <item>86102</item>
-        <item>86103</item>
-        <item>86201</item>
-        <item>86202</item>
-        <item>86203</item>
-        <item>86204</item>
-        <item>86901</item>
-        <item>86902</item>
-        <item>86903</item>
-        <item>86904</item>
-        <item>86905</item>
-        <item>87101</item>
-        <item>87102</item>
-        <item>87201</item>
-        <item>87202</item>
-        <item>88101</item>
-        <item>88102</item>
-        <item>88901</item>
-        <item>88902</item>
-        <item>88903</item>
-        <item>88904</item>
-        <item>88905</item>
-        <item>88906</item>
-        <item>88907</item>
-        <item>88909</item>
-    </string-array>
+    <item>86101</item>
+    <item>86102</item>
+    <item>86103</item>
+    <item>86201</item>
+    <item>86202</item>
+    <item>86203</item>
+    <item>86204</item>
+    <item>86901</item>
+    <item>86902</item>
+    <item>86903</item>
+    <item>86904</item>
+    <item>86905</item>
+    <item>87101</item>
+    <item>87102</item>
+    <item>87201</item>
+    <item>87202</item>
+    <item>88101</item>
+    <item>88102</item>
+    <item>88901</item>
+    <item>88902</item>
+    <item>88903</item>
+    <item>88904</item>
+    <item>88905</item>
+    <item>88906</item>
+    <item>88907</item>
+    <item>88909</item>
+</string-array>
 
-    <string-array name="health_activity_descriptions">
-        <item>Medical, diagnostic and treatment activities, of general hospitals</item>
-        <item>Medical, diagnostic and treatment activities of military-base hospitals</item>
-        <item>Medical, diagnostic and treatment activities of specialized hospitals</item>
-        <item>Medical consultation and treatment in the field of general and specialized medicine by general practitioners and medical specialists and surgeons</item>
-        <item>Dental practice activities of a general or specialized nature, e.g. dentistry, endodontic and paediatric dentistry; oral pathology, orthodontic activities, dental activities in operating rooms</item>
-        <item>Family planning centres providing medical treatment, such as sterilization and termination of pregnancy, without accommodation</item>
-        <item>Private consultants’ services to inpatients</item>
-        <item>Activities for human health not performed by hospitals or by medical doctors or dentists</item>
-        <item>Activities of dental paramedical personnel</item>
-        <item>Activities of medical laboratories</item>
-        <item>Activities of blood banks, sperm banks, transplant organ banks etc.</item>
-        <item>Ambulance transport of patients by any mode of transport including airplanes</item>
-        <item>Activities of homes for the elderly with nursing care</item>
-        <item>Activity of nursing homes, etc Residential care activities for mental retaediation, mental health and substance abuse</item>
-        <item>Activities of facilities for treatment of alcoholism and drug addiction</item>
-        <item>Activities of residential group homes for the emotionally disturbed, mental retardation facilities, mental health halfway houses etc.</item>
-        <item>Visiting of the elderly and disabled, day care activities for the elderly or for handicapped adults</item>
-        <item>Vocational rehabilitation and habilitation activities for disabled persons</item>
-        <item>Welfare and guidance activities for children and adolescents, adoption activities, activities for the prevention of cruelty to children and others</item>
-        <item>Counselling services for household budget, marriage and family guidance, credit and debt counselling services</item>
-        <item>Activities for disaster victims, refugees, immigrants etc</item>
-        <item>Vocational rehabilitation and habilitation activities for unemployed persons</item>
-        <item>Eligibility determination in connection with welfare aid, rent supplements or food stamps</item>
-        <item>Child day-care activities, including for handicapped children</item>
-        <item>Charitable activities like fund-raising or other supporting activities aimed at social work</item>
-        <item>Other n.e.c.</item>
-    </string-array>
+<string-array name="health_activity_descriptions">
+    <item>Medical, diagnostic and treatment activities, of general hospitals</item>
+    <item>Medical, diagnostic and treatment activities of military-base hospitals</item>
+    <item>Medical, diagnostic and treatment activities of specialized hospitals</item>
+    <item>Medical consultation and treatment in the field of general and specialized medicine by general practitioners and medical specialists and surgeons</item>
+    <item>Dental practice activities of a general or specialized nature, e.g. dentistry, endodontic and paediatric dentistry; oral pathology, orthodontic activities, dental activities in operating rooms</item>
+    <item>Family planning centres providing medical treatment, such as sterilization and termination of pregnancy, without accommodation</item>
+    <item>Private consultantsâ€™ services to inpatients</item>
+    <item>Activities for human health not performed by hospitals or by medical doctors or dentists</item>
+    <item>Activities of dental paramedical personnel</item>
+    <item>Activities of medical laboratories</item>
+    <item>Activities of blood banks, sperm banks, transplant organ banks etc.</item>
+    <item>Ambulance transport of patients by any mode of transport including airplanes</item>
+    <item>Activities of homes for the elderly with nursing care</item>
+    <item>Activity of nursing homes, etc Residential care activities for mental retaediation, mental health and substance abuse</item>
+    <item>Activities of facilities for treatment of alcoholism and drug addiction</item>
+    <item>Activities of residential group homes for the emotionally disturbed, mental retardation facilities, mental health halfway houses etc.</item>
+    <item>Visiting of the elderly and disabled, day care activities for the elderly or for handicapped adults</item>
+    <item>Vocational rehabilitation and habilitation activities for disabled persons</item>
+    <item>Welfare and guidance activities for children and adolescents, adoption activities, activities for the prevention of cruelty to children and others</item>
+    <item>Counselling services for household budget, marriage and family guidance, credit and debt counselling services</item>
+    <item>Activities for disaster victims, refugees, immigrants etc</item>
+    <item>Vocational rehabilitation and habilitation activities for unemployed persons</item>
+    <item>Eligibility determination in connection with welfare aid, rent supplements or food stamps</item>
+    <item>Child day-care activities, including for handicapped children</item>
+    <item>Charitable activities like fund-raising or other supporting activities aimed at social work</item>
+    <item>Other n.e.c.</item>
+</string-array>
 
-    <!-- PSIC Codes for Publishing (Survey ID: 3) -->
-    <string-array name="publishing_psic_codes">
-        <item>58111</item>
-        <item>58112</item>
-        <item>58113</item>
-        <item>58114</item>
-        <item>58121</item>
-        <item>58122</item>
-        <item>58123</item>
-        <item>58131</item>
-        <item>58132</item>
-        <item>58191</item>
-        <item>58192</item>
-        <item>58200</item>
-        <item>62011</item>
-        <item>62012</item>
-        <item>62021</item>
-        <item>62022</item>
-        <item>62091</item>
-        <item>62092</item>
-        <item>63111</item>
-        <item>63112</item>
-        <item>63113</item>
-        <item>63114</item>
-        <item>63115</item>
-        <item>63116</item>
-        <item>63121</item>
-        <item>63122</item>
-        <item>63910</item>
-        <item>63991</item>
-        <item>63992</item>
-        <item>63993</item>
-        <item>63999</item>
-    </string-array>
+<!-- PSIC Codes for Publishing (Survey ID: 3) -->
+<string-array name="publishing_psic_codes">
+    <item>58111</item>
+    <item>58112</item>
+    <item>58113</item>
+    <item>58114</item>
+    <item>58121</item>
+    <item>58122</item>
+    <item>58123</item>
+    <item>58131</item>
+    <item>58132</item>
+    <item>58191</item>
+    <item>58192</item>
+    <item>58200</item>
+    <item>62011</item>
+    <item>62012</item>
+    <item>62021</item>
+    <item>62022</item>
+    <item>62091</item>
+    <item>62092</item>
+    <item>63111</item>
+    <item>63112</item>
+    <item>63113</item>
+    <item>63114</item>
+    <item>63115</item>
+    <item>63116</item>
+    <item>63121</item>
+    <item>63122</item>
+    <item>63910</item>
+    <item>63991</item>
+    <item>63992</item>
+    <item>63993</item>
+    <item>63999</item>
+</string-array>
 
-    <!-- Descriptions for Publishing (Survey ID: 3) -->
-    <string-array name="publishing_descriptions">
-        <item>Publishing of books, brochures, leaflets and similar publications, including publishing of dictionaries and encyclopedias</item>
-        <item>Publishing of atlases, maps and charts</item>
-        <item>Publishing of audio books</item>
-        <item>Publishing of encyclopedias etc. on CD-ROM</item>
-        <item>Publishing of mailing lists</item>
-        <item>Publishing of telephone books</item>
-        <item>Publishing of other directories and compilations, such as case law, pharmaceutical compendia etc.</item>
-        <item>Publishing of newspapers, including advertising newspapers</item>
-        <item>Publishing of periodicals and other journals, including publishing of radio and television schedules</item>
-        <item>Publishing (including online) of catalogs, photos, engravings and postcards, greeting cards, forms, posters, reproduction of works of art, advertising material, other printed matter</item>
-        <item>Online publishing of statistics or other information</item>
-        <item>Publishing of ready-made (non-customized) software (operating systems, business and other applications, computer games) for all platforms</item>
-        <item>Designing the structure and content of, and/or writing the computer code necessary to create and implement, systems software, software applications, databases, web pages</item>
-        <item>Customizing of software, i.e. modifying and configuring an existing application</item>
-        <item>Planning and designing of computer systems that integrate computer hardware, software and communication technologies</item>
-        <item>Provision of on-site management and operation of clients’ computer systems and/or data processing facilities, as well as related support services</item>
-        <item>Computer disaster recovery</item>
-        <item>Installation (setting-up) of personal computers/ software installation</item>
-        <item>Provision of infrastructure for hosting, data processing services and related activities</item>
-        <item>Specialized hosting activities such as Web hosting, streaming services, application hosting</item>
-        <item>Application service provisioning</item>
-        <item>General time-share provision of mainframe facilities to clients</item>
-        <item>Data processing activities, complete processing of data supplied by clients, generation of specialized reports from data supplied by clients</item>
-        <item>Provision of data entry services</item>
-        <item>Operation of web sites that use a search engine to generate and maintain extensive databases of Internet addresses and content in an easily searchable format</item>
-        <item>Operation of other websites that act as portals to the Internet</item>
-        <item>News syndicate and news agency activities furnishing news, pictures and features to the media</item>
-        <item>Telephone-based information services</item>
-        <item>Information search services</item>
-        <item>News clipping services, press clipping services, etc.</item>
-        <item>Others n.e.c.</item>
-    </string-array>
+<!-- Descriptions for Publishing (Survey ID: 3) -->
+<string-array name="publishing_descriptions">
+    <item>Publishing of books, brochures, leaflets and similar publications, including publishing of dictionaries and encyclopedias</item>
+    <item>Publishing of atlases, maps and charts</item>
+    <item>Publishing of audio books</item>
+    <item>Publishing of encyclopedias etc. on CD-ROM</item>
+    <item>Publishing of mailing lists</item>
+    <item>Publishing of telephone books</item>
+    <item>Publishing of other directories and compilations, such as case law, pharmaceutical compendia etc.</item>
+    <item>Publishing of newspapers, including advertising newspapers</item>
+    <item>Publishing of periodicals and other journals, including publishing of radio and television schedules</item>
+    <item>Publishing (including online) of catalogs, photos, engravings and postcards, greeting cards, forms, posters, reproduction of works of art, advertising material, other printed matter</item>
+    <item>Online publishing of statistics or other information</item>
+    <item>Publishing of ready-made (non-customized) software (operating systems, business and other applications, computer games) for all platforms</item>
+    <item>Designing the structure and content of, and/or writing the computer code necessary to create and implement, systems software, software applications, databases, web pages</item>
+    <item>Customizing of software, i.e. modifying and configuring an existing application</item>
+    <item>Planning and designing of computer systems that integrate computer hardware, software and communication technologies</item>
+    <item>Provision of on-site management and operation of clientsâ€™ computer systems and/or data processing facilities, as well as related support services</item>
+    <item>Computer disaster recovery</item>
+    <item>Installation (setting-up) of personal computers/ software installation</item>
+    <item>Provision of infrastructure for hosting, data processing services and related activities</item>
+    <item>Specialized hosting activities such as Web hosting, streaming services, application hosting</item>
+    <item>Application service provisioning</item>
+    <item>General time-share provision of mainframe facilities to clients</item>
+    <item>Data processing activities, complete processing of data supplied by clients, generation of specialized reports from data supplied by clients</item>
+    <item>Provision of data entry services</item>
+    <item>Operation of web sites that use a search engine to generate and maintain extensive databases of Internet addresses and content in an easily searchable format</item>
+    <item>Operation of other websites that act as portals to the Internet</item>
+    <item>News syndicate and news agency activities furnishing news, pictures and features to the media</item>
+    <item>Telephone-based information services</item>
+    <item>Information search services</item>
+    <item>News clipping services, press clipping services, etc.</item>
+    <item>Others n.e.c.</item>
+</string-array>
 
-    <!-- Major Activity Options -->
-    <string-array name="spn_major_activity_education">
-        <item>Pre-primary education</item>
-        <item>Primary education</item>
-        <item>Secondary education</item>
-        <item>Higher education</item>
-        <item>Sports and recreation education</item>
-        <item>Cultural education</item>
-        <item>Other education n.e.c. (Academies, driving schools, computer training, etc.)</item>
-        <item>Educational support activities (Testing, etc.)</item>
-        <item>Technical and vocational secondary education</item>
-    </string-array>
+<!-- Major Activity Options -->
+<string-array name="spn_major_activity_education">
+    <item>Pre-primary education</item>
+    <item>Primary education</item>
+    <item>Secondary education</item>
+    <item>Higher education</item>
+    <item>Sports and recreation education</item>
+    <item>Cultural education</item>
+    <item>Other education n.e.c. (Academies, driving schools, computer training, etc.)</item>
+    <item>Educational support activities (Testing, etc.)</item>
+    <item>Technical and vocational secondary education</item>
+</string-array>
 
-    <string-array name="spn_major_activity_health">
-        <item>Hospital activities</item>
-        <item>Medical and dental practice activities</item>
-        <item>Other human health activities (medical laboratories, blood banks etc.)</item>
-        <item>Residential Nursing Care Facilities</item>
-        <item>Residential care activities for mental retardation, mental health and substance abuse</item>
-        <item>Social work activities without accommodation for the elderly and disabled</item>
-        <item>Other social work activities without accommodation</item>
-    </string-array>
+<string-array name="spn_major_activity_health">
+    <item>Hospital activities</item>
+    <item>Medical and dental practice activities</item>
+    <item>Other human health activities (medical laboratories, blood banks etc.)</item>
+    <item>Residential Nursing Care Facilities</item>
+    <item>Residential care activities for mental retardation, mental health and substance abuse</item>
+    <item>Social work activities without accommodation for the elderly and disabled</item>
+    <item>Other social work activities without accommodation</item>
+</string-array>
 
-    <string-array name="spn_major_activity_publishing">
-        <item>Book publishing</item>
-        <item>Publishing of directories and mailing lists</item>
-        <item>Publishing of newspapers, journals and periodicals</item>
-        <item>Other publishing activities</item>
-        <item>Software publishing</item>
-        <item>Computer programming activities</item>
-        <item>Computer consultancy and computer facilities management activities</item>
-        <item>Other information technology and computer service activities</item>
-        <item>Data processing, hosting and related activities</item>
-        <item>Web portals</item>
-        <item>News agency activities</item>
-        <item>Other information service activities n.e.c.</item>
-    </string-array>
+<string-array name="spn_major_activity_publishing">
+    <item>Book publishing</item>
+    <item>Publishing of directories and mailing lists</item>
+    <item>Publishing of newspapers, journals and periodicals</item>
+    <item>Other publishing activities</item>
+    <item>Software publishing</item>
+    <item>Computer programming activities</item>
+    <item>Computer consultancy and computer facilities management activities</item>
+    <item>Other information technology and computer service activities</item>
+    <item>Data processing, hosting and related activities</item>
+    <item>Web portals</item>
+    <item>News agency activities</item>
+    <item>Other information service activities n.e.c.</item>
+</string-array>
 
-    <string-array name="spn_major_activity_personal_services">
-        <item>Washing and (dry-) cleaning of textile and fur products</item>
-        <item>Hairdressing and other beauty treatment</item>
-        <item>Other personal service activities n.e.c. (e.g. shoe shiners, etc.)</item>
-        <item>Funeral and Related Activities</item>
-    </string-array>
+<string-array name="spn_major_activity_personal_services">
+    <item>Washing and (dry-) cleaning of textile and fur products</item>
+    <item>Hairdressing and other beauty treatment</item>
+    <item>Other personal service activities n.e.c. (e.g. shoe shiners, etc.)</item>
+    <item>Funeral and Related Activities</item>
+</string-array>
 
-    <string-array name="spn_major_activity_accommodation_food">
-        <item>Short term accommodation activities</item>
-        <item>Camping grounds, recreational vehicle parks and trailer parks</item>
-        <item>Other accommodation</item>
-        <item>Restaurants and mobile food service activities</item>
-        <item>Event catering</item>
-        <item>Other food service activities</item>
-        <item>Beverage serving activities</item>
-    </string-array>
+<string-array name="spn_major_activity_accommodation_food">
+    <item>Short term accommodation activities</item>
+    <item>Camping grounds, recreational vehicle parks and trailer parks</item>
+    <item>Other accommodation</item>
+    <item>Restaurants and mobile food service activities</item>
+    <item>Event catering</item>
+    <item>Other food service activities</item>
+    <item>Beverage serving activities</item>
+</string-array>
 
-    <!-- Organization Type Options -->
-    <string-array name="spn_organization_type">
-        <item>Individual Ownership</item>
-        <item>Partnership</item>
-        <item>Private Ltd. Co.</item>
-        <item>Public Ltd. Co.</item>
-        <item>Cooperative</item>
-        <item>Others</item>
-    </string-array>
-    <string-array name="spn_survey_type">
-        <item>Select Survey</item>
-        <item>Survey on Education</item>
-        <item>Survey on Human Health and Social Work Activities</item>
-        <item>Publishing and Software Development Activities</item>
-        <item>Survey on Other Personal Service Activities</item>
-        <item>Study on Accommodation and Food Services</item>
-    </string-array>
+<!-- Organization Type Options -->
+<string-array name="spn_organization_type">
+    <item>Individual Ownership</item>
+    <item>Partnership</item>
+    <item>Private Ltd. Co.</item>
+    <item>Public Ltd. Co.</item>
+    <item>Cooperative</item>
+    <item>Others</item>
+</string-array>
+<string-array name="spn_survey_type">
+    <item>Select Survey</item>
+    <item>Survey on Education</item>
+    <item>Survey on Human Health and Social Work Activities</item>
+    <item>Publishing and Software Development Activities</item>
+    <item>Survey on Other Personal Service Activities</item>
+    <item>Study on Accommodation and Food Services</item>
+</string-array>
 </resources>

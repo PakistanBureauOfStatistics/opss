@@ -228,7 +228,7 @@
                         <TextView
                             style="@style/summary_eng"
                             android:layout_weight="4"
-                            android:text="407. Payment for Current Repair and Maintenance Work Done by Others on This EstablishmentÃ¢â‚¬â„¢s Fixed Assets" />
+                            android:text="407. Payment for Current Repair and Maintenance Work Done by Others on This EstablishmentÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s Fixed Assets" />
                         <EditText
                             android:id="@+id/student__407"
                             android:visibility="gone"
