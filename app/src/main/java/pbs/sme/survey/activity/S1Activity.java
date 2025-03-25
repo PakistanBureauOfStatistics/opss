@@ -55,6 +55,7 @@ public class S1Activity extends FormActivity {
 
 // Define the options
         String[] respondentOptions = {
+                "Please Select:",
                 "Owner",
                 "Responsible Family Member",
                 "Manager",
@@ -65,6 +66,7 @@ public class S1Activity extends FormActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, respondentOptions);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         respondentSpinner.setAdapter(adapter);
+       // respondentSpinner.setSelection(0);
 
 // Handle selection
         respondentSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -83,6 +85,7 @@ public class S1Activity extends FormActivity {
 
 // Define the options
         String[] buildingOptions = {
+                "Please select:",
                 "Owned",
                 "Leased",
                 "Rented",
@@ -94,7 +97,7 @@ public class S1Activity extends FormActivity {
         ArrayAdapter<String> adapter1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, buildingOptions);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         buildingSpinner.setAdapter(adapter1);
-
+        //buildingSpinner.setSelection(0);
 // Handle selection
         buildingSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

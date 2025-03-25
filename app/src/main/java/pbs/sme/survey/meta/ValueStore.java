@@ -77,6 +77,18 @@ public class ValueStore {
     public int toInt(){
         return Integer.parseInt(this.mStoredValue);
     }
+    public static int toInt(String valueStr) {
+        try {
+            // First, convert to double to handle decimal values
+            double value = Double.parseDouble(valueStr);
+
+            // Round it to the nearest integer before converting
+            return (int) Math.round(value);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();  // Log error for debugging
+            return 0;  // Return default value in case of error
+        }
+    }
 
     public float toFloat(){
         return Float.parseFloat(this.mStoredValue);

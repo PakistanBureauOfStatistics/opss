@@ -56,11 +56,11 @@ public class Section12 extends FormTable {
     public Integer months;
     public Integer hostel_facilty;
     public Integer food_laundry_other;
-    public Integer q501;
+   /* public Integer q501;
     public String q5021;
     public String q5022;
     public Integer q503rs;
-    public Integer q503perc;
+    public Integer q503perc;*/
     public Double lat;
     public Double lon;
     public Double alt;
@@ -133,11 +133,6 @@ public class Section12 extends FormTable {
                 ", months=" + months +
                 ", hostel_facilty=" + hostel_facilty +
                 ", food_laundry_other='" + food_laundry_other + '\'' +
-                ", q501=" + q501 +
-                ", q5021='" + q5021 + '\'' +
-                ", q5022='" + q5022 + '\'' +
-                ", q503rs=" + q503rs +
-                ", q503perc=" + q503perc +
                 ", lat=" + lat +
                 ", lon=" + lon +
                 ", alt=" + alt +

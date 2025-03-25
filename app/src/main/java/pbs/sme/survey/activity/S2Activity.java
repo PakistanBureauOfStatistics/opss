@@ -32,6 +32,7 @@ public class S2Activity extends FormActivity {
     private Spinner major_activity;
     private Spinner organization_type;
     private LinearLayout l_seasonal;
+    private LinearLayout layoutHostelFacility;
     private EditText establishment_months,psic;
     private CheckBox[] monthCheckboxes;
     private Spinner description_psic;
@@ -53,6 +54,7 @@ public class S2Activity extends FormActivity {
 
 // Create an array list for years (1947 to 2025)
         List<String> years = new ArrayList<>();
+        years.add("Please select:");
         for (int i = 1947; i <= 2025; i++) {
             years.add(String.valueOf(i));
         }
@@ -60,6 +62,7 @@ public class S2Activity extends FormActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, years);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         yearSpinner.setAdapter(adapter);
+        yearSpinner.setSelection(0);
 
 // Handle selection
         yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -77,7 +80,7 @@ public class S2Activity extends FormActivity {
         description_psic = findViewById(R.id.description_psic);
         psic = findViewById(R.id.psic);
         updateMajorActivitySpinner(resumeModel.survey_id);
-        updateDescriptionSpinner();
+            updateDescriptionSpinner();
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {
@@ -97,6 +100,7 @@ public class S2Activity extends FormActivity {
 
         organization_type = findViewById(R.id.type_org);
         l_seasonal = findViewById(R.id.l_seasonal);
+        layoutHostelFacility = findViewById(R.id.layout_hostel_facility);
         establishment_months = findViewById(R.id.establishment_months);
         establishment_months.setKeyListener(null); // Make it non-editable
 
@@ -111,6 +115,7 @@ public class S2Activity extends FormActivity {
         }
 
 
+        toggleSeasonalVisibility(resumeModel.survey_id);
     }
 
 
@@ -229,6 +234,11 @@ public class S2Activity extends FormActivity {
             l_seasonal.setVisibility(View.VISIBLE);
         } else {
             l_seasonal.setVisibility(View.GONE);
+        }
+        if (surveyPosition == 1) {
+            layoutHostelFacility.setVisibility(View.VISIBLE);
+        } else {
+            layoutHostelFacility.setVisibility(View.GONE);
         }
     }
 

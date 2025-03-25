@@ -347,6 +347,7 @@
 </string-array>
 
 <string-array name="spn_major_activity_accommodation_food">
+
     <item>Short term accommodation activities</item>
     <item>Camping grounds, recreational vehicle parks and trailer parks</item>
     <item>Other accommodation</item>
@@ -358,6 +359,7 @@
 
 <!-- Organization Type Options -->
 <string-array name="spn_organization_type">
+    <item>Please Select</item>
     <item>Individual Ownership</item>
     <item>Partnership</item>
     <item>Private Ltd. Co.</item>
@@ -365,12 +367,12 @@
     <item>Cooperative</item>
     <item>Others</item>
 </string-array>
-<string-array name="spn_survey_type">
-    <item>Select Survey</item>
-    <item>Survey on Education</item>
-    <item>Survey on Human Health and Social Work Activities</item>
-    <item>Publishing and Software Development Activities</item>
-    <item>Survey on Other Personal Service Activities</item>
-    <item>Study on Accommodation and Food Services</item>
-</string-array>
+    <string-array name="spn_survey_type">
+        <item>Select Survey</item>
+        <item>Survey on Education (2023-2024)</item>
+        <item>Survey on Human Health and Social Work Activities (2023-2024)</item>
+        <item>Publishing and Software Development Activities (Last 3 Months)</item>
+        <item>Survey on Other Personal Service Activities (Last Month)</item>
+        <item>Study on Accommodation and Food Services (Last 3 Months)</item>
+    </string-array>
 </resources>

@@ -1,8 +1,6 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -23,12 +21,12 @@ public class S8Activity extends FormActivity {
     private final String[] inputValidationOrder= new String[]{
             //"value"
             "acq_fixed_assets", "major_improvements", "sales_proceeds", "own_account_capital",
-            "exp_life", "scrap_value", "GFCF"
+            "exp_life", "scrap_value"
     };
 
     private final String[] codeList= new String[]{
             "801","802","803","804","805","806","807","808", "809",
-            "810","811","812","813", "800"
+            "810","811","812","813"
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,35 +38,10 @@ public class S8Activity extends FormActivity {
 
         for(String property : inputValidationOrder){
             for (String code : codeList) {
-                if (!code.equals("800")) {
+                if (!property.equalsIgnoreCase("exp_life")) {
                     EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
                     EditText total300 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
                     et.addTextChangedListener(new AdditionTextWatcher(total300));
-                    if(!property.equals("GFCF")) {
-                        et.addTextChangedListener(new TextWatcher() {
-                            @Override
-                            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                            }
-
-                            @Override
-                            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                            }
-
-                            @Override
-                            public void afterTextChanged(Editable editable) {
-                                EditText acq = findViewById(getResources().getIdentifier("acq_fixed_assets__"+code, "id", getPackageName()));
-                                EditText addition = findViewById(getResources().getIdentifier("major_improvements__"+code, "id", getPackageName()));
-                                EditText sales = findViewById(getResources().getIdentifier("sales_proceeds__"+code, "id", getPackageName()));
-                                EditText ownAccount = findViewById(getResources().getIdentifier("own_account_capital__"+code, "id", getPackageName()));
-                                EditText gfcf = findViewById(getResources().getIdentifier("GFCF__"+code, "id", getPackageName()));
-                                int value1 = GetInteger(addition.getText().toString()) + GetInteger(acq.getText().toString());
-                                int value2 = GetInteger(sales.getText().toString()) + GetInteger(ownAccount.getText().toString());
-                                gfcf.setText(String.valueOf(value1 - value2));
-                            }
-                        });
-                    }
                 }
             }
         }
@@ -135,14 +108,6 @@ public class S8Activity extends FormActivity {
         for(Section8 s: modelDatabase){
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
-    }
 
-    private int GetInteger(String txt){
-        try {
-            return Integer.parseInt(txt);
-        }
-        catch (Exception e) {
-            return 0;
-        }
     }
 }

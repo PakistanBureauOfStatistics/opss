@@ -29,11 +29,12 @@
                     android:orientation="vertical">
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Building of Establishment:"/>
+                        <RelativeLayout
+                            style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
                         <Spinner
                             android:id="@+id/building_establishment"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:spinnerMode="dropdown"/>
+                            style="@style/spn_form"/>
+                        </RelativeLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -55,7 +56,8 @@
                             android:text="Name of Owner(s)/Proprietor(s): "/>
                         <EditText
                             android:id="@+id/owner"
-                            style="@style/edit_form_text"/>
+                            style="@style/edit_form_text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
                     </LinearLayout>
 
                     <LinearLayout
@@ -96,26 +98,18 @@
                             android:text="Name of the Respondent: "/>
                         <EditText
                             android:id="@+id/respondent_name"
-                            style="@style/edit_form_text"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        style="@style/vliner">
-                        <TextView
-                            style="@style/q_heading"
-                            android:text="Designation of the Respondent: "/>
-
+                            style="@style/edit_form_text"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ., "/>
                     </LinearLayout>
 
                     <LinearLayout style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="Respondent Designation:"/>
-
-                        <Spinner
+                        <RelativeLayout
+                            style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
+                       <Spinner
                             android:id="@+id/respondent_designation"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:spinnerMode="dropdown"/>
-                    </LinearLayout>
+                            style="@style/spn_form"/>
+    </RelativeLayout>  </LinearLayout>
 
 
                     <LinearLayout

@@ -29,11 +29,12 @@
                     <LinearLayout style="@style/smp_container_hr" android:orientation="vertical">
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.1 Year of Commencement of Activity"/>
-                            <Spinner
-                                android:id="@+id/year"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:spinnerMode="dropdown"/>
+                            <RelativeLayout
+                                style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
+                                <Spinner
+                                    android:id="@+id/year"
+                                    style="@style/spn_form"/>
+                            </RelativeLayout>
                         </LinearLayout>
 
 
@@ -98,7 +99,7 @@
                                 style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
                                 <Spinner android:id="@+id/description_psic" style="@style/spn_form" />
                             </RelativeLayout>
-                        </LinearLayout>
+                             </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.3 Code (PSIC-2010)"/>
@@ -113,8 +114,12 @@
 
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.5 Type of Organization"/>
-                            <Spinner android:id="@+id/type_org" style="@style/spn_form" android:entries="@array/spn_organization_type"/>
-                        </LinearLayout>
+                            <RelativeLayout
+                                style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
+                                <Spinner android:id="@+id/type_org" style="@style/spn_form" android:entries="@array/spn_organization_type"/>
+
+                            </RelativeLayout>
+                           </LinearLayout>
 
                         <LinearLayout android:id="@+id/l_seasonal" style="@style/vliner" android:visibility="gone">
                             <TextView style="@style/q_heading" android:text="2.6 Is business activity seasonal? (Only for Survey Type 3, 4, and 5)"/>
@@ -153,17 +158,37 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
-                        <LinearLayout style="@style/vliner">
-                            <TextView style="@style/q_heading" android:text="2.8 Is hostel facility available? (Only for Survey Type 1)"/>
-                            <RadioGroup android:id="@+id/hostel_facilty" style="@style/rdg" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                                <RadioButton android:id="@+id/hostel_facilty1" style="@style/rd_yesno" android:text="Yes"
+                        <LinearLayout
+                            android:id="@+id/layout_hostel_facility"
+                            style="@style/vliner"
+                            android:visibility="gone"> <!-- Default to hidden -->
+
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="2.8 Is hostel facility available? (Only for Survey Type 1)" />
+
+                            <RadioGroup
+                                android:id="@+id/hostel_facilty"
+                                style="@style/rdg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:id="@+id/hostel_facilty1"
+                                    style="@style/rd_yesno"
+                                    android:text="Yes"
                                     android:tag="1"
                                     android:layout_width="127dp"/>
-                                <RadioButton android:id="@+id/hostel_facilty2" style="@style/rd_yesno" android:text="No"
+
+                                <RadioButton
+                                    android:id="@+id/hostel_facilty2"
+                                    style="@style/rd_yesno"
+                                    android:text="No"
                                     android:tag="0"
-                                    android:layout_width="127dp" />
+                                    android:layout_width="127dp"/>
                             </RadioGroup>
                         </LinearLayout>
+
 
                         <LinearLayout android:id="@+id/l_food_services" style="@style/vliner" android:visibility="gone">
                             <TextView style="@style/q_heading" android:text="2.9 Who arranges food and laundry services in hostel?"/>

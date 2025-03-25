@@ -50,11 +50,13 @@
                             android:textColor="@color/white"
                             android:gravity="left"/>
                         <TextView
+                            android:id="@+id/month"
                             style="@style/summary_eng"
                             android:layout_weight="3.2"
                             android:textColor="@color/white"
                             android:text="Last Month/Last 3 Months"/>
                         <TextView
+                            android:id="@+id/year"
                             style="@style/summary_eng"
                             android:layout_weight="2"
                             android:textColor="@color/white"
@@ -2236,15 +2238,14 @@
                             android:id="@+id/student__400"
                             android:layout_weight="2"
                             android:enabled="false"
+                            android:visibility="gone"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/month__400"
-                            android:layout_weight="2"
                             android:enabled="false"
                             style="@style/edit_table"/>
                         <EditText
                             android:id="@+id/year__400"
-                            android:layout_weight="2"
                             android:enabled="false"
                             style="@style/edit_table"/>
                     </LinearLayout>

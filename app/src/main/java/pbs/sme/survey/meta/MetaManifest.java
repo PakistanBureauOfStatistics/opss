@@ -9,6 +9,7 @@ import pbs.sme.survey.model.NCH;
 import pbs.sme.survey.model.Section12;
 import pbs.sme.survey.model.Section3;
 import pbs.sme.survey.model.Section47;
+import pbs.sme.survey.model.Section5;
 import pbs.sme.survey.model.Section6;
 import pbs.sme.survey.model.Section8;
 import pbs.sme.survey.model.Section9;
@@ -24,7 +25,7 @@ public class MetaManifest {
 
             House.class,  Household.class, Section12.class, Section3.class, Section47.class, Baseline.class,
             Assignment.class, User.class, NCH.class,
-            Alerts.class, Contact.class, Settings.class,
+            Alerts.class, Contact.class, Settings.class, Section5.class,
              Section6.class, Section9.class, Section8.class,
     };
 
