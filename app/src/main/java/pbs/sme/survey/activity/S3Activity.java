@@ -1,11 +1,14 @@
 package pbs.sme.survey.activity;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +25,11 @@ public class S3Activity extends FormActivity {
     private List<Section3> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-           "male", "female", "wages", "other_cash_payment", "payment_in_kind"
+           "male", "female", "wages", "other_cash_payment", "payment_in_kind", "total"
     };
 
     private final String[] codeList= new String[]{
-            "301","302","303","304","305","306","307", "308"//,"300"
+            "301","302","303","304","305","306","307", "308","300"
     };
 
     @Override
@@ -45,17 +48,54 @@ public class S3Activity extends FormActivity {
         else
             duration3.setChecked(true);
 
+        if(resumeModel.survey_id == 1 || resumeModel.survey_id == 2){
+            for(int i = 300; i < 309; i++){
+                TextView tv = (TextView) findViewById(getResources().getIdentifier("tvPersons"+i, "id", getPackageName()));
+                tv.setText(getString(R.string.persons_last_month_year));
+            }
+        }
+
         for(String property : inputValidationOrder){
             for (String code : codeList) {
-                EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
-                EditText total300 = findViewById(getResources().getIdentifier(property+"__300", "id", getPackageName()));
-                et.addTextChangedListener(new AdditionTextWatcher(total300));
-                String resourceName = getResources().getResourceEntryName(et.getId());
-                if(resourceName.contains("ale")){
-                    EditText total = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
-                    EditText persons300 = findViewById(getResources().getIdentifier("persons__300", "id", getPackageName()));
-                    et.addTextChangedListener(new AdditionTextWatcher(total));
-                    et.addTextChangedListener(new AdditionTextWatcher(persons300));
+                if (!code.equals("300")) {
+                    EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
+                    EditText total300 = findViewById(getResources().getIdentifier(property+"__300", "id", getPackageName()));
+                    et.addTextChangedListener(new AdditionTextWatcher(total300));
+                    String resourceName = getResources().getResourceEntryName(et.getId());
+                    if(resourceName.contains("ale")){
+                        EditText totalPersons = findViewById(getResources().getIdentifier("persons__"+ code, "id", getPackageName()));
+                        EditText persons300 = findViewById(getResources().getIdentifier("persons__300", "id", getPackageName()));
+                        et.addTextChangedListener(new AdditionTextWatcher(totalPersons));
+                        et.addTextChangedListener(new AdditionTextWatcher(persons300));
+                    }
+                    else{
+                        if(!(property.equals("total") || code.equals("302"))) {
+                            et.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable editable) {
+                                    EditText total = findViewById(getResources().getIdentifier("total__"+ code, "id", getPackageName()));
+                                    //EditText persons300 = findViewById(getResources().getIdentifier("persons__300", "id", getPackageName()));
+
+                                    EditText wages = findViewById(getResources().getIdentifier("wages__"+code, "id", getPackageName()));
+                                    EditText other_cash_payment = findViewById(getResources().getIdentifier("other_cash_payment__"+code, "id", getPackageName()));
+                                    EditText payment_in_kind = findViewById(getResources().getIdentifier("payment_in_kind__"+code, "id", getPackageName()));
+                                    int value1 = GetInteger(wages.getText().toString()) + GetInteger(other_cash_payment.getText().toString());
+                                    int value2 = GetInteger(payment_in_kind.getText().toString());
+                                    total.setText(String.valueOf(value1 + value2));
+                                }
+                            });
+                        }
+                    }
                 }
             }
         }
@@ -126,8 +166,6 @@ public class S3Activity extends FormActivity {
         modelDatabase= dbHandler.query(Section3.class," uid='"+resumeModel.uid+"' AND (is_deleted=0 OR is_deleted is null)");
         for(Section3 s: modelDatabase){
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
-            EditText total = findViewById(getResources().getIdentifier("persons__"+ s.code, "id", getPackageName()));
-            total.setText(String.valueOf(s.getPersons() ));
         }
 
     }

@@ -299,4 +299,6 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="import_from_online" translatable="false">Import (From Online)</string>
+    <string name="persons_last_working_day" translatable="false">Number of Persons on the Last working day.</string>
+    <string name="persons_last_month_year" translatable="false">Average Number of Persons engaged during Last month/year.</string>
 </resources>

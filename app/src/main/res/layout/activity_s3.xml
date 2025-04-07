@@ -52,7 +52,8 @@
                             android:text="301 Working Proprietor"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons301"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -147,6 +148,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__301"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -155,7 +176,8 @@
                             android:text="302 Unpaid Family Workers "/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons302"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -258,6 +280,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__302"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:text="0"
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -266,7 +308,8 @@
                             android:text="303 Doctors/Teaching staff /Managerial Staff"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons303"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -363,6 +406,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__303"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -372,7 +435,8 @@
                             android:text="304 Nursing and paramedical staff/technicians and associate professionals/Sales Staff"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons304"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -469,6 +533,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__304"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -478,7 +562,8 @@
                             android:text="305 Clerical and support staff/ Front Office Staff"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons305"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -575,6 +660,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__305"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -584,7 +689,8 @@
                             android:text="306 Service workers/Chefs/Cooks"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons306"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -681,6 +787,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__306"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -690,7 +816,8 @@
                             android:text="307 Other casual/ Daily Wagers"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons307"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -787,6 +914,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__307"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -795,7 +942,8 @@
                             android:text="308 Other Regular employees"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons308"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -892,6 +1040,26 @@
                                     android:inputType="number"/>
                             </LinearLayout>
                         </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__308"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
@@ -900,7 +1068,8 @@
                             android:text="300 Total"/>
                         <TextView
                             style="@style/txt_lbl"
-                            android:text="Number of Persons on the Last working day."/>
+                            android:id="@+id/tvPersons300"
+                            android:text="@string/persons_last_working_day"/>
                         <LinearLayout
                             style="@style/hliner"
                             android:weightSum="3">
@@ -992,6 +1161,26 @@
                                     android:digits="0123456789"
                                     android:maxLines="1"
                                     android:enabled="false"
+                                    android:hint="Rs."
+                                    android:inputType="number"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            style="@style/hliner"
+                            android:weightSum="3">
+                            <LinearLayout
+                                style="@style/vliner"
+                                android:layout_weight="1">
+                                <TextView
+                                    style="@style/txt_lbl"
+                                    android:text="Total (Wages/Salaries+Other Cash Payments+Non Cash Benefits)"/>
+                                <EditText
+                                    android:id="@+id/total__300"
+                                    style="@style/edit_form_text"
+                                    android:digits="0123456789"
+                                    android:maxLength="11"
+                                    android:enabled="false"
+                                    android:lines="1"
                                     android:hint="Rs."
                                     android:inputType="number"/>
                             </LinearLayout>

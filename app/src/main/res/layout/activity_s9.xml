@@ -108,7 +108,7 @@
                         style="@style/summary_txt_md"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="903" />
+                        android:text="900" />
                     <TextView
                         style="@style/summary_txt_md"
                         android:layout_weight="6"
