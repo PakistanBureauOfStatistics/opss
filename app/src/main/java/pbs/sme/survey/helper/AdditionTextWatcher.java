@@ -5,9 +5,9 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 
 public class AdditionTextWatcher implements TextWatcher {
-    private static boolean IGNORE_TEXT_WATCHER = false;
+    private boolean ignoreTextWatcher = false;
     private final EditText totalEditText;
-    private int beforeValue = 0;
+    private long beforeValue = 0;
 
     public AdditionTextWatcher(EditText totalEditText) {
         this.totalEditText = totalEditText;
@@ -15,9 +15,9 @@ public class AdditionTextWatcher implements TextWatcher {
 
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-        if (IGNORE_TEXT_WATCHER) return;
+        if (ignoreTextWatcher) return;
 
-        beforeValue = parseInteger(s.toString());
+        beforeValue = parseLong(s.toString());
     }
 
     @Override
@@ -27,30 +27,34 @@ public class AdditionTextWatcher implements TextWatcher {
 
     @Override
     public void afterTextChanged(Editable s) {
-        if (IGNORE_TEXT_WATCHER) return;
+        if (ignoreTextWatcher) return;
 
-        int afterValue = parseInteger(s.toString());
-        int totalValue = parseInteger(totalEditText.getText().toString());
+        Long afterValue = parseLong(s.toString());
+        Long totalValue =parseLong(totalEditText.getText().toString());
 
         // Update total value
-        int newTotal = totalValue - beforeValue + afterValue;
+        Long newTotal = totalValue - beforeValue + afterValue;
 
         // Prevent infinite loop and only update if there's an actual change
-        if (newTotal != totalValue) {
-            IGNORE_TEXT_WATCHER = true;
+        if (!newTotal.equals(totalValue)) {
+            ignoreTextWatcher = true;
             totalEditText.setText(String.valueOf(newTotal));
             totalEditText.setSelection(totalEditText.getText().length()); // Move cursor to the end
-            IGNORE_TEXT_WATCHER = false;
+            ignoreTextWatcher = false;
         }
     }
 
-    private int parseInteger(String value) {
+    private Long parseLong(String value) {
+        if (value.equals("0") || value.isEmpty()) {
+            return 0L;
+        }
         try {
-            return Integer.parseInt(value);
+            return Long.parseLong(value);
         } catch (NumberFormatException e) {
-            return 0;
+            return 0L;
         }
     }
 }
+
 
 

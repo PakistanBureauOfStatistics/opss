@@ -12,7 +12,7 @@ import java.util.List;
 import pbs.sme.survey.R;
 import pbs.sme.survey.helper.AdditionTextWatcher;
 import pbs.sme.survey.model.Section8;
-import pbs.sme.survey.model.Section8;
+
 import pk.gov.pbs.utils.StaticUtils;
 
 public class S8Activity extends FormActivity {
@@ -42,8 +42,8 @@ public class S8Activity extends FormActivity {
             for (String code : codeList) {
                 if (!code.equals("800")) {
                     EditText et = (EditText) findViewById(getResources().getIdentifier(property+"__"+code, "id", getPackageName()));
-                    EditText total800 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
-                    et.addTextChangedListener(new AdditionTextWatcher(total800));
+                    EditText total300 = findViewById(getResources().getIdentifier(property+"__800", "id", getPackageName()));
+                    et.addTextChangedListener(new AdditionTextWatcher(total300));
                     if(!property.equals("GFCF")) {
                         et.addTextChangedListener(new TextWatcher() {
                             @Override
@@ -63,8 +63,8 @@ public class S8Activity extends FormActivity {
                                 EditText sales = findViewById(getResources().getIdentifier("sales_proceeds__"+code, "id", getPackageName()));
                                 EditText ownAccount = findViewById(getResources().getIdentifier("own_account_capital__"+code, "id", getPackageName()));
                                 EditText gfcf = findViewById(getResources().getIdentifier("GFCF__"+code, "id", getPackageName()));
-                                int value1 = GetInteger(addition.getText().toString()) + GetInteger(acq.getText().toString());
-                                int value2 = GetInteger(sales.getText().toString()) + GetInteger(ownAccount.getText().toString());
+                                Long value1 = GetInteger(addition.getText().toString()) + GetInteger(acq.getText().toString());
+                                Long value2 = GetInteger(sales.getText().toString()) + GetInteger(ownAccount.getText().toString());
                                 gfcf.setText(String.valueOf(value1 - value2));
                             }
                         });
@@ -137,12 +137,12 @@ public class S8Activity extends FormActivity {
         }
     }
 
-    private int GetInteger(String txt){
+    private Long GetInteger(String txt){
         try {
-            return Integer.parseInt(txt);
+            return Long.parseLong(txt);
         }
         catch (Exception e) {
-            return 0;
+            return 0L;
         }
     }
 }

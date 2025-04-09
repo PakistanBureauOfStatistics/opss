@@ -9,25 +9,25 @@ public class Section8 extends FormTable {
     @SqlPrimaryKey
     public String code;
     public Integer survey_id;
-    public Integer acq_fixed_assets;
+    public Long acq_fixed_assets;
 
 
-    public Integer major_improvements;
+    public Long major_improvements;
 
 
-    public Integer sales_proceeds;
+    public Long sales_proceeds;
 
 
-    public Integer own_account_capital;
+    public Long own_account_capital;
 
 
-    public Integer GFCF;
+    public Long GFCF;
 
 
-    public Integer exp_life;
+    public Long exp_life;
 
 
-    public Integer scrap_value;
+    public Long scrap_value;
 
     @Override
     public String toString() {

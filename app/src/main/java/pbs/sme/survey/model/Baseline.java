@@ -45,7 +45,6 @@ public class Baseline extends FormTable {
     public String f6_other;
     public Integer f7;
     public Integer f8;
-    public Integer f9;
     public String f9_other;
     public Integer f10;
     public String f10_other;
@@ -103,7 +102,6 @@ public class Baseline extends FormTable {
                 ", f6_other='" + f6_other + '\'' +
                 ", f7=" + f7 +
                 ", f8=" + f8 +
-                ", f9=" + f9 +
                 ", f9_other='" + f9_other + '\'' +
                 ", f10=" + f10 +
                 ", f10_other='" + f10_other + '\'' +

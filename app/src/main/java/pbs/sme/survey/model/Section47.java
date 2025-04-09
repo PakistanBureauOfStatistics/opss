@@ -13,10 +13,10 @@ public class Section47 extends FormTable {
 
     public String code;
     public Integer survey_id;
-    public Integer student;
-    public Integer month;
+    public Long student;
+    public Long month;
 
-    public Integer year;
+    public Long year;
 
     @Override
     public String toString() {

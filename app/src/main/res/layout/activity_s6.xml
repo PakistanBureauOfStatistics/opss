@@ -20,6 +20,7 @@
                 <include layout="@layout/layout_household"/>
 
                 <TextView
+                    android:id="@+id/reference"
                     style="@style/s_heading"
                     android:layout_width="match_parent"
                     android:text="SECTION-6   TAXES " />
@@ -61,6 +62,7 @@
                             android:text="General Sales Taxes" />
                         <EditText
                             android:id="@+id/value__601"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -75,6 +77,7 @@
                             android:text="Motor Vehicle Tax/Land Tax" />
                         <EditText
                             android:id="@+id/value__602"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -89,6 +92,7 @@
                             android:text="Excise/Import Duty" />
                         <EditText
                             android:id="@+id/value__603"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -103,6 +107,7 @@
                             android:text="Provincial/District taxes " />
                         <EditText
                             android:id="@+id/value__604"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -117,6 +122,7 @@
                             android:text="Other Taxes" />
                         <EditText
                             android:id="@+id/value__605"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -131,6 +137,7 @@
                             android:text="Depreciation" />
                         <EditText
                             android:id="@+id/value__606"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>
@@ -145,6 +152,7 @@
                             android:text="Total" />
                         <EditText
                             android:id="@+id/value__600"
+                            android:digits="0123456789"
                             android:inputType="number"
                             style="@style/edit_table"/>
                     </LinearLayout>

@@ -1,5 +1,117 @@
 <resources>
 
+<string-array name="education_codes12">
+    <item>85101</item>
+    <item>85102</item>
+    <item>85103</item>
+    <item>85104</item>
+</string-array>
+    <string-array name="education_descriptions12">
+    <item>Pre-primary education</item>
+    <item>Primary education</item>
+    <item>Special education for handicapped students at this level</item>
+    <item>Provision of literacy programmes for adults</item>
+    </string-array>
+    <string-array name="education_codes3">
+        <item>85211</item>
+        <item>85212</item>
+        <item>85213</item>
+</string-array>
+    <string-array name="education_descriptions3">
+        <item>General school education in the first stage of the secondary level corresponding more or less to the period of compulsory school attendance</item>
+        <item>General school education in the second stage of the secondary level giving, in principle, access to higher education</item>
+        <item>Special education for handicapped students at this level</item>
+    </string-array>
+    <string-array name="education_codes4">
+        <item>85301</item>
+        <item>85302</item>
+        <item>85303</item>
+        <item>85304</item>
+    </string-array>
+    <string-array name="education_descriptions4">
+        <item>Post-secondary non-tertiary education</item>
+        <item>First stage of tertiary education</item>
+        <item>Second stage of tertiary education</item>
+        <item>Performing arts schools providing higher education</item>
+    </string-array>
+    <string-array name="education_codes5">
+        <item>85411</item>
+        <item>85412</item>
+        <item>85413</item>
+        <item>85414</item>
+        <item>85419</item>
+    </string-array>
+    <string-array name="education_descriptions5">
+        <item>Sports instruction including camps, sports instruction</item>
+        <item>Gymnastics/ riding/ swimming instruction</item>
+        <item>Professional sports instructors, teachers, coaches</item>
+        <item>Martial arts instruction</item>
+        <item>Others like card game/ yoga/ cheerleading instructions n.e.c.</item>
+    </string-array>
+    <string-array name="education_codes6">
+        <item>85421</item>
+        <item>85422</item>
+        <item>85423</item>
+        <item>85424</item>
+        <item>85425</item>
+        <item>85429</item>
+    </string-array>
+    <string-array name="education_descriptions6">
+        <item>Piano teachers and other music instruction</item>
+        <item>Dance instruction and dance studios, drama schools (except academic)</item>
+        <item>Fine arts schools (except academic)</item>
+        <item>Photography schools (except commercial)</item>
+        <item>Art instruction / performing arts schools (except academic)</item>
+        <item>Others n.e.c.</item>
+    </string-array>
+    <string-array name="education_codes7">
+        <item>85491</item>
+        <item>85492</item>
+        <item>85493</item>
+        <item>85494</item>
+        <item>85495</item>
+        <item>85499</item>
+    </string-array>
+    <string-array name="education_descriptions7">
+        <item>Academic tutoring, college board / preparation, professional examination review courses, language instruction and conversational skills instruction, speed reading instruction, public speaking training</item>
+        <item>Automobile driving/ flying schools</item>
+        <item>Lifeguard / survival training</item>
+        <item>Computer training</item>
+        <item>Others n.e.c.</item>
+    </string-array>
+    <string-array name="education_codes8">
+        <item>85501</item>
+        <item>85502</item>
+        <item>85503</item>
+        <item>85504</item>
+        <item>85509</item>
+    </string-array>
+    <string-array name="education_descriptions8">
+        <item>Provision of non-instructional services that support educational processes or systems</item>
+        <item>Educational consulting, educational guidance counselling services</item>
+        <item>Educational testing evaluation services, educational testing services</item>
+        <item>Organization of student exchange programs</item>
+        <item>Others n.e.c.</item>
+    </string-array>
+    <string-array name="education_codes9">
+        <item>85221</item>
+        <item>85222</item>
+        <item>85223</item>
+        <item>85224</item>
+        <item>85225</item>
+        <item>85226</item>
+        <item>85227</item>
+    </string-array>
+    <string-array name="education_descriptions9">
+        <item>Technical and vocational education below the level of higher education</item>
+        <item>Instruction for tourist guides</item>
+        <item>Instruction for chefs, hoteliers and restaurateurs</item>
+        <item>Special education for handicapped students at this level</item>
+        <item>Cosmetology and barber schools</item>
+        <item>Computer repair training</item>
+        <item>Driving schools for occupational drivers e.g. of trucks, buses, coaches</item>
+
+    </string-array>
 <string-array name="education_codes">
     <item>85101</item>
     <item>85102</item>
@@ -172,7 +284,87 @@
     <item>Others n.e.c</item>
 </string-array>
 
+    <string-array name="health_activity_code1">
+        <item>86101</item>
+        <item>86102</item>
+        <item>86103</item>
+    </string-array>
+    <string-array name="health_activity_descriptions1">
+        <item>Medical, diagnostic and treatment activities, of general hospitals</item>
+        <item>Medical, diagnostic and treatment activities of military-base hospitals</item>
+        <item>Medical, diagnostic and treatment activities of specialized hospitals</item>
+    </string-array>
+    <string-array name="health_activity_code2">
+        <item>86201</item>
+        <item>86202</item>
+        <item>86203</item>
+        <item>86204</item>
+    </string-array>
+    <string-array name="health_activity_descriptions2">
+        <item>Medical consultation and treatment in the field of general and specialized medicine by general practitioners and medical specialists and surgeons</item>
+        <item>Dental practice activities of a general or specialized nature, e.g. dentistry, endodontic and paediatric dentistry; oral pathology, orthodontic activities, dental activities in operating rooms</item>
+        <item>Family planning centres providing medical treatment, such as sterilization and termination of pregnancy, without accommodation</item>
+        <item>Private consultants services to inpatients</item>
+    </string-array>
+    <string-array name="health_activity_code3">
+        <item>86901</item>
+        <item>86902</item>
+        <item>86903</item>
+        <item>86904</item>
+        <item>86905</item>
+    </string-array>
+    <string-array name="health_activity_descriptions3">
+        <item>Activities for human health not performed by hospitals or by medical doctors or dentists</item>
+        <item>Activities of dental paramedical personnel</item>
+        <item>Activities of medical laboratories</item>
+        <item>Activities of blood banks, sperm banks, transplant organ banks etc.</item>
+        <item>Ambulance transport of patients by any mode of transport including airplanes</item>
 
+    </string-array>
+    <string-array name="health_activity_code4">
+        <item>87101</item>
+        <item>87102</item>
+    </string-array>
+    <string-array name="health_activity_descriptions4">
+        <item>Activities of homes for the elderly with nursing care</item>
+        <item>Activity of nursing homes, etc Residential care activities for mental retaediation, mental health and substance abuse</item>
+    </string-array>
+    <string-array name="health_activity_code5">
+        <item>87201</item>
+        <item>87202</item>
+    </string-array>
+    <string-array name="health_activity_descriptions5">
+        <item>Activities of facilities for treatment of alcoholism and drug addiction</item>
+        <item>Activities of residential group homes for the emotionally disturbed, mental retardation facilities, mental health halfway houses etc.</item>
+    </string-array>
+    <string-array name="health_activity_code6">
+        <item>88101</item>
+        <item>88102</item>
+    </string-array>
+    <string-array name="health_activity_descriptions6">
+        <item>Activities for disaster victims, refugees, immigrants etc</item>
+        <item>Vocational rehabilitation and habilitation activities for unemployed persons</item>
+    </string-array>
+    <string-array name="health_activity_code7">
+        <item>88901</item>
+        <item>88902</item>
+        <item>88903</item>
+        <item>88904</item>
+        <item>88905</item>
+        <item>88906</item>
+        <item>88907</item>
+        <item>88909</item>
+    </string-array>
+    <string-array name="health_activity_descriptions7">
+        <item>Welfare and guidance activities for children and adolescents, adoption activities, activities for the prevention of cruelty to children and others</item>
+        <item>Counselling services for household budget, marriage and family guidance, credit and debt counselling services</item>
+        <item>Activities for disaster victims, refugees, immigrants etc</item>
+        <item>Vocational rehabilitation and habilitation activities for unemployed persons</item>
+        <item>Eligibility determination in connection with welfare aid, rent supplements or food stamps</item>
+        <item>Child day-care activities, including for handicapped children</item>
+        <item>Charitable activities like fund-raising or other supporting activities aimed at social work</item>
+        <item>Other n.e.c.</item>
+    </string-array>
 <string-array name="health_activity_codes">
     <item>86101</item>
     <item>86102</item>
@@ -209,7 +401,7 @@
     <item>Medical consultation and treatment in the field of general and specialized medicine by general practitioners and medical specialists and surgeons</item>
     <item>Dental practice activities of a general or specialized nature, e.g. dentistry, endodontic and paediatric dentistry; oral pathology, orthodontic activities, dental activities in operating rooms</item>
     <item>Family planning centres providing medical treatment, such as sterilization and termination of pregnancy, without accommodation</item>
-    <item>Private consultantsâ€™ services to inpatients</item>
+    <item>Private consultants services to inpatients</item>
     <item>Activities for human health not performed by hospitals or by medical doctors or dentists</item>
     <item>Activities of dental paramedical personnel</item>
     <item>Activities of medical laboratories</item>
@@ -303,6 +495,7 @@
 
 <!-- Major Activity Options -->
 <string-array name="spn_major_activity_education">
+    <item>Please Select</item>
     <item>Pre-primary education</item>
     <item>Primary education</item>
     <item>Secondary education</item>
@@ -315,6 +508,7 @@
 </string-array>
 
 <string-array name="spn_major_activity_health">
+    <item>Please Select</item>
     <item>Hospital activities</item>
     <item>Medical and dental practice activities</item>
     <item>Other human health activities (medical laboratories, blood banks etc.)</item>
@@ -325,6 +519,7 @@
 </string-array>
 
 <string-array name="spn_major_activity_publishing">
+    <item>Please Select</item>
     <item>Book publishing</item>
     <item>Publishing of directories and mailing lists</item>
     <item>Publishing of newspapers, journals and periodicals</item>
@@ -340,6 +535,7 @@
 </string-array>
 
 <string-array name="spn_major_activity_personal_services">
+    <item>Please Select</item>
     <item>Washing and (dry-) cleaning of textile and fur products</item>
     <item>Hairdressing and other beauty treatment</item>
     <item>Other personal service activities n.e.c. (e.g. shoe shiners, etc.)</item>
@@ -347,7 +543,7 @@
 </string-array>
 
 <string-array name="spn_major_activity_accommodation_food">
-
+    <item>Please Select</item>
     <item>Short term accommodation activities</item>
     <item>Camping grounds, recreational vehicle parks and trailer parks</item>
     <item>Other accommodation</item>

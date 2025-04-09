@@ -14,12 +14,12 @@ public class Section3 extends FormTable {
     public Integer male;
     public Integer female;
     public Integer persons;
-    public Integer wages;
-    public Integer other_cash_payment;
-    public Integer payment_in_kind;
+    public Long wages;
+    public Long other_cash_payment;
+    public Long payment_in_kind;
 
-    public Integer total;
-    public Integer emp_cost;
+    public Long total;
+    public Long emp_cost;
     public String other;
 
     public Integer getPersons() {

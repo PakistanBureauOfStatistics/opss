@@ -18,112 +18,112 @@
                 android:orientation="vertical">
 
                 <include layout="@layout/layout_household"/>
-            <LinearLayout
-                android:id="@+id/content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingHorizontal="?pad">
-
-                <TextView
-                    style="@style/summary_txt_lg"
-                    android:layout_width="match_parent"
-                    android:textSize="20dp"
-                    android:text="SECTION-9: VALUE OF INVENTORIES DURING 2023-24" />
-
                 <LinearLayout
-                    android:id="@+id/tbl_header"
+                    android:id="@+id/content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="?s_color"
-                    android:orientation="horizontal"
-                    android:padding="?padd"
-                    android:weightSum="10">
+                    android:orientation="vertical"
+                    android:paddingHorizontal="?pad">
+
                     <TextView
-                        android:id="@+id/tv_code"
-                        style="@style/summary_txt_md"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="Code"
-                        android:textColor="@color/white" />
-                    <TextView
-                        android:id="@+id/tv_items"
-                        style="@style/summary_txt_md"
-                        android:layout_weight="6"
-                        android:gravity="center_horizontal"
-                        android:text="Items"
-                        android:textColor="@color/white" />
-                    <TextView
-                        android:id="@+id/tv_amount"
-                        style="@style/summary_txt_md"
-                        android:layout_weight="3"
-                        android:gravity="center"
-                        android:text="Amount ‘000’ Rs."
-                        android:textColor="@color/white" />
+                        style="@style/summary_txt_lg"
+                        android:layout_width="match_parent"
+                        android:textSize="20dp"
+                        android:text="SECTION-9: VALUE OF INVENTORIES DURING 2023-24" />
+
+                    <LinearLayout
+                        android:id="@+id/tbl_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?s_color"
+                        android:orientation="horizontal"
+                        android:padding="?padd"
+                        android:weightSum="10">
+                        <TextView
+                            android:id="@+id/tv_code"
+                            style="@style/summary_txt_md"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Code"
+                            android:textColor="@color/white" />
+                        <TextView
+                            android:id="@+id/tv_items"
+                            style="@style/summary_txt_md"
+                            android:layout_weight="6"
+                            android:gravity="center_horizontal"
+                            android:text="Items"
+                            android:textColor="@color/white" />
+                        <TextView
+                            android:id="@+id/tv_amount"
+                            style="@style/summary_txt_md"
+                            android:layout_weight="3"
+                            android:gravity="center"
+                            android:text="Amount ‘000’ Rs."
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="901" />
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="6"
+                            android:gravity="start"
+                            android:text="Value of Stock at the beginning of the year" />
+                        <EditText
+                            android:id="@+id/rupees__901"
+                            style="@style/edit_form_num"
+                            android:maxLength="10"
+                            android:layout_weight="3"
+                            android:hint="Rs." />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="902" />
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="6"
+                            android:gravity="start"
+                            android:text="Value of Stock at the end of the year" />
+                        <EditText
+                            android:id="@+id/rupees__902"
+                            style="@style/edit_form_num"
+                            android:maxLength="10"
+                            android:layout_weight="3"
+                            android:hint="Rs." />
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/hliner"
+                        android:weightSum="10">
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="900" />
+                        <TextView
+                            style="@style/summary_txt_md"
+                            android:layout_weight="6"
+                            android:gravity="start"
+                            android:text="Change/(902-901)= +/-" />
+                        <EditText
+                            android:id="@+id/rupees__900"
+                            style="@style/edit_form_num"
+                            android:maxLength="10"
+                            android:enabled="false"
+                            android:layout_weight="3"
+                            android:hint="Rs." />
+                    </LinearLayout>
+                    <include layout="@layout/layout_form_buttons" />
                 </LinearLayout>
-                <LinearLayout
-                    style="@style/hliner"
-                    android:weightSum="10">
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="901" />
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="6"
-                        android:gravity="start"
-                        android:text="Value of Stock at the beginning of the year" />
-                    <EditText
-                        android:id="@+id/rupees__901"
-                        style="@style/edit_form_num"
-                        android:maxLength="10"
-                        android:layout_weight="3"
-                        android:hint="Rs." />
-                </LinearLayout>
-                <LinearLayout
-                    style="@style/hliner"
-                    android:weightSum="10">
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="902" />
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="6"
-                        android:gravity="start"
-                        android:text="Value of Stock at the end of the year" />
-                    <EditText
-                        android:id="@+id/rupees__902"
-                        style="@style/edit_form_num"
-                        android:maxLength="10"
-                        android:layout_weight="3"
-                        android:hint="Rs." />
-                </LinearLayout>
-                <LinearLayout
-                    style="@style/hliner"
-                    android:weightSum="10">
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="900" />
-                    <TextView
-                        style="@style/summary_txt_md"
-                        android:layout_weight="6"
-                        android:gravity="start"
-                        android:text="Change/(902-901)= +/-" />
-                    <EditText
-                        android:id="@+id/rupees__900"
-                        style="@style/edit_form_num"
-                        android:maxLength="10"
-                        android:enabled="false"
-                        android:layout_weight="3"
-                        android:hint="Rs." />
-                </LinearLayout>
-                <include layout="@layout/layout_form_buttons" />
-            </LinearLayout>
 
             </LinearLayout>
 

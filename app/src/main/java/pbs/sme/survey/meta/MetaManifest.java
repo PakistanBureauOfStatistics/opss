@@ -20,7 +20,7 @@ import pk.gov.pbs.database.annotations.Table;
 
 public class MetaManifest {
     private static MetaManifest instance;
-    private static final int mVersion = 3;
+    private static final int mVersion = 4;
     private static final Class<?>[] models = new Class[]{
 
             House.class,  Household.class, Section12.class, Section3.class, Section47.class, Baseline.class,

@@ -41,7 +41,7 @@ public class S4Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s4);
-        setDrawer(this,"Section 4: INTERMEDIATE INPUTS DURING LAST YEAR ");
+        setDrawer(this,"Section 4: INTERMEDIATE INPUTS");
         setParent(this, S5Activity.class);
         scrollView = findViewById(R.id.scrollView);
         init();
@@ -81,6 +81,7 @@ public class S4Activity extends FormActivity {
         LinearLayout layout5 = findViewById(R.id.survey5);
         TextView v1=findViewById(R.id.month);
         TextView v2=findViewById(R.id.year);
+        TextView v3=findViewById(R.id.lmonth);
         // Hide all layouts initially
         layout1.setVisibility(View.GONE);
         layout2.setVisibility(View.GONE);
@@ -91,6 +92,8 @@ public class S4Activity extends FormActivity {
         {
             v2.setVisibility(View.VISIBLE);
             v1.setVisibility(View.GONE);
+            v3.setVisibility(View.GONE);
+            ((TextView)findViewById(R.id.reference)).setText("SECTION-4   INPUTS/INTERMEDIATE CONSUMPTION "+v2.getText());
             for (int i = 0; i < codeList.length-1; i++) {
                 String id = "year__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
@@ -112,10 +115,38 @@ public class S4Activity extends FormActivity {
             }
 
         }
-        if(resumeModel.survey_id==3||resumeModel.survey_id==4||resumeModel.survey_id==5)
+        if(resumeModel.survey_id==4) {
+            v1.setVisibility(View.GONE);
+            v2.setVisibility(View.GONE);
+            v3.setVisibility(View.VISIBLE);
+
+            ((TextView) findViewById(R.id.reference)).setText("SECTION-4   INPUTS/INTERMEDIATE CONSUMPTION " + "Last Month");
+            for (int i = 0; i < codeList.length; i++) {
+                String id = "year__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                if (et != null) {
+                    et.setVisibility(View.GONE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
+            }
+            for (int i = 0; i < codeList.length; i++) {
+                String id = "month__" + codeList[i];
+                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
+                if (et != null) {
+                    et.setVisibility(View.VISIBLE);
+                } else {
+                    Log.e("S4Activity", "EditText not found for ID: " + id);
+                }
+            }
+        }
+        if(resumeModel.survey_id==3||resumeModel.survey_id==5)
         {
             v1.setVisibility(View.VISIBLE);
             v2.setVisibility(View.GONE);
+            v3.setVisibility(View.GONE);
+
+            ((TextView)findViewById(R.id.reference)).setText("SECTION-4   INPUTS/INTERMEDIATE CONSUMPTION "+v1.getText());
             for (int i = 0; i < codeList.length; i++) {
                 String id = "year__" + codeList[i];
                 EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
@@ -174,41 +205,68 @@ public class S4Activity extends FormActivity {
     }
     private void saveForm() {
         sbtn.setEnabled(false);
-        List<Section47> list=new ArrayList<>();
+        List<Section47> list = new ArrayList<>();
 
-        for(int i = 0; i < codeList.length; i++) {
-
+        // Iterate over each code to extract the validated model
+        for (int i = 0; i < codeList.length; i++) {
             Section47 m = null;
-            if(modelDatabase != null && modelDatabase.size() == codeList.length){
+            if (modelDatabase != null && modelDatabase.size() == codeList.length) {
                 m = modelDatabase.get(i);
             }
 
             try {
-                m = (Section47) extractValidatedModelFromForm(this, m, true, inputValidationOrder, codeList[i], Section47.class, false, this.findViewById(android.R.id.content));
+                m = (Section47) extractValidatedModelFromForm(
+                        this, m, true, inputValidationOrder,
+                        codeList[i], Section47.class, false,
+                        this.findViewById(android.R.id.content)
+                );
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
 
-
             if (m == null) {
-                mUXToolkit.showAlertDialogue("Failed", "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔", alertForEmptyFieldEvent);
+                mUXToolkit.showAlertDialogue(
+                        "Failed",
+                        "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔ " +
+                                "خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔",
+                        alertForEmptyFieldEvent
+                );
                 sbtn.setEnabled(true);
                 return;
             }
 
             list.add(m);
             setCommonFields(m);
-            m.section=4;
-            m.code=codeList[i];
-
+            m.section = 4;
+            m.code = codeList[i];
         }
 
+        // --- At Least 2 Inputs Must Be Filled Check ---
+        // Here we assume that each Section47 object has at least one of the key fields: student, month, or year.
+        // A field is considered "filled" if its value is greater than zero.
+        int filledCount = 0;
+        for (Section47 item : list) {
+            // Adjust these conditions based on the actual field names and what qualifies as "filled"
+            if ((item.student != null && item.student > 0) ||
+                    (item.month   != null && item.month > 0)   ||
+                    (item.year    != null && item.year > 0)) {
+                filledCount++;
+            }
+        }
 
-        /////TODO CHECKS////////////////////////////
+        if (filledCount < 2) {
+            mUXToolkit.showAlertDialogue(
+                    "Failed",
+                    "At least 2 inputs must be filled",
+                    null
+            );
+            sbtn.setEnabled(true);
+            return;
+        }
 
-
+        // --- Save to Database ---
         List<Long> iid = dbHandler.replace(list);
-        for(Long i:iid){
+        for (Long i : iid) {
             if (i != null && i < 0) {
                 mUXToolkit.showToast("Failed");
                 sbtn.setEnabled(true);
@@ -219,6 +277,7 @@ public class S4Activity extends FormActivity {
         sbtn.setEnabled(true);
         btnn.callOnClick();
     }
+
 
     @Override
     protected void onResume() {

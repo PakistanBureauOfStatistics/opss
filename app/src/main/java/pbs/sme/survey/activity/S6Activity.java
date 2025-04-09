@@ -1,8 +1,11 @@
 package pbs.sme.survey.activity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +29,12 @@ public class S6Activity extends FormActivity {
             "601","602","603","604","605","606","600"
 
     };
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s6);
-        setDrawer(this,"Section 6: Taxes ");
+        setDrawer(this, "Section 6: Taxes ");
         setParent(this, S7Activity.class);
         scrollView = findViewById(R.id.scrollView);
 
@@ -38,10 +42,23 @@ public class S6Activity extends FormActivity {
 
         AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
 
-        for(int i = 0; i < codeList.length-2; i++) {
-            EditText et = findViewById(getResources().getIdentifier("value__"+codeList[i], "id", getPackageName()));et.removeTextChangedListener(additionTextWatcher);
+        for (int i = 0; i < codeList.length - 1; i++) {
+            EditText et = findViewById(getResources().getIdentifier("value__" + codeList[i], "id", getPackageName()));
+            et.removeTextChangedListener(additionTextWatcher);
             et.addTextChangedListener(additionTextWatcher);
         }
+        if (resumeModel.survey_id == 1 || resumeModel.survey_id == 2) {
+
+            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "2023-24");
+        } else   if(resumeModel.survey_id==4)
+        {
+            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "Last Month");
+        } else   if(resumeModel.survey_id==3||resumeModel.survey_id==5)
+        {
+            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "Last 3 Calendar Months");
+        }
+
+
 
         sbtn = findViewById(R.id.btns);
         sbtn.setOnClickListener(v -> {

@@ -37,8 +37,8 @@ public class S2Activity extends FormActivity {
     private CheckBox[] monthCheckboxes;
     private Spinner description_psic;
     private final String[] inputValidationOrder = new String[]{
-            "year", "is_registered", "agency", "maintaining_accounts", "type_org", "description_psic", "psic", "hostel_facilty",
-            "food_laundry_other", "major_activities", "months"
+            "year", "is_registered", "agency", "maintaining_accounts","major_activities",  "description_psic", "psic","type_org", "hostel_facilty",
+            "food_laundry_other",  "months"
     };
 
 

@@ -180,13 +180,15 @@
     </style>
 
     <style name="txt_lbl">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">?t_md</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:fontFamily">@font/urdu</item>
-        <item name="android:layout_marginBottom">-12dp</item>
+        <item name="android:minLines">2</item>  <!-- Ensure space for longer text -->
+        <item name="android:layout_marginBottom">12dp</item>
     </style>
+
+
 
     <style name="txt_bg">
         <item name="android:layout_width">wrap_content</item>
@@ -613,7 +615,8 @@
         <item name="android:popupBackground">@color/color_blue</item>
         <item name="android:gravity">top</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_weight">2.2</item>
+        <item name="android:layout_weight">2.3</item>
+        <item name="android:maxLength">13</item>
     </style>
 
     <style name="edit_table_complex" parent="edit_table">

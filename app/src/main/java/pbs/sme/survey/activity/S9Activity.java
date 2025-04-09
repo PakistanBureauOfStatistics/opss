@@ -3,7 +3,6 @@ package pbs.sme.survey.activity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -52,9 +51,9 @@ public class S9Activity extends FormActivity {
                         EditText et901 = findViewById(getResources().getIdentifier("rupees__901", "id", getPackageName()));
                         EditText et902 = findViewById(getResources().getIdentifier("rupees__902", "id", getPackageName()));
                         EditText total = findViewById(getResources().getIdentifier("rupees__900", "id", getPackageName()));
-                        int Count901 = GetInteger(et901.getText().toString());
-                        int Count902 = GetInteger(et902.getText().toString());
-                        total.setText(String.valueOf(Count902 - Count901));
+                        Long  Count901 = GetInteger(et901.getText().toString());
+                        Long  Count902 = GetInteger(et902.getText().toString());
+                        total.setText(String.valueOf(Count901 - Count902));
                     }
                 });
             }
@@ -126,12 +125,12 @@ public class S9Activity extends FormActivity {
             setFormFromModel(this, s, inputValidationOrder, s.code, false, this.findViewById(android.R.id.content));
         }
     }
-    private int GetInteger(String txt){
+    private Long GetInteger(String txt){
         try {
-            return Integer.parseInt(txt);
+            return Long.parseLong(txt);
         }
         catch (Exception e) {
-            return 0;
+            return 0L;
         }
     }
 }

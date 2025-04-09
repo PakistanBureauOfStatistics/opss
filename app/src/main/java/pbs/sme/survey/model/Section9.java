@@ -10,7 +10,7 @@ public class Section9 extends FormTable {
     @SqlPrimaryKey
     public String code;
     public Integer survey_id;
-    public Integer rupees;
+    public Long rupees;
 
     @Override
     public String toString() {

@@ -87,8 +87,11 @@
                         <LinearLayout style="@style/vliner">
                             <TextView style="@style/q_heading" android:text="2.4.1 Kind of Major Activity"/>
                             <RelativeLayout
-                                style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
-                                <Spinner android:id="@+id/major_activities" style="@style/spn_form" />
+                                style="@style/vertical_wrapper"
+                                android:background="@drawable/spinner_container">
+                                <Spinner
+                                    android:id="@+id/major_activities"
+                                    style="@style/spn_form" />
                             </RelativeLayout>
 
                         </LinearLayout>
@@ -113,10 +116,12 @@
                         </LinearLayout>
 
                         <LinearLayout style="@style/vliner">
-                            <TextView style="@style/q_heading" android:text="2.5 Type of Organization"/>
+                            <TextView style="@style/q_heading"
+                                android:text="2.5 Type of Organization"/>
                             <RelativeLayout
                                 style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
-                                <Spinner android:id="@+id/type_org" style="@style/spn_form" android:entries="@array/spn_organization_type"/>
+                                <Spinner android:id="@+id/type_org" style="@style/spn_form"
+                                    android:entries="@array/spn_organization_type"/>
 
                             </RelativeLayout>
                            </LinearLayout>

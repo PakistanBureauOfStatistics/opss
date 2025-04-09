@@ -25,44 +25,79 @@
 
                 <include layout="@layout/layout_household"/>
                 <TextView
+                    android:id="@+id/reference"
                     style="@style/s_heading"
                     android:layout_width="match_parent"
                     android:text="SECTION-4   INPUTS/INTERMEDIATE CONSUMPTION " />
 
                 <LinearLayout
                     style="@style/smp_container_hr"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
                     <LinearLayout
                         style="@style/hliner"
+                        android:orientation="horizontal"
                         android:weightSum="10"
                         android:paddingVertical="?pad"
-                        android:background="?s_color">
+                        android:background="?s_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
                         <TextView
                             style="@style/summary_eng"
                             android:layout_weight="1.2"
                             android:textColor="@color/white"
                             android:text="Code"
-                            android:gravity="center_horizontal"/>
+                            android:gravity="center_horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
                         <TextView
                             style="@style/summary_eng"
-                            android:layout_weight="4"
+                            android:layout_weight="5.7"
                             android:text="Description"
                             android:textColor="@color/white"
-                            android:gravity="left"/>
+                            android:gravity="left"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+
+                        <!-- "Last 3 Months" TextView, initially visible or hidden dynamically -->
                         <TextView
                             android:id="@+id/month"
                             style="@style/summary_eng"
                             android:layout_weight="3.2"
                             android:textColor="@color/white"
-                            android:text="Last Month/Last 3 Months"/>
+                            android:text="Last 3 Months"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" /> <!-- Initially hidden, change visibility dynamically -->
+
+                        <!-- "Last Month" TextView, initially visible or hidden dynamically -->
+                        <TextView
+                            android:id="@+id/lmonth"
+                            style="@style/summary_eng"
+                            android:layout_weight="2.2"
+                            android:textColor="@color/white"
+                            android:text="Last Month"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" /> <!-- Initially hidden, change visibility dynamically -->
+
+                        <!-- "Year" TextView, initially visible or hidden dynamically -->
                         <TextView
                             android:id="@+id/year"
                             style="@style/summary_eng"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:textColor="@color/white"
-                            android:text="2023-24"/>
+                            android:text="2023-24"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" /> <!-- Initially hidden, change visibility dynamically -->
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -76,6 +111,7 @@
                             style="@style/summary_eng"
                             android:layout_weight="4"
                             android:text="401. Rent of Building" />
+                        
                         <EditText
                             android:id="@+id/student__401"
                             android:visibility="gone"
@@ -230,7 +266,7 @@
                         <TextView
                             style="@style/summary_eng"
                             android:layout_weight="4"
-                            android:text="407. Payment for Current Repair and Maintenance Work Done by Others on This EstablishmentÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s Fixed Assets" />
+                            android:text="407. Payment for current repair and maintenance work done by others on this establishment’s fixed assets" />
                         <EditText
                             android:id="@+id/student__407"
                             android:visibility="gone"

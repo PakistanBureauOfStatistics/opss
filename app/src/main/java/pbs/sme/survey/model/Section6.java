@@ -11,7 +11,7 @@ public class Section6 extends FormTable {
     @PrimaryKey
     @SqlPrimaryKey
     public String code;
-    public Integer value;
+    public Long value;
     public String other;
 
     @Override

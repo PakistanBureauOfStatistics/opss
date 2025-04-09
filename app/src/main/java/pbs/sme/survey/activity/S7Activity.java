@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import pbs.sme.survey.R;
 import pbs.sme.survey.helper.AdditionTextWatcher;
@@ -24,11 +23,12 @@ public class S7Activity extends FormActivity {
     private Button sbtn;
     private List<Section47> modelDatabase;
     // Year Fields
+
     EditText year_700,  year_709, year_710 ,year_711, year_712, year_713, year_714;
     // Month Fields
     EditText month_700, month_709, month_710,month_711, month_712, month_713, month_714;
     // Student Fields
-    EditText student_700, student_709, student_710 ,student_711, student_712, student_713, student_714;
+    EditText student_701 ,student_702, student_703,student_704,student_705,student_706,student_707,student_708, student_700, student_709, student_710 ,student_711, student_712, student_713, student_714;
 
     private final String[] inputValidationOrder = new String[]{
             "month", "year", "student"
@@ -51,10 +51,10 @@ public class S7Activity extends FormActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s7);
-        setDrawer(this, "Section 7: Quantity/Value of Fish Catch/Sold LY2023-24");
+        setDrawer(this, "Section 7: OUTPUT/SALES ");
         setParent(this, S8Activity.class);
         scrollView = findViewById(R.id.scrollView);
-        init();
+
         updateTextViewVisibility();
         // Initialize Year Fields
         year_700 = findViewById(R.id.year__700);
@@ -82,7 +82,15 @@ public class S7Activity extends FormActivity {
         student_712 = findViewById(R.id.student__712);
         student_713 = findViewById(R.id.student__713);
         student_714 = findViewById(R.id.student__714);
-
+        student_701 = findViewById(R.id.student__701);
+        student_702 = findViewById(R.id.student__702);
+        student_703 = findViewById(R.id.student__703); // Percentage Field
+        student_704 = findViewById(R.id.student__704);
+        student_705 = findViewById(R.id.student__705);
+        student_706 = findViewById(R.id.student__706);
+        student_707= findViewById(R.id.student__707);
+        student_708= findViewById(R.id.student__708);
+        init();
         // Add Listeners to Calculate Percentages
         addPercentageCalculation(year_700, year_711, year_712);
         addPercentageCalculation(year_700, year_713, year_714);
@@ -102,14 +110,14 @@ public class S7Activity extends FormActivity {
         AdditionTextWatcher additionTextWatchermonth = new AdditionTextWatcher(totalEditTextmonth);
         AdditionTextWatcher additionTextWatcheryear = new AdditionTextWatcher(totalEditTextyear);
         AdditionTextWatcher additionTextWatcherstudent = new AdditionTextWatcher(totalEditTexttstudent);
-        for (int i = 0; i < codeList.length - 1; i++) {
+        for (int i = 0; i < codeList.length -6; i++) {
             EditText et = findViewById(getResources().getIdentifier("student__" + codeList[i], "id", getPackageName()));
             if (et != null) {
                 et.removeTextChangedListener(additionTextWatcherstudent);
                 et.addTextChangedListener(additionTextWatcherstudent);
             }
         }
-        for (int i = 0; i < codeList.length - 1; i++) {
+        for (int i = 0; i < codeList.length - 6; i++) {
             EditText et = findViewById(getResources().getIdentifier("month__" + codeList[i], "id", getPackageName()));
             if (et != null) {
                 et.removeTextChangedListener(additionTextWatchermonth);
@@ -117,7 +125,7 @@ public class S7Activity extends FormActivity {
             }
         }
 
-        for (int i = 0; i < codeList.length - 1; i++) {
+        for (int i = 0; i < codeList.length - 6; i++) {
             EditText et = findViewById(getResources().getIdentifier("year__" + codeList[i], "id", getPackageName()));
             if (et != null) {
                 et.removeTextChangedListener(additionTextWatcheryear);
@@ -136,47 +144,187 @@ public class S7Activity extends FormActivity {
 
     }
     private void saveForm() {
-        sbtn.setEnabled(false);
+        sbtn.setEnabled(false); // Prevent duplicate submissions
         List<Section47> list = new ArrayList<>();
 
-        for (String c : codeList) {
-            Section47 m = null;
-            try {
-                m = (Section47) extractValidatedModelFromForm(this, m, true, inputValidationOrder, c, Section47.class, false, this.findViewById(android.R.id.content));
-            } catch (Exception e) {
-                throw new RuntimeException(e);
+        // --- Survey ID 1 Specific Validation ---
+        // For survey_id==1, ensure that among EditTexts from student__1715 to student__1723 and
+        // year__1715 to year__1723, at least two fields contain values greater than zero.
+        if (resumeModel != null && resumeModel.survey_id == 1) {
+            int validCount = 0;
+            Log.d("Validation", "Starting survey_id==1 validation from student__1715 to student__1723");
+
+            // Iterate from 1715 to 1723 (inclusive)
+            for (int i = 1715; i <= 1723; i++) {
+                String studentIdStr = "student__" + i;
+                String yearIdStr = "year__" + i;
+
+                int studentResId = getResources().getIdentifier(studentIdStr, "id", getPackageName());
+                int yearResId = getResources().getIdentifier(yearIdStr, "id", getPackageName());
+
+                // Get the EditText for student field
+                EditText studentField = (EditText) findViewById(studentResId);
+                // Get the EditText for year field
+                EditText yearField = (EditText) findViewById(yearResId);
+
+                if (studentField != null) {
+                    studentField.clearFocus(); // Ensure latest value is committed
+                    String studentText = studentField.getText().toString().trim();
+                    Log.d("Validation", studentIdStr + " found with value: " + studentText);
+                    try {
+                        int studentValue = Integer.parseInt(studentText);
+                        if (studentValue > 0) {
+                            validCount++;
+                        }
+                    } catch (NumberFormatException e) {
+                        Log.d("Validation", "Error parsing " + studentIdStr + ": " + e.getMessage());
+                    }
+                } else {
+                    Log.d("Validation", "EditText " + studentIdStr + " not found, resId: " + studentResId);
+                }
+
+                if (yearField != null) {
+                    yearField.clearFocus(); // Ensure latest value is committed
+                    String yearText = yearField.getText().toString().trim();
+                    Log.d("Validation", yearIdStr + " found with value: " + yearText);
+                    try {
+                        int yearValue = Integer.parseInt(yearText);
+                        if (yearValue > 0) {
+                            validCount++;
+                        }
+                    } catch (NumberFormatException e) {
+                        Log.d("Validation", "Error parsing " + yearIdStr + ": " + e.getMessage());
+                    }
+                } else {
+                    Log.d("Validation", "EditText " + yearIdStr + " not found, resId: " + yearResId);
+                }
             }
+            Log.d("Validation", "Total valid (nonzero) count: " + validCount);
 
-
-            if (m == null) {
-                mUXToolkit.showAlertDialogue("Failed", "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔", alertForEmptyFieldEvent);
+            if (validCount < 2) {
+                mUXToolkit.showAlertDialogue(
+                        "درست معلومات درکار",
+                        "سروے آئی ڈی 1 کے لیے، 1715 تا 1723 میں سے کم از کم دو فیلڈز میں غیر صفر ویلیو ہونی چاہیے۔ براہ کرم درست معلومات درج کریں۔",
+                        null
+                );
                 sbtn.setEnabled(true);
                 return;
             }
-
-            list.add(m);
-            setCommonFields(m);
-            m.section = 7;
-            m.code = c;
-
         }
+// --- Check fields from "month__701" to "month__708" and "year__701" to "year__708" to ensure at least one field has a non-zero value ---
+        int nonZeroCount = 0;
 
+// Check month fields from "month__701" to "month__708"
+        for (int i = 701; i <= 708; i++) {
+            String monthIdStr = "month__" + i;  // month__701, month__702, ..., month__708
+            int monthResId = getResources().getIdentifier(monthIdStr, "id", getPackageName());
 
-        /////TODO CHECKS////////////////////////////
+            EditText monthField = (EditText) findViewById(monthResId);
+            if (monthField != null) {
+                monthField.clearFocus(); // Ensure latest value is committed
+                String monthText = monthField.getText().toString().trim();
+                Log.d("Validation", monthIdStr + " found with value: " + monthText);
 
-
-        List<Long> iid = dbHandler.replace(list);
-        for (Long i : iid) {
-            if (i != null && i < 0) {
-                mUXToolkit.showToast("Failed");
-                sbtn.setEnabled(true);
-                return;
+                try {
+                    int monthValue = Integer.parseInt(monthText);
+                    if (monthValue > 0) {
+                        nonZeroCount++;
+                    }
+                } catch (NumberFormatException e) {
+                    Log.d("Validation", "Error parsing " + monthIdStr + ": " + e.getMessage());
+                }
+            } else {
+                Log.d("Validation", "EditText " + monthIdStr + " not found, resId: " + monthResId);
             }
         }
-        mUXToolkit.showToast("Success");
-        sbtn.setEnabled(true);
-        btnn.callOnClick();
+
+// Check year fields from "year__701" to "year__708"
+        for (int i = 701; i <= 708; i++) {
+            String yearIdStr = "year__" + i;  // year__701, year__702, ..., year__708
+            int yearResId = getResources().getIdentifier(yearIdStr, "id", getPackageName());
+
+            EditText yearField = (EditText) findViewById(yearResId);
+            if (yearField != null) {
+                yearField.clearFocus(); // Ensure latest value is committed
+                String yearText = yearField.getText().toString().trim();
+                Log.d("Validation", yearIdStr + " found with value: " + yearText);
+
+                try {
+                    int yearValue = Integer.parseInt(yearText);
+                    if (yearValue > 0) {
+                        nonZeroCount++;
+                    }
+                } catch (NumberFormatException e) {
+                    Log.d("Validation", "Error parsing " + yearIdStr + ": " + e.getMessage());
+                }
+            } else {
+                Log.d("Validation", "EditText " + yearIdStr + " not found, resId: " + yearResId);
+            }
+        }
+
+// If no non-zero values found in the fields from "month__701" to "month__708" and "year__701" to "year__708"
+        if (nonZeroCount == 0) {
+            mUXToolkit.showAlertDialogue(
+                    "درست معلومات درکار",
+                    "کم از کم ایک مہینہ یا سال فیلڈ میں غیر صفر ویلیو ہونی چاہیے۔ براہ کرم درست معلومات درج کریں۔",
+                    null
+            );
+            sbtn.setEnabled(true);
+            return;
+        }
+        if (validateSection12EditChecks()) {
+            // If validation passes, proceed with saving the form
+            for (String c : codeList) {
+                Section47 m = null;
+                try {
+                    m = (Section47) extractValidatedModelFromForm(this, m, true, inputValidationOrder,
+                            c, Section47.class, false, this.findViewById(android.R.id.content));
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+
+                if (m == null) {
+                    mUXToolkit.showAlertDialogue(
+                            "Failed",
+                            "فارم کو محفوظ نہیں کر سکتے، براہ کرم آگے بڑھنے سے پہلے تمام ڈیٹا درج کریں۔ خالی اندراج یا غلط جوابات دیکھنے کے لیے \"OK\" پر کلک کریں۔",
+                            alertForEmptyFieldEvent
+                    );
+                    sbtn.setEnabled(true);
+                    return;
+                }
+                list.add(m);
+                setCommonFields(m);
+                m.section = 7;
+                m.code = c;
+            }
+
+            // --- Save Data to Database ---
+            List<Long> iid = dbHandler.replace(list);
+            for (Long i : iid) {
+                if (i != null && i < 0) {
+                    mUXToolkit.showToast("Failed");
+                    sbtn.setEnabled(true);
+                    return;
+                }
+            }
+            mUXToolkit.showToast("Success");
+            sbtn.setEnabled(true);
+            btnn.callOnClick(); // Trigger any subsequent actions (e.g., navigation)
+        } else {
+            // If validation fails, show the error and allow the user to correct the form
+            mUXToolkit.showAlertDialogue("درست معلومات درکار", "فارم میں کچھ غلطیاں ہیں۔ براہ کرم درست کریں اور دوبارہ کوشش کریں۔", null);
+            sbtn.setEnabled(true);
+        }
+
+
     }
+
+
+
+
+
+
+
 
     @Override
     protected void onResume() {
@@ -192,25 +340,49 @@ public class S7Activity extends FormActivity {
         }
 
     }
+
     private void updateTextViewVisibility() {
         // Get references to the TextViews
         TextView studentTextView = findViewById(R.id.student);
         TextView monthsTextView = findViewById(R.id.Months);
         TextView yearTextView = findViewById(R.id.year);
+        TextView lastmonthTextView = findViewById(R.id.lmonth);
+
 
         // Hide all TextViews initially
         studentTextView.setVisibility(View.GONE);
         monthsTextView.setVisibility(View.GONE);
         yearTextView.setVisibility(View.GONE);
+        lastmonthTextView.setVisibility(View.GONE);
 
-        // Show the correct TextView based on survey_id
+        // Check if resumeModel is not null before proceeding
         if (resumeModel != null) {
-            if (resumeModel.survey_id == 1 || resumeModel.survey_id == 2) {
-                yearTextView.setVisibility(View.VISIBLE);  // Show "Number of Students"
-            } else if (resumeModel.survey_id == 3 || resumeModel.survey_id == 4 || resumeModel.survey_id == 5) {
-                monthsTextView.setVisibility(View.VISIBLE);   // Show "Last 3 Calendar Months"
+            if (resumeModel.survey_id == 1) {
+                // Show "Number of Students"
+                studentTextView.setVisibility(View.VISIBLE);
+                yearTextView.setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.reference)).setText("SECTION-7: OUTPUT/SALES DURING  " + yearTextView.getText());
+
+            } else if (resumeModel.survey_id == 2) {
+                // Show "Year"
+                yearTextView.setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.reference)).setText("SECTION-7: OUTPUT/SALES DURING" + yearTextView.getText());
+
+            } else if (resumeModel.survey_id == 4) {
+                yearTextView.setVisibility(View.INVISIBLE);
+                monthsTextView.setVisibility(View.INVISIBLE);
+                lastmonthTextView.setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.reference)).setText("SECTION-7: OUTPUT/SALES DURING " + "Last Month");
+
+            } else if (resumeModel.survey_id == 3 || resumeModel.survey_id == 5) {
+                // Show "Last 3 Calendar Months"
+                yearTextView.setVisibility(View.INVISIBLE);
+                monthsTextView.setVisibility(View.VISIBLE);
+                ((TextView) findViewById(R.id.reference)).setText("SECTION-7: OUTPUT/SALES DURING " + monthsTextView.getText());
+
             } else {
-                studentTextView.setVisibility(View.VISIBLE);   // Default case: Show "2023-24"
+                // Default case: Show "2023-24"
+                studentTextView.setVisibility(View.VISIBLE);
             }
         } else {
             Log.e("SurveyDebug", "resumeModel is null!");
@@ -224,6 +396,7 @@ public class S7Activity extends FormActivity {
         LinearLayout layout3 = findViewById(R.id.survey3);
         LinearLayout layout4 = findViewById(R.id.survey4);
         LinearLayout layout5 = findViewById(R.id.survey5);
+        LinearLayout commmon = findViewById(R.id.common);
 
         // Hide all layouts initially
         layout1.setVisibility(View.GONE);
@@ -246,9 +419,25 @@ public class S7Activity extends FormActivity {
             if (studentEt != null) studentEt.setVisibility(View.GONE);
             if (monthEt != null) monthEt.setVisibility(View.GONE);
         }
+// Show specific EditTexts based on survey_id
+        if (resumeModel.survey_id == 1 ) {
 
+            for (String code : codeList) {
+                EditText studentEt = findViewById(getResources().getIdentifier("student__" + code, "id", getPackageName()));
+                if (studentEt != null) studentEt.setVisibility(View.VISIBLE);
+
+            }
+            for (String code : codeList) {
+                EditText yearEt = findViewById(getResources().getIdentifier("year__" + code, "id", getPackageName()));
+                if (yearEt != null) yearEt.setVisibility(View.VISIBLE);
+            }
+            for (String code : codeList) {
+                EditText monthEt = findViewById(getResources().getIdentifier("month__" + code, "id", getPackageName()));
+                if (monthEt != null) monthEt.setVisibility(View.GONE);
+            }
+        }
         // Show specific EditTexts based on survey_id
-        if (resumeModel.survey_id == 1 || resumeModel.survey_id == 2) {
+        if ( resumeModel.survey_id == 2) {
             for (String code : codeList) {
                 EditText yearEt = findViewById(getResources().getIdentifier("year__" + code, "id", getPackageName()));
                 if (yearEt != null) yearEt.setVisibility(View.VISIBLE);
@@ -282,6 +471,20 @@ public class S7Activity extends FormActivity {
         switch (resumeModel.survey_id) {
             case 1:
                 layout1.setVisibility(View.VISIBLE);
+                student_701.setVisibility(View.INVISIBLE);
+                student_702.setVisibility(View.INVISIBLE);
+                student_703.setVisibility(View.INVISIBLE);
+                student_704.setVisibility(View.INVISIBLE);
+                student_705.setVisibility(View.INVISIBLE);
+                student_706.setVisibility(View.INVISIBLE);
+                student_708.setVisibility(View.INVISIBLE);
+                student_707.setVisibility(View.INVISIBLE);
+                student_709.setVisibility(View.INVISIBLE);
+                student_710.setVisibility(View.INVISIBLE);
+                student_711.setVisibility(View.INVISIBLE);
+                student_712.setVisibility(View.INVISIBLE);
+                student_713.setVisibility(View.INVISIBLE);
+                student_714.setVisibility(View.INVISIBLE);
                 break;
             case 2:
                 layout2.setVisibility(View.VISIBLE);
@@ -301,202 +504,6 @@ public class S7Activity extends FormActivity {
         }
     }
 
-/*    private void init() {
-        // Get references to all layouts
-        LinearLayout layout1 = findViewById(R.id.survey1);
-        LinearLayout layout2 = findViewById(R.id.survey2);
-        LinearLayout layout3 = findViewById(R.id.survey3);
-        LinearLayout layout4 = findViewById(R.id.survey4);
-        LinearLayout layout5 = findViewById(R.id.survey5);
-
-        // Hide all layouts initially
-        layout1.setVisibility(View.GONE);
-        layout2.setVisibility(View.GONE);
-        layout3.setVisibility(View.GONE);
-        layout4.setVisibility(View.GONE);
-        layout5.setVisibility(View.GONE);
-        if (resumeModel.survey_id == 1 || resumeModel.survey_id == 2) {
-            for (int i = 0; i < codeList.length - 1; i++) {
-                String id = "year__" + codeList[i];
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.VISIBLE);
-                } else {
-                    Log.e("S4Activity", "EditText not found for ID: " + id);
-                }
-            }
-            for (int i = 0; i < codeList.length - 1; i++) {
-                String id = "student__" + codeList[i];
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.GONE);
-                } else {
-                    Log.e("S4Activity", "EditText not found for ID: " + id);
-                }
-            }
-
-            for (int i = 0; i < codeList.length - 1; i++) {
-                String id = "month__" + codeList[i];
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.GONE);
-                } else {
-                    Log.e("S4Activity", "EditText not found for ID: " + id);
-                }
-            }
-
-
-        if (resumeModel.survey_id == 3 || resumeModel.survey_id == 4 || resumeModel.survey_id == 5) {
-            for (int i = 0; i < codeList.length; i++) {
-                String id = "year__" + codeList[i];
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.GONE);
-                } else {
-                    Log.e("S47activity", "EditText not found for ID: " + id);
-                }
-            }
-            for (int i = 0; i < codeList.length - 1; i++) {
-                String id = "student__" + codeList[i];
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.GONE);
-                } else {
-                    Log.e("S4Activity", "EditText not found for ID: " + id);
-                }
-            }
-            for (String s : codeList) {
-                String id = "month__" + s;
-                EditText et = findViewById(getResources().getIdentifier(id, "id", getPackageName()));
-                if (et != null) {
-                    et.setVisibility(View.VISIBLE);
-                } else {
-                    Log.e("S4Activity", "EditText not found for ID: " + id);
-                }
-            }
-
-            }
-        // Find EditText elements once to avoid duplicate calls
-        EditText year_700 = findViewById(R.id.year__700);
-        EditText month_700 = findViewById(R.id.month__700);
-        EditText student_700 = findViewById(R.id.student__700);
-
-        EditText year_709 = findViewById(R.id.year__709);
-        EditText month_709 = findViewById(R.id.month__709);
-        EditText student_709 = findViewById(R.id.student__709);
-
-        EditText year_710 = findViewById(R.id.year__710);
-        EditText month_710 = findViewById(R.id.month__710);
-        EditText student_710 = findViewById(R.id.student__710);
-
-        EditText year_711 = findViewById(R.id.year__711);
-        EditText month_711 = findViewById(R.id.month__711);
-        EditText student_711 = findViewById(R.id.student__711);
-
-        EditText year_712 = findViewById(R.id.year__712);
-        EditText month_712 = findViewById(R.id.month__712);
-        EditText student_712 = findViewById(R.id.student__712);
-
-        EditText year_713 = findViewById(R.id.year__713);
-        EditText month_713 = findViewById(R.id.month__713);
-        EditText student_713 = findViewById(R.id.student__713);
-
-        EditText year_714 = findViewById(R.id.year__714);
-        EditText month_714 = findViewById(R.id.month__714);
-        EditText student_714 = findViewById(R.id.student__714);
-
-// Hide all EditTexts initially
-        year_700.setVisibility(View.GONE);
-        month_700.setVisibility(View.GONE);
-        student_700.setVisibility(View.GONE);
-
-        year_709.setVisibility(View.GONE);
-        month_709.setVisibility(View.GONE);
-        student_709.setVisibility(View.GONE);
-
-        year_710.setVisibility(View.GONE);
-        month_710.setVisibility(View.GONE);
-        student_710.setVisibility(View.GONE);
-
-        year_711.setVisibility(View.GONE);
-        month_711.setVisibility(View.GONE);
-        student_711.setVisibility(View.GONE);
-
-        year_712.setVisibility(View.GONE);
-        month_712.setVisibility(View.GONE);
-        student_712.setVisibility(View.GONE);
-
-        year_713.setVisibility(View.GONE);
-        month_713.setVisibility(View.GONE);
-        student_713.setVisibility(View.GONE);
-
-        year_714.setVisibility(View.GONE);
-        month_714.setVisibility(View.GONE);
-        student_714.setVisibility(View.GONE);
-
-
-// Show the layout based on survey_id
-            switch (resumeModel.survey_id) {
-                case 1:
-                    layout1.setVisibility(View.VISIBLE);
-                    student_700.setVisibility(View.VISIBLE);
-                    student_709.setVisibility(View.VISIBLE);
-                    student_710.setVisibility(View.VISIBLE);
-                    student_711.setVisibility(View.VISIBLE);
-                    student_712.setVisibility(View.VISIBLE);
-                    student_713.setVisibility(View.VISIBLE);
-                    student_714.setVisibility(View.VISIBLE);
-
-                    break;
-                case 2:
-                    layout2.setVisibility(View.VISIBLE);
-                    year_700.setVisibility(View.VISIBLE); // Ensure this is intentional
-                    year_709.setVisibility(View.VISIBLE);
-                    year_710.setVisibility(View.VISIBLE);
-                    year_711.setVisibility(View.VISIBLE);
-                    year_712.setVisibility(View.VISIBLE);
-                    year_713.setVisibility(View.VISIBLE);
-                    year_714.setVisibility(View.VISIBLE);
-                    break;
-                case 3:
-                    layout3.setVisibility(View.VISIBLE);
-                    month_700.setVisibility(View.VISIBLE);
-                    month_700.setVisibility(View.VISIBLE); // Ensure this is intentional
-                    month_709.setVisibility(View.VISIBLE);
-                    month_710.setVisibility(View.VISIBLE);
-                    month_711.setVisibility(View.VISIBLE);
-                    month_712.setVisibility(View.VISIBLE);
-                    month_713.setVisibility(View.VISIBLE);
-                    month_714.setVisibility(View.VISIBLE);
-                    break;
-                case 4:
-                    layout4.setVisibility(View.VISIBLE);
-                    month_700.setVisibility(View.VISIBLE);
-                    month_709.setVisibility(View.VISIBLE);
-                    month_710.setVisibility(View.VISIBLE);
-                    month_711.setVisibility(View.VISIBLE);
-                    month_712.setVisibility(View.VISIBLE);
-                    month_713.setVisibility(View.VISIBLE);
-                    month_714.setVisibility(View.VISIBLE);
-                    break;
-                case 5:
-                    layout5.setVisibility(View.VISIBLE);
-                    month_700.setVisibility(View.VISIBLE); // Ensure this is intentional
-                    month_709.setVisibility(View.VISIBLE);
-                    month_710.setVisibility(View.VISIBLE);
-                    month_711.setVisibility(View.VISIBLE);
-                    month_712.setVisibility(View.VISIBLE);
-                    month_713.setVisibility(View.VISIBLE);
-                    month_714.setVisibility(View.VISIBLE);
-                    break;
-                default:
-                    // Handle cases where survey_id is not in range 1-5
-                    break;
-            }
-        }
-        }*/
-
-        // validate code __702
 
 
         private int parseInteger (String value){
@@ -569,6 +576,225 @@ public class S7Activity extends FormActivity {
 
         totalEditText.addTextChangedListener(textWatcher);
         valueEditText.addTextChangedListener(textWatcher);
+    }
+    private boolean validateSection12EditChecks() {
+        // Check if the section12 object is null, if so, return true (validation passes)
+        if (resumeModel == null) return true;
+
+        int surveyId = resumeModel.survey_id;  // Get survey ID
+        int majorActivity = resumeModel.major_activities;  // Get major activity ID
+
+        // ---------- Survey 1 ----------
+        if (surveyId == 1) {
+            switch (majorActivity) {
+                case 1:
+                    if (!isFilled("year__1715") || !isFilled("student__1715")) {
+                        showError("سال 1715 اور طالبعلم 1715 دونوں درج ہونے چاہئیں۔");
+                        return false;  // Validation fails if fields are not filled
+                    }
+                    break;
+                case 2:
+                    if (!isFilled("year__1716") || !isFilled("student__1716")) {
+                        showError("سال 1716 اور طالبعلم 1716 دونوں درج ہونے چاہئیں۔");
+                        return false;
+                    }
+                    break;
+                case 3:
+                    if ((!isFilled("year__1717") && !isFilled("year__1718")) ||
+                            (!isFilled("student__1717") && !isFilled("student__1718"))) {
+                        showError("سال یا طالبعلم 1717 یا 1718 میں سے کم از کم ایک پر کریں۔");
+                        return false;
+                    }
+                    break;
+                case 4:
+                    if ((!isFilled("year__1719") && !isFilled("year__1720")) ||
+                            (!isFilled("student__1719") && !isFilled("student__1720"))) {
+                        showError("سال یا طالبعلم 1719 یا 1720 میں سے کم از کم ایک پر کریں۔");
+                        return false;
+                    }
+                    break;
+                case 7: case 8: case 9:
+                    if (!isFilled("year__1721") || !isFilled("student__1721")) {
+                        showError("سال 1721 اور طالبعلم 1721 لازمی درج ہوں۔");
+                        return false;
+                    }
+                    break;
+            }
+
+            boolean anyFilled = false;
+            for (int i = 1715; i <= 1723; i++) {
+                if (isFilled("year__" + i) || isFilled("student__" + i)) {
+                    anyFilled = true;
+                    break;
+                }
+            }
+            if (!anyFilled) {
+                showError("1715 تا 1723 میں سے کم از کم ایک فیلڈ پر کریں۔");
+                return false;
+            }
+        }
+
+        // ---------- Survey 2 ----------
+        else if (surveyId == 2) {
+            switch (majorActivity) {
+                case 1:
+                    for (int i = 2715; i <= 2724; i++) {
+                        if (isFilled("year__" + i)) return true;
+                    }
+                    showError("سال 2715 تا 2724 میں سے کم از کم ایک پر کریں۔");
+                    return false;
+
+                case 2:
+                    if (!isFilled("year__2716") || !isFilled("year__2717")) {
+                        showError("سال 2716 اور 2717 دونوں درج کریں۔");
+                        return false;
+                    }
+                    break;
+                case 3:
+                    if (!isFilled("year__2720")) {
+                        showError("سال 2720 لازمی درج کریں۔");
+                        return false;
+                    }
+                    break;
+                case 4: case 5:
+                    if (!isFilled("year__2721") && !isFilled("year__2722")) {
+                        showError("سال 2721 یا 2722 میں سے ایک پر کریں۔");
+                        return false;
+                    }
+                    break;
+                case 6: case 7:
+                    if (!isFilled("year__2722") && !isFilled("year__2723")) {
+                        showError("سال 2722 یا 2723 میں سے ایک پر کریں۔");
+                        return false;
+                    }
+                    break;
+            }
+        }
+
+        // ---------- Survey 3 ----------
+        else if (surveyId == 3) {
+            if ((majorActivity == 1 || majorActivity == 2) &&
+                    (!isFilled("month__3715") || !isFilled("month__3719"))) {
+                showError("مہینہ 3715 اور 3719 دونوں درج کریں۔");
+                return false;
+            }
+
+            if (majorActivity == 3 && !isFilled("month__3716")) {
+                showError("مہینہ 3716 لازمی پر کریں۔");
+                return false;
+            }
+
+            if (majorActivity == 4) {
+                for (int i = 3717; i <= 3732; i++) {
+                    if (!isFilled("month__" + i)) {
+                        showError("مہینہ " + i + " لازمی پر کریں۔");
+                        return false;
+                    }
+                }
+            }
+        }
+
+        // ---------- Survey 4 ----------
+        else if (surveyId == 4) {
+            if (majorActivity == 1 && !isFilled("month__4715")) {
+                showError("مہینہ 4715 درج کریں۔");
+                return false;
+            }
+            if (majorActivity == 2 && !isFilled("month__4716")) {
+                showError("مہینہ 4716 درج کریں۔");
+                return false;
+            }
+        }
+
+        // ---------- Survey 5 ----------
+        else if (surveyId == 5) {
+            if (majorActivity >= 1 && majorActivity <= 3) {
+                int count = 0;
+                for (int i = 5715; i <= 5719; i++) {
+                    if (isFilled("month__" + i)) count++;
+                }
+                if (isFilled("month__5722")) count++;
+                if (isFilled("month__5725")) count++;
+
+                if (count < 2) {
+                    showError("کم از کم دو مہینے 5715 تا 5719، 5722، 5725 میں سے پر کریں۔");
+                    return false;
+                }
+            }
+
+            if (majorActivity == 4 &&
+                    (!isFilled("month__5720") || !isFilled("month__5721") || !isFilled("month__5725"))) {
+                showError("ماہ 5720، 5721، 5725 لازمی درج ہوں۔");
+                return false;
+            }
+
+            if (majorActivity == 5 && !isFilled("month__5723")) {
+                showError("مہینہ 5723 لازمی درج کریں۔");
+                return false;
+            }
+
+            if (majorActivity == 6) {
+                boolean oneFilled = false;
+                for (int i = 5715; i <= 5725; i++) {
+                    if (isFilled("month__" + i)) {
+                        oneFilled = true;
+                        break;
+                    }
+                }
+                if (!oneFilled) {
+                    showError("مہینوں 5715 تا 5725 میں سے کم از کم ایک پر کریں۔");
+                    return false;
+                }
+            }
+
+            if (majorActivity == 7 &&
+                    (!isFilled("month__5724") || !isFilled("month__5725"))) {
+                showError("مہینہ 5724 اور 5725 دونوں پر کریں۔");
+                return false;
+            }
+        }
+
+        return true;  // All checks passed, validation successful
+    }
+
+    private boolean isFilled(String fieldId) {
+        int resId = getResources().getIdentifier(fieldId, "id", getPackageName());
+        if (resId == 0) return false; // View ID not found
+
+        View view = findViewById(resId);
+        if (view instanceof EditText) {
+            String value = ((EditText) view).getText().toString().trim();
+            if (value.isEmpty()) return false; // Field is empty
+
+            try {
+                // Ensure the value is an integer
+                int number = Integer.parseInt(value);
+                return number != 0; // Not zero
+            } catch (NumberFormatException e) {
+                return false; // Not a valid integer
+            }
+        }
+
+        return false; // Not an EditText
+    }
+
+
+
+//    private boolean isFilled(String fieldId) {
+//        int resId = getResources().getIdentifier(fieldId, "id", getPackageName());
+//        if (resId == 0) return false; // ID not found
+//
+//        View view = findViewById(resId);
+//        if (view instanceof EditText) {
+//            String value = ((EditText) view).getText().toString().trim();
+//            return !value.isEmpty();
+//        }
+//
+//        return false; // Not an EditText or view not found
+//    }
+
+    private void showError(String message) {
+        mUXToolkit.showAlertDialogue("درست معلومات درکار", message, null);
     }
 
 

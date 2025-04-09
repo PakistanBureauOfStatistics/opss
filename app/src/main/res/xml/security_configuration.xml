@@ -3,4 +3,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">pbos.gov.pk</domain>
     </domain-config>
+<!--    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.43.168</domain>
+    </domain-config>-->
 </network-security-config>

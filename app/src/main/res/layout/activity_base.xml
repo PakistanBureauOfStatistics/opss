@@ -77,16 +77,16 @@
                             android:id="@+id/b1"
                             style="@style/rdg"
                             android:layout_width="match_parent">
-                            <RadioButton android:id="@+id/b11" style="@style/rd_yesno" android:text="yes" />
-                            <RadioButton android:id="@+id/b12" style="@style/rd_yesno" android:text="no" />
+                            <RadioButton android:id="@+id/b11" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/b12" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
                         style="@style/vliner">
                         <TextView style="@style/q_heading" android:text="2.	In case of ‘No’ have you ever applied for loan? " />
                         <RadioGroup android:id="@+id/b2" style="@style/rdg" android:layout_width="match_parent">
-                            <RadioButton android:id="@+id/b21" style="@style/rd_yesno" android:text="yes" />
-                            <RadioButton android:id="@+id/b22" style="@style/rd_yesno" android:text="no" />
+                            <RadioButton android:id="@+id/b21" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/b22" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
@@ -109,7 +109,8 @@
                         <TextView style="@style/q_heading" android:text="4. If the loan was rejected last time, what was the reason cited by bank?" />
                         <RadioGroup
                             android:id="@+id/b4"
-                            style="@style/brdg">
+                            style="@style/brdg"
+                            >
                             <RadioButton android:id="@+id/b41" style="@style/rd_linear" android:text="Lack of collateral" />
                             <RadioButton android:id="@+id/b42" style="@style/rd_linear" android:text="Issues in documentation" />
                             <RadioButton android:id="@+id/b43" style="@style/rd_linear" android:text="Lack of standard financial statement" />
@@ -144,11 +145,12 @@
                             <RadioButton android:id="@+id/b63" style="@style/rd_linear" android:text="Complicated application process" />
                             <RadioButton android:id="@+id/b64" style="@style/rd_linear" android:text="Lack of financial records" />
                             <RadioButton android:id="@+id/b65" style="@style/rd_linear" android:text="Limited knowledge about financial products" />
-                            <RadioButton android:id="@+id/b66" style="@style/rd_linear" android:text="Other" />
+                            <RadioButton android:id="@+id/b66" style="@style/rd_linear" android:text="Other (specify)" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/vliner">
+                        style="@style/vliner"
+                        android:visibility="gone">
                         <TextView
                             style="@style/q_heading"
                             android:text="Other(Specify)"/>
@@ -163,8 +165,8 @@
                             android:id="@+id/b7"
                             style="@style/rdg"
                             android:layout_width="match_parent">
-                            <RadioButton android:id="@+id/b71" style="@style/rd_yesno" android:text="yes" />
-                            <RadioButton android:id="@+id/b72" style="@style/rd_yesno" android:text="no" />
+                            <RadioButton android:id="@+id/b71" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/b72" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <!-- Never Applied for Loan Reason -->
@@ -186,8 +188,8 @@
                             android:id="@+id/b9"
                             style="@style/rdg"
                             android:layout_width="match_parent">
-                            <RadioButton android:id="@+id/b91" style="@style/rd_yesno" android:text="yes" />
-                            <RadioButton android:id="@+id/b92" style="@style/rd_yesno" android:text="yes" />
+                            <RadioButton android:id="@+id/b91" style="@style/rd_yesno" android:text="Yes" />
+                            <RadioButton android:id="@+id/b92" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout style="@style/vliner">
@@ -203,7 +205,8 @@
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
-                        style="@style/vliner">
+                        style="@style/vliner"
+                        android:visibility="gone">
                         <TextView
                             style="@style/q_heading"
                             android:text="Other(Specify)"/>
@@ -225,12 +228,13 @@
                             <RadioButton android:id="@+id/c13" style="@style/rd_linear" android:text="Environmental pollution (smoke, noise, contamination)" />
                             <RadioButton android:id="@+id/c14" style="@style/rd_linear" android:text="Law and order/security issues" />
                             <RadioButton android:id="@+id/c15" style="@style/rd_linear" android:text="Accessibility for customers and suppliers" />
-                            <RadioButton android:id="@+id/c16" style="@style/rd_linear" android:text="Other" />
+                            <RadioButton android:id="@+id/c16" style="@style/rd_linear" android:text="Other (specify)" />
                             <RadioButton android:id="@+id/c17" style="@style/rd_linear" android:text="None" />
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other (Specify)" />
                         <EditText android:id="@+id/c1_other" style="@style/edit_form_text" />
                     </LinearLayout>
@@ -275,7 +279,8 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="2. If ‘No’, what is the main reason?" />
                         <RadioGroup
                             android:id="@+id/d2"
@@ -284,8 +289,18 @@
                             <RadioButton android:id="@+id/d21" style="@style/rd_linear" android:text="Lack of awareness" />
                             <RadioButton android:id="@+id/d22" style="@style/rd_linear" android:text="High cost of services" />
                             <RadioButton android:id="@+id/d23" style="@style/rd_linear" android:text="Service not required" />
-                            <RadioButton android:id="@+id/d24" style="@style/rd_linear" android:text="Other" />
+                            <RadioButton android:id="@+id/d24" style="@style/rd_linear" android:text="Other (specify)" />
                         </RadioGroup>
+                    </LinearLayout>
+                    <LinearLayout
+                        style="@style/vliner"
+                        android:visibility="gone">
+                        <TextView
+                            style="@style/q_heading"
+                            android:text="Other(Specify)"/>
+                        <EditText
+                            android:id="@+id/d2_other"
+                            style="@style/edit_form_text"/>
                     </LinearLayout>
 
                     <LinearLayout style="@style/vliner">
@@ -347,11 +362,12 @@
                             <RadioButton android:id="@+id/d73" style="@style/rd_linear" android:text="Does not fulfill current business needs" />
                             <RadioButton android:id="@+id/d74" style="@style/rd_linear" android:text="Quality of services provided" />
                             <RadioButton android:id="@+id/d75" style="@style/rd_linear" android:text="Cost of services" />
-                            <RadioButton android:id="@+id/d76" style="@style/rd_linear" android:text="Other" />
+                            <RadioButton android:id="@+id/d76" style="@style/rd_linear" android:text="Other (specify)" />
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other(Specify)" />
                         <EditText android:id="@+id/d7_other" style="@style/edit_form_text" />
                     </LinearLayout>
@@ -373,7 +389,8 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other (Specify)" />
                         <EditText android:id="@+id/e1_other" style="@style/edit_form_text" />
                     </LinearLayout>
@@ -506,12 +523,16 @@
                             <RadioButton android:id="@+id/f66" style="@style/rd_linear" android:text="Other (please specify)" />
                         </RadioGroup>
 
-                        <EditText android:id="@+id/f6_other" style="@style/edit_form_text" android:hint="Specify other challenge" android:visibility="gone"/>
+                    </LinearLayout>
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
+                        <TextView style="@style/q_heading" android:text="6. If ‘Yes’, please specify challenge" />
+                        <EditText android:id="@+id/f6_other" style="@style/edit_form_text" android:hint="specify the scheme"/>
+
                     </LinearLayout>
 
-
                     <LinearLayout style="@style/vliner">
-                        <TextView style="@style/q_heading" android:text="7. Have you availed any Government support for technology upgrades?" />
+                        <TextView style="@style/q_heading" android:text="7. Are you aware of government programmes or incentives for technology adoption?" />
                         <RadioGroup
                             android:id="@+id/f7" style="@style/rdg"
                             android:layout_width="match_parent">
@@ -530,19 +551,20 @@
                             <RadioButton android:id="@+id/f82" style="@style/rd_yesno" android:text="No" />
                         </RadioGroup>
                     </LinearLayout>
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="9. If ‘Yes’, please specify the scheme" />
-                        <EditText android:id="@+id/f9" style="@style/edit_form_text" android:hint="specify the scheme"/>
+                        <EditText android:id="@+id/f9_other" style="@style/edit_form_text" android:hint="specify the scheme"/>
 
                     </LinearLayout>
 
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="10. If 'Not', what is the main reason?" />
                         <RadioGroup
                             android:id="@+id/f10"
-                            style="@style/brdg"
-                            >
+                            style="@style/brdg">
                             <RadioButton android:id="@+id/f101" style="@style/rd_linear" android:text="Lack of awareness" />
                             <RadioButton android:id="@+id/f102" style="@style/rd_linear" android:text="Difficult application procedure" />
                             <RadioButton android:id="@+id/f103" style="@style/rd_linear" android:text="Legal requirements" />
@@ -551,7 +573,8 @@
                             <RadioButton android:id="@+id/f106" style="@style/rd_linear" android:text="Other (please specify)" />
                         </RadioGroup>
                     </LinearLayout>
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other(Specify)" />
                         <EditText android:id="@+id/f10_other" style="@style/edit_form_text" android:hint="Other"/>
 
@@ -627,6 +650,7 @@
                         </RadioGroup>
                     </LinearLayout>
                     <LinearLayout
+                        android:visibility="gone"
                         style="@style/vliner">
 
                         <TextView
@@ -673,16 +697,18 @@
                             android:id="@+id/export2h"
                             style="@style/moption"
                             android:layout_weight="1"
-                            android:text="Other" />
+                            android:text="Other (specify)" />
                     </LinearLayout>
 
-                    <LinearLayout style="@style/vliner">
+                    <LinearLayout style="@style/vliner"
+                        android:visibility="gone">
                         <TextView style="@style/q_heading" android:text="Other (Specify)" />
                         <EditText android:id="@+id/export_other" style="@style/edit_form_text" />
                     </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
                     style="@style/vliner"
+                    android:visibility="gone"
                     android:id="@+id/export_reasons_wrapper">
 
                     <TextView

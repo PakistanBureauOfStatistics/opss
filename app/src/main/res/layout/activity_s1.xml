@@ -57,7 +57,7 @@
                         <EditText
                             android:id="@+id/owner"
                             style="@style/edit_form_text"
-                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "/>
                     </LinearLayout>
 
                     <LinearLayout

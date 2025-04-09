@@ -88,7 +88,7 @@ public class HomeActivity extends FormActivity {
             times[2]=s3time;
             status[2]=R.drawable.ic_tick;
         }
-        String s4time=dbHandler.queryString("SELECT min(created_time) from "+ Section47.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
+        String s4time=dbHandler.queryString("SELECT min(created_time) from "+ Section47.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and Section='"+4+"'and (is_deleted=0 or is_deleted is null)",null);
         if(s4time!=null && !s4time.isEmpty()){
             times[3]=s4time;
             status[3]=R.drawable.ic_tick;
@@ -104,7 +104,7 @@ public class HomeActivity extends FormActivity {
             times[5]=s6time;
             status[5]=R.drawable.ic_tick;
         }
-        String s7time=dbHandler.queryString("SELECT min(created_time) from "+ Section47.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and  (is_deleted=0 or is_deleted is null)",null);
+        String s7time=dbHandler.queryString("SELECT min(created_time) from "+ Section47.class.getSimpleName()+" where uid='"+resumeModel.uid+"' and Section='"+7+"' and  (is_deleted=0 or is_deleted is null)",null);
         if(s7time!=null && !s7time.isEmpty()){
             times[6]=s7time;
             status[6]=R.drawable.ic_tick;

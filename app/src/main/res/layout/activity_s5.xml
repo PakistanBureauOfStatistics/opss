@@ -23,7 +23,7 @@
                 <TextView
                     style="@style/summary_txt_lg"
                     android:layout_width="match_parent"
-                    android:text="SECTION-5 DIGITAL INTERMEDIATION " />
+                    android:text="SECTION-5 DIGITAL INTERMEDIARY PLATFORMS(DIPs) Busineess using DIP " />
 
                 <LinearLayout
                     style="@style/smp_container_hr"
