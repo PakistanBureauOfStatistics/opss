@@ -25,7 +25,7 @@ public class S3Activity extends FormActivity {
     private List<Section3> modelDatabase;
 
     private final String[] inputValidationOrder= new String[]{
-           "male", "female", "wages", "other_cash_payment", "payment_in_kind", "total"
+           "male", "female","persons", "wages", "other_cash_payment", "payment_in_kind", "total"
     };
 
     private final String[] codeList= new String[]{
@@ -89,8 +89,8 @@ public class S3Activity extends FormActivity {
                                     EditText wages = findViewById(getResources().getIdentifier("wages__"+code, "id", getPackageName()));
                                     EditText other_cash_payment = findViewById(getResources().getIdentifier("other_cash_payment__"+code, "id", getPackageName()));
                                     EditText payment_in_kind = findViewById(getResources().getIdentifier("payment_in_kind__"+code, "id", getPackageName()));
-                                    int value1 = GetInteger(wages.getText().toString()) + GetInteger(other_cash_payment.getText().toString());
-                                    int value2 = GetInteger(payment_in_kind.getText().toString());
+                                    Long value1 = GetInteger(wages.getText().toString()) + GetInteger(other_cash_payment.getText().toString());
+                                    Long value2 = GetInteger(payment_in_kind.getText().toString());
                                     total.setText(String.valueOf(value1 + value2));
                                 }
                             });
@@ -170,12 +170,12 @@ public class S3Activity extends FormActivity {
 
     }
 
-    private int GetInteger(String txt){
+    private Long GetInteger(String txt){
         try {
-            return Integer.parseInt(txt);
+            return Long.parseLong(txt);
         }
         catch (Exception e) {
-            return 0;
+            return 0L;
         }
     }
 }

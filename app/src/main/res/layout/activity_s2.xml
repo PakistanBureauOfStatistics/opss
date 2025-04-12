@@ -32,7 +32,7 @@
                             <RelativeLayout
                                 style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
                                 <Spinner
-                                    android:id="@+id/year"
+                                    android:id="@+id/started_year"
                                     style="@style/spn_form"/>
                             </RelativeLayout>
                         </LinearLayout>
@@ -125,9 +125,30 @@
 
                             </RelativeLayout>
                            </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/is_seasonallayout"
+                            style="@style/vliner">
+                            <TextView
+                                style="@style/q_heading"
+                                android:text="2.6 :Is the business activity seasonal?"/>
+                            <RadioGroup
+                                android:id="@+id/is_seasonal"
+                                style="@style/rdg"
+                                android:layout_width="match_parent"
+                                android:weightSum="2">
+                                <RadioButton
+                                    android:id="@+id/is_seasonal1"
+                                    style="@style/rd_yesno"
+                                    android:text="Yes" />
+                                <RadioButton
+                                    android:id="@+id/is_seasonal2"
+                                    style="@style/rd_yesno"
+                                    android:text="No" />
+                            </RadioGroup>
+                        </LinearLayout>
 
                         <LinearLayout android:id="@+id/l_seasonal" style="@style/vliner" android:visibility="gone">
-                            <TextView style="@style/q_heading" android:text="2.6 Is business activity seasonal? (Only for Survey Type 3, 4, and 5)"/>
+                            <TextView style="@style/q_heading" android:text="Is business activity seasonal? (Only for Survey Type 3, 4, and 5)"/>
                             <!-- <CheckBox android:id="@+id/seasonal" style="@style/rd_yesno" android:text="Yes" android:layout_width="127dp" android:layout_height="wrap_content"/>
                             -->
                             <TextView style="@style/q_heading" android:text="Mention months during which activity was carried out:"/>
@@ -156,7 +177,7 @@
                             <TextView style="@style/q_heading"
                                 android:text="2.7 No. of months Establishment Worked during the year (Auto Count Q 2.6)"/>
                             <EditText
-                                android:id="@+id/establishment_months"
+                                android:id="@+id/months"
                                 style="@style/edit_form_text"
                                 android:inputType="number"
                                 android:focusable="false"

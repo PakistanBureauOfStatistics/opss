@@ -23,7 +23,7 @@
                     android:id="@+id/reference"
                     style="@style/s_heading"
                     android:layout_width="match_parent"
-                    android:text="SECTION-6   TAXES " />
+                    android:text="SECTION-6   TAXES DURING 2023-24" />
 
                 <LinearLayout
                     style="@style/smp_container_hr"

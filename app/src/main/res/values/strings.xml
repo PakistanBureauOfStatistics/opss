@@ -11,7 +11,7 @@
 
 
     <string name="version">?android:versionName</string>
-    <string name="survey_desc">Survey on Major Public Services</string>
+    <string name="survey_desc">Other Private Services Sectors</string>
     <string name="nav_open" translatable="false">Open</string>
     <string name="nav_close" translatable="false">Close</string>
     <string name="pak_geo" translatable="false">{
@@ -299,6 +299,6 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="import_from_online" translatable="false">Import (From Online)</string>
-    <string name="persons_last_working_day" translatable="false">Number of Persons on the Last working day.</string>
+    <string name="persons_last_working_day" translatable="false">Average Number of Persons engaged during Last month/year.</string>
     <string name="persons_last_month_year" translatable="false">Average Number of Persons engaged during Last month/year.</string>
 </resources>

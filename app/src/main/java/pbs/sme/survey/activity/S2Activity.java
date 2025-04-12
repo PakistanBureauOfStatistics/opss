@@ -28,18 +28,19 @@ public class S2Activity extends FormActivity {
     private Map<String, List<String>> descriptionMap = new HashMap<>();
     private Map<String, String> psicCodeMap = new HashMap<>();
     private Section12 section2_database;
-    private RadioGroup is_registered, is_hostel_available;
+    private RadioGroup is_registered, is_hostel_available,  is_seasonal;
     private Spinner major_activity;
     private Spinner organization_type;
-    private LinearLayout l_seasonal;
+    private LinearLayout l_seasonal ,is_seasonallayout;
     private LinearLayout layoutHostelFacility;
     private EditText establishment_months,psic;
     private CheckBox[] monthCheckboxes;
     private Spinner description_psic;
     private final String[] inputValidationOrder = new String[]{
-            "year", "is_registered", "agency", "maintaining_accounts","major_activities",  "description_psic", "psic","type_org", "hostel_facilty",
-            "food_laundry_other",  "months"
+            "started_year", "is_registered", "agency", "maintaining_accounts","major_activities","description_psic", "psic","type_org", "hostel_facilty",
+            "food_laundry_other","is_seasonal" ,"jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec","months"
     };
+
 
 
     @Override
@@ -50,7 +51,7 @@ public class S2Activity extends FormActivity {
         setParent(this, S3Activity.class);
         scrollView = findViewById(R.id.scrollView);
 
-        Spinner yearSpinner = findViewById(R.id.year);
+        Spinner yearSpinner = findViewById(R.id.started_year);
 
 // Create an array list for years (1947 to 2025)
         List<String> years = new ArrayList<>();
@@ -100,8 +101,27 @@ public class S2Activity extends FormActivity {
 
         organization_type = findViewById(R.id.type_org);
         l_seasonal = findViewById(R.id.l_seasonal);
+        is_seasonallayout = findViewById(R.id.is_seasonallayout);
+        is_seasonal=findViewById(R.id.is_seasonal);
+        is_seasonal.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if(checkedId==R.id.is_seasonal1){
+                    findViewById(R.id.l_seasonal).setVisibility(View.VISIBLE);
+
+
+
+                }
+                else{
+                    findViewById(R.id.l_seasonal).setVisibility(View.GONE);
+
+
+                }
+            }
+        });
+
         layoutHostelFacility = findViewById(R.id.layout_hostel_facility);
-        establishment_months = findViewById(R.id.establishment_months);
+        establishment_months = findViewById(R.id.months);
         establishment_months.setKeyListener(null); // Make it non-editable
 
         monthCheckboxes = new CheckBox[]{
@@ -234,6 +254,8 @@ public class S2Activity extends FormActivity {
             l_seasonal.setVisibility(View.VISIBLE);
         } else {
             l_seasonal.setVisibility(View.GONE);
+            is_seasonal.setVisibility(View.GONE);
+            is_seasonallayout.setVisibility(View.GONE);
         }
         if (surveyPosition == 1) {
             layoutHostelFacility.setVisibility(View.VISIBLE);

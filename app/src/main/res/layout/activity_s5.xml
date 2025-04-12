@@ -23,7 +23,7 @@
                 <TextView
                     style="@style/summary_txt_lg"
                     android:layout_width="match_parent"
-                    android:text="SECTION-5 DIGITAL INTERMEDIARY PLATFORMS(DIPs) Busineess using DIP " />
+                    android:text="SECTION-5 DIGITAL INTERMEDIARY PLATFORMS(DIPs) Business using DIP " />
 
                 <LinearLayout
                     style="@style/smp_container_hr"
@@ -140,6 +140,7 @@
                             <EditText
                                 android:id="@+id/amount"
                                 android:hint="Enter amount in Rs"
+                                android:maxLength="10"
                                 style="@style/edit_table_num_full_width" />
                             </LinearLayout>
 
@@ -153,6 +154,7 @@
                             <EditText
                                 android:id="@+id/percent"
                                 android:hint="Enter Percentage"
+                                android:maxLength="2"
                                 style="@style/edit_table_num_full_width" />
                             </LinearLayout>
                         </LinearLayout>

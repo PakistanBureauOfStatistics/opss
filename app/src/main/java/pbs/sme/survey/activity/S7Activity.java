@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -272,6 +273,7 @@ public class S7Activity extends FormActivity {
             sbtn.setEnabled(true);
             return;
         }
+
         if (validateSection12EditChecks()) {
             // If validation passes, proceed with saving the form
             for (String c : codeList) {
@@ -297,25 +299,27 @@ public class S7Activity extends FormActivity {
                 m.section = 7;
                 m.code = c;
             }
-
-            // --- Save Data to Database ---
-            List<Long> iid = dbHandler.replace(list);
-            for (Long i : iid) {
-                if (i != null && i < 0) {
-                    mUXToolkit.showToast("Failed");
-                    sbtn.setEnabled(true);
-                    return;
+            if (validateFields()) {
+                List<Long> iid = dbHandler.replace(list);
+                for (Long i : iid) {
+                    if (i != null && i < 0) {
+                        mUXToolkit.showToast("Failed");
+                        sbtn.setEnabled(true);
+                        return;
+                    }
                 }
-            }
-            mUXToolkit.showToast("Success");
-            sbtn.setEnabled(true);
-            btnn.callOnClick(); // Trigger any subsequent actions (e.g., navigation)
-        } else {
-            // If validation fails, show the error and allow the user to correct the form
-            mUXToolkit.showAlertDialogue("درست معلومات درکار", "فارم میں کچھ غلطیاں ہیں۔ براہ کرم درست کریں اور دوبارہ کوشش کریں۔", null);
-            sbtn.setEnabled(true);
-        }
+                mUXToolkit.showToast("Success");
+                sbtn.setEnabled(true);
+                btnn.callOnClick(); // Trigger any subsequent actions (e.g., navigation)
+            } else {
+                // If validation fails, show the error and allow the user to correct the form
+                mUXToolkit.showAlertDialogue("درست معلومات درکار", "فارم میں کچھ غلطیاں ہیں۔ براہ کرم درست کریں اور دوبارہ کوشش کریں۔", null);
+                sbtn.setEnabled(true);
+            } // Save data or move to next screen
 
+
+        }
+        sbtn.setEnabled(true);
 
     }
 
@@ -506,13 +510,7 @@ public class S7Activity extends FormActivity {
 
 
 
-        private int parseInteger (String value){
-            try {
-                return Integer.parseInt(value);
-            } catch (NumberFormatException e) {
-                return 0;
-            }
-        }
+
     private void addPercentageCalculation(EditText totalEditText, EditText valueEditText, EditText percentEditText) {
         TextWatcher textWatcher = new TextWatcher() {
             private boolean isUpdating = false; // Prevents infinite loop
@@ -534,7 +532,7 @@ public class S7Activity extends FormActivity {
 
             private void updatePercentage() {
                 String totalStr = totalEditText.getText().toString().trim().replace(",", ".");
-                String valueStr = valueEditText.getText().toString().trim().replace(",", ".");
+                 String valueStr = valueEditText.getText().toString().trim().replace(",", ".");
 
                 if (isValidNumber(totalStr) && isValidNumber(valueStr)) {
                     try {
@@ -579,7 +577,10 @@ public class S7Activity extends FormActivity {
     }
     private boolean validateSection12EditChecks() {
         // Check if the section12 object is null, if so, return true (validation passes)
-        if (resumeModel == null) return true;
+        if (resumeModel.survey_id == null || resumeModel.major_activities == null) {
+            showError("Major Activities is not selected.");
+            return false;
+        }
 
         int surveyId = resumeModel.survey_id;  // Get survey ID
         int majorActivity = resumeModel.major_activities;  // Get major activity ID
@@ -797,6 +798,80 @@ public class S7Activity extends FormActivity {
         mUXToolkit.showAlertDialogue("درست معلومات درکار", message, null);
     }
 
+    private boolean validateFields() {
+        try {
+            long totalYear = GetInteger(year_700.getText().toString().trim());
+            long partYear = GetInteger(year_709.getText().toString().trim());
+            long partYear11 = GetInteger(year_711.getText().toString().trim());
+            long partYear13 = GetInteger(year_713.getText().toString().trim());
+
+            long totalMonth = GetInteger(month_700.getText().toString().trim());
+            long  partMonth = GetInteger(month_709.getText().toString().trim());
+            long  partMonth11 = GetInteger(month_711.getText().toString().trim());
+            long  partMonth13 = GetInteger(month_713.getText().toString().trim());
+
+            long totalStudent = GetInteger(student_700.getText().toString().trim());
+            long partStudent = GetInteger(student_709.getText().toString().trim());
+            long partStudent11 = GetInteger(student_711.getText().toString().trim());
+            long partStudent13 = GetInteger(student_713.getText().toString().trim());
+
+            if (partYear > totalYear) {
+                year_709.setError("Value cannot be greater than total year");
+                return false;
+            }
+
+            if (partYear11 > totalYear) {
+                year_711.setError("Value cannot be greater than total year");
+                return false;
+            }
+            if (partYear13 > totalYear) {
+                year_713.setError("Value cannot be greater than total year");
+                return false;
+            }
+
+            if (partMonth > totalMonth) {
+                month_709.setError("Value cannot be greater than total month");
+                return false;
+            }
+            if (partMonth11 > totalMonth) {
+                month_711.setError("Value cannot be greater than total month");
+                return false;
+            }
+            if (partMonth13 > totalMonth) {
+                month_713.setError("Value cannot be greater than total month");
+                return false;
+            }
+
+            if (partStudent > totalStudent) {
+                student_709.setError("Value cannot be greater than total student");
+                return false;
+            }
+            if (partStudent11 > totalStudent) {
+                student_711.setError("Value cannot be greater than total student");
+                return false;
+            }
+            if (partStudent13 > totalStudent) {
+                student_713.setError("Value cannot be greater than total student");
+                return false;
+            }
+
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Please enter valid numeric values", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        return true;
+    }
+
+
+    private Long GetInteger(String txt){
+        try {
+            return Long.parseLong(txt);
+        }
+        catch (Exception e) {
+            return 0L;
+        }
+    }
 
 }
 

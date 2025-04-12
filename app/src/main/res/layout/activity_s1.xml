@@ -67,24 +67,24 @@
                             android:text="Gender of owner"/>
 
                         <RadioGroup
-                            android:id="@+id/gender"
+                            android:id="@+id/owner_gender"
                             style="@style/rdg"
                             android:layout_width="match_parent"
                             android:orientation="horizontal"
                             android:weightSum="3">
 
                             <RadioButton
-                                android:id="@+id/gender1"
+                                android:id="@+id/owner_gender1"
                                 style="@style/rd_yesno"
                                 android:text="Male" />
 
                             <RadioButton
-                                android:id="@+id/gender2"
+                                android:id="@+id/owner_gender2"
                                 style="@style/rd_yesno"
                                 android:text="Female" />
 
                             <RadioButton
-                                android:id="@+id/gender3"
+                                android:id="@+id/owner_gender3"
                                 style="@style/rd_yesno"
                                 android:hint="T"
                                 android:text="Joint" />
@@ -97,7 +97,7 @@
                             style="@style/q_heading"
                             android:text="Name of the Respondent: "/>
                         <EditText
-                            android:id="@+id/respondent_name"
+                            android:id="@+id/name"
                             style="@style/edit_form_text"
                             android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ., "/>
                     </LinearLayout>
@@ -107,7 +107,7 @@
                         <RelativeLayout
                             style="@style/vertical_wrapper" android:background="@drawable/spinner_container">
                        <Spinner
-                            android:id="@+id/respondent_designation"
+                            android:id="@+id/designation"
                             style="@style/spn_form"/>
     </RelativeLayout>  </LinearLayout>
 

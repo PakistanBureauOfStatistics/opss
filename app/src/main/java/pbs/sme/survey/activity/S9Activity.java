@@ -53,7 +53,7 @@ public class S9Activity extends FormActivity {
                         EditText total = findViewById(getResources().getIdentifier("rupees__900", "id", getPackageName()));
                         Long  Count901 = GetInteger(et901.getText().toString());
                         Long  Count902 = GetInteger(et902.getText().toString());
-                        total.setText(String.valueOf(Count901 - Count902));
+                        total.setText(String.valueOf(Count902 - Count901));
                     }
                 });
             }

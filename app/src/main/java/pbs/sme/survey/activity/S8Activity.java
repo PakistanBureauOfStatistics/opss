@@ -64,8 +64,9 @@ public class S8Activity extends FormActivity {
                                 EditText ownAccount = findViewById(getResources().getIdentifier("own_account_capital__"+code, "id", getPackageName()));
                                 EditText gfcf = findViewById(getResources().getIdentifier("GFCF__"+code, "id", getPackageName()));
                                 Long value1 = GetInteger(addition.getText().toString()) + GetInteger(acq.getText().toString());
-                                Long value2 = GetInteger(sales.getText().toString()) + GetInteger(ownAccount.getText().toString());
-                                gfcf.setText(String.valueOf(value1 - value2));
+                                value1=value1- GetInteger(sales.getText().toString());
+                                Long value2 = GetInteger(ownAccount.getText().toString());
+                                gfcf.setText(String.valueOf(value1 + value2));
                             }
                         });
                     }

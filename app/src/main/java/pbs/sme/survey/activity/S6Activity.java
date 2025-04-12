@@ -26,7 +26,7 @@ public class S6Activity extends FormActivity {
     };
 
     private final String[] codeList= new String[]{
-            "601","602","603","604","605","606","600"
+            "601","602","603","604","605","600","606"
 
     };
     @SuppressLint("SetTextI18n")
@@ -42,20 +42,10 @@ public class S6Activity extends FormActivity {
 
         AdditionTextWatcher additionTextWatcher = new AdditionTextWatcher(totalEditText);
 
-        for (int i = 0; i < codeList.length - 1; i++) {
+        for (int i = 0; i < codeList.length - 2; i++) {
             EditText et = findViewById(getResources().getIdentifier("value__" + codeList[i], "id", getPackageName()));
             et.removeTextChangedListener(additionTextWatcher);
             et.addTextChangedListener(additionTextWatcher);
-        }
-        if (resumeModel.survey_id == 1 || resumeModel.survey_id == 2) {
-
-            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "2023-24");
-        } else   if(resumeModel.survey_id==4)
-        {
-            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "Last Month");
-        } else   if(resumeModel.survey_id==3||resumeModel.survey_id==5)
-        {
-            ((TextView) findViewById(R.id.reference)).setText("SECTION -6   TAXES DURING  " + "Last 3 Calendar Months");
         }
 
 

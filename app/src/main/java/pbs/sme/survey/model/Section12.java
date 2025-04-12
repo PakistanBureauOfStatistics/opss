@@ -11,14 +11,14 @@ public class Section12 extends FormTable {
 
     public String title;
     public String owner;
-    public Integer gender;
+    public Integer owner_gender;
     public String prv;
     public String dist;
     public String teh;
     public String city;
     public String vil;
-    public String respondent_name;
-    public Integer respondent_designation;
+    public String name;
+    public String designation;
     public Integer building_establishment;
     public String tel;
     public Integer phone_type;
@@ -85,14 +85,14 @@ public class Section12 extends FormTable {
                 ", srEstb=" + srEstb +
                 ", title='" + title + '\'' +
                 ", owner='" + owner + '\'' +
-                ", gender=" + gender +
+                ", owner_gender=" + owner_gender +
                 ", prv='" + prv + '\'' +
                 ", dist='" + dist + '\'' +
                 ", teh='" + teh + '\'' +
                 ", city='" + city + '\'' +
                 ", vil='" + vil + '\'' +
-                ", respondent_name='" + respondent_name + '\'' +
-                ", respondent_designation=" + respondent_designation +
+                ", name='" + name + '\'' +
+                ", designation='" + designation + '\'' +
                 ", building_establishment=" + building_establishment +
                 ", tel='" + tel + '\'' +
                 ", phone_type=" + phone_type +
@@ -128,7 +128,7 @@ public class Section12 extends FormTable {
                 ", dec=" + dec +
                 ", months=" + months +
                 ", hostel_facilty=" + hostel_facilty +
-                ", food_laundry_other='" + food_laundry_other + '\'' +
+                ", food_laundry_other=" + food_laundry_other +
                 ", lat=" + lat +
                 ", lon=" + lon +
                 ", alt=" + alt +
@@ -165,6 +165,7 @@ public class Section12 extends FormTable {
                 ", remarks='" + remarks + '\'' +
                 ", flag=" + flag +
                 ", survey=" + survey +
+                ", env='" + env + '\'' +
                 ", status=" + status +
                 '}';
     }

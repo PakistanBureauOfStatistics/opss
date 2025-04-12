@@ -26,7 +26,7 @@ public class S1Activity extends FormActivity {
     EditText phone_code2,phone_number;
 
     private final String[] inputValidationOrder= new String[]{
-            "building_establishment", "title","owner","gender","respondent_name","respondent_designation","phone_type","phone_code","phone_number"
+            "title","owner","owner_gender","name","designation","building_establishment","phone_type","phone_code","phone_number"
             ,"reason_no_phone"
     };
 
@@ -51,7 +51,7 @@ public class S1Activity extends FormActivity {
 
     }
     public void init(){
-        Spinner respondentSpinner = findViewById(R.id.respondent_designation);
+        Spinner respondentSpinner = findViewById(R.id.designation);
 
 // Define the options
         String[] respondentOptions = {

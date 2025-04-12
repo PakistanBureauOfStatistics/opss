@@ -597,7 +597,7 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">?t_sm</item>
-        <item name="android:layout_weight">6.6</item>
+        <item name="android:layout_weight">5.6</item>
         <item name="android:layout_marginRight">?pad</item>
     </style>
     <style name="summary_eng_c" parent="summary_eng">
@@ -615,7 +615,7 @@
         <item name="android:popupBackground">@color/color_blue</item>
         <item name="android:gravity">top</item>
         <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_weight">2.3</item>
+        <item name="android:layout_weight">3.3</item>
         <item name="android:maxLength">13</item>
     </style>
 

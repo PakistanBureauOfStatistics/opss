@@ -64,12 +64,12 @@ public class Constants {
      public static final String[] SECTION_NAMES={
              "Section-1: Basic Info",
              "Section-2: Economic Activity",
-             "Section-3: Emplpyment and Employment Cose",
+             "Section-3: Employment and Employment Cost",
              "Section-4: Inputs",
              "Section-5:Digital Intermediary Platforms(DIP)",
              "Section-6:Taxes ",
              "Section-7: Income",
-             "Section-8: Gross Fixed Captial",
+             "Section-8: Gross Fixed Capital",
              "Section-9: Value of Inventories",
              "Baseline"};
 
